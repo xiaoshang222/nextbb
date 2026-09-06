@@ -1,0 +1,41 @@
+import { ReactNode } from "react"
+import { redirect } from "next/navigation"
+import { getServerSessionUser } from "@/lib/server-auth"
+import { prisma } from "@/lib/prisma"
+import { decodeUsername, encodeUsername } from "@/lib/utils"
+import { PreferencesNavigation } from "@/components/user/preferences-navigation"
+
+type PreferencesLayoutProps = {
+  children: ReactNode
+  params: Promise<{ username: string }>
+}
+
+export default async function PreferencesLayout({
+  children,
+  params,
+}: PreferencesLayoutProps) {
+  const { username } = await params
+  const decodedUsername = decodeUsername(username)
+
+  // 权限验证：仅本人可访问偏好设置
+  const session = await getServerSessionUser()
+  if (!session) {
+    redirect("/login")
+  }
+
+  const currentUser = await prisma.users.findUnique({
+    where: { id: session.userId },
+    select: { name: true },
+  })
+
+  if (currentUser?.name !== decodedUsername) {
+    redirect(`/u/${encodeUsername(decodedUsername)}`)
+  }
+
+  return (
+    <div className="flex flex-col w-full">
+      <PreferencesNavigation username={decodedUsername} />
+      <div className="max-w-5xl mx-auto w-full py-6">{children}</div>
+    </div>
+  )
+}

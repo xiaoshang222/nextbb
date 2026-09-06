@@ -1,0 +1,1460 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model users {
+  id             BigInt    @id @db.BigInt
+  name           String    @db.VarChar(32)
+  avatar         String    @db.VarChar(256)
+  email          String    @db.VarChar(256)
+  password       String?   @db.VarChar(255)
+  status         Int
+  is_deleted     Boolean
+  is_admin       Boolean   @default(false)
+  credits        Int       @default(0)
+  bio            String    @default("") @db.VarChar(500)
+  website        String    @default("") @db.VarChar(256)
+  location       String    @default("") @db.VarChar(100)
+  birthday       DateTime?
+  title_badge_id BigInt?   @db.BigInt
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+
+  title_badge             badges?                @relation("user_title_badge", fields: [title_badge_id], references: [id])
+  topics                  topics[]
+  posts                   posts[]
+  post_likes              post_likes[]           @relation("post_likes_user")
+  post_bookmarks          post_bookmarks[]       @relation("post_bookmarks_user")
+  user_badges             user_badges[]          @relation("user_badges_user")
+  awarded_badges          user_badges[]          @relation("user_badges_awarder")
+  followers               user_follows[]         @relation("user_follows_following")
+  following               user_follows[]         @relation("user_follows_follower")
+  conversations_created   conversations[]        @relation("conversations_created_by")
+  conversation_members    conversation_members[] @relation("conversation_members_user")
+  messages                messages[]             @relation("messages_sender")
+  poll_votes              poll_votes[]           @relation("poll_votes_user")
+  lottery_participants    lottery_participants[] @relation("lottery_participants_user")
+  lottery_winners         lottery_winners[]      @relation("lottery_winners_user")
+  bounty_rewards_given    bounty_rewards[]       @relation("bounty_rewards_giver")
+  bounty_rewards_received bounty_rewards[]       @relation("bounty_rewards_receiver")
+  question_acceptances    question_acceptances[] @relation("question_acceptances_accepter")
+  checkins                user_checkins[]        @relation("user_checkins_user")
+  credit_logs             user_credit_logs[]     @relation("user_credit_logs_user")
+  donations               donations[]            @relation("donations_user")
+  confirmed_donations     donations[]            @relation("donations_confirmer")
+
+  notifications      notifications[] @relation("notifications_user")
+  sent_notifications notifications[] @relation("notifications_sender")
+
+  login_stats     user_login_stats?
+  login_logs      user_login_logs[]
+  uploads         uploads[]
+  custom_status   user_custom_statuses?
+  social_accounts user_social_accounts[] @relation("user_social_accounts_user")
+  two_factor      user_two_factor?
+  storage_files   storage_files[]        @relation("storage_files_user")
+
+  invite_codes        user_invite_codes[]  @relation("user_invite_codes_user")
+  invitations_sent    user_invitations[]   @relation("user_invitations_inviter")
+  invitation_received user_invitations?    @relation("user_invitations_invitee")
+  reviewed_registration_applications registration_applications[] @relation("registration_applications_reviewer")
+  registration_application            registration_applications?  @relation("registration_applications_user")
+
+  @@unique([email], map: "users_email_key")
+  @@map("users")
+}
+
+model categories {
+  id            BigInt   @id @db.BigInt
+  source_locale String   @default("zh") @db.VarChar(8)
+  icon          String   @db.VarChar(32)
+  sort          Int      @default(0)
+  bg_color        String?  @db.VarChar(16)
+  text_color      String?  @db.VarChar(16)
+  dark_bg_color   String?  @db.VarChar(16)
+  dark_text_color String?  @db.VarChar(16)
+  is_deleted    Boolean
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  topics       topics[]
+  translations category_translations[]
+
+  @@map("categories")
+}
+
+model category_translations {
+  category_id BigInt   @db.BigInt
+  locale      String   @db.VarChar(8)
+  name        String   @db.VarChar(32)
+  description String?  @db.VarChar(255)
+  is_source   Boolean  @default(false)
+  version     Int      @default(0)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  category categories @relation(fields: [category_id], references: [id], onDelete: Cascade)
+
+  @@id([category_id, locale])
+  @@index([locale, is_source], map: "category_translations_locale_source_index")
+  @@index([category_id, is_source], map: "category_translations_category_source_index")
+  @@map("category_translations")
+}
+
+model tags {
+  id            BigInt   @id @db.BigInt
+  source_locale String   @default("zh") @db.VarChar(8)
+  icon          String   @db.VarChar(32)
+  sort          Int      @default(0)
+  bg_color        String?  @db.VarChar(16)
+  text_color      String?  @db.VarChar(16)
+  dark_bg_color   String?  @db.VarChar(16)
+  dark_text_color String?  @db.VarChar(16)
+  is_deleted    Boolean
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  topic_links  topic_tags[]
+  translations tag_translations[]
+
+  @@map("tags")
+}
+
+model tag_translations {
+  tag_id      BigInt   @db.BigInt
+  locale      String   @db.VarChar(8)
+  name        String   @db.VarChar(32)
+  description String?  @db.VarChar(255)
+  is_source   Boolean  @default(false)
+  version     Int      @default(0)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  tag tags @relation(fields: [tag_id], references: [id], onDelete: Cascade)
+
+  @@id([tag_id, locale])
+  @@index([locale, is_source], map: "tag_translations_locale_source_index")
+  @@index([tag_id, is_source], map: "tag_translations_tag_source_index")
+  @@map("tag_translations")
+}
+
+model topics {
+  id            BigInt    @id @db.BigInt
+  category_id   BigInt    @db.BigInt
+  user_id       BigInt    @db.BigInt
+  source_locale String    @default("zh") @db.VarChar(8)
+  type          String    @default("GENERAL") @db.VarChar(32)
+  status        String    @default("ACTIVE") @db.VarChar(32)
+  end_time      DateTime?
+  is_settled    Boolean   @default(false)
+  views         Int       @default(0)
+  is_pinned     Boolean   @default(false)
+  is_community  Boolean   @default(false)
+  is_deleted    Boolean
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+
+  category             categories             @relation(fields: [category_id], references: [id])
+  user                 users                  @relation(fields: [user_id], references: [id])
+  posts                posts[]
+  tag_links            topic_tags[]
+  poll_options         poll_options[]
+  poll_config          poll_configs?
+  lottery_config       lottery_configs?
+  lottery_participants lottery_participants[]
+  lottery_winners      lottery_winners[]
+  bounty_config        bounty_configs?
+  bounty_rewards       bounty_rewards[]
+  question_acceptance  question_acceptances?
+  notifications        notifications[]
+  translations         topic_translations[]
+
+  @@index([user_id], map: "topics_user_index")
+  @@index([category_id], map: "topics_category_index")
+  @@index([type], map: "topics_type_index")
+  @@index([status, end_time], map: "topics_status_endtime_index")
+  @@index([type, status], map: "topics_type_status_index")
+  @@index([is_settled], map: "topics_settled_index")
+  @@map("topics")
+}
+
+model topic_translations {
+  topic_id   BigInt   @db.BigInt
+  locale     String   @db.VarChar(8)
+  title      String   @db.VarChar(256)
+  is_source  Boolean  @default(false)
+  version    Int      @default(0)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  topic topics @relation(fields: [topic_id], references: [id], onDelete: Cascade)
+
+  @@id([topic_id, locale])
+  @@index([locale, is_source], map: "topic_translations_locale_source_index")
+  @@index([topic_id, is_source], map: "topic_translations_topic_source_index")
+  @@map("topic_translations")
+}
+
+model posts {
+  id                 BigInt   @id @db.BigInt
+  topic_id           BigInt   @db.BigInt
+  user_id            BigInt   @db.BigInt
+  parent_id          BigInt   @default(0) @db.BigInt
+  reply_to_user_id   BigInt   @default(0) @db.BigInt
+  floor_number       Int
+  content            String   @db.Text
+  source_locale      String   @default("zh") @db.VarChar(8)
+  is_first_user_post Boolean  @default(false)
+  is_deleted         Boolean
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+
+  topic               topics                @relation(fields: [topic_id], references: [id])
+  user                users                 @relation(fields: [user_id], references: [id])
+  likes               post_likes[]          @relation("post_likes_post")
+  bookmarks           post_bookmarks[]      @relation("post_bookmarks_post")
+  bounty_rewards      bounty_rewards[]
+  lottery_winners     lottery_winners[]
+  question_acceptance question_acceptances?
+  notifications       notifications[]
+  translations        post_translations[]
+
+  @@index([topic_id], map: "posts_topic_index")
+  @@index([user_id], map: "posts_user_index")
+  @@map("posts")
+}
+
+model post_translations {
+  post_id      BigInt   @db.BigInt
+  locale       String   @db.VarChar(8)
+  content_html String   @db.Text
+  is_source    Boolean  @default(false)
+  version      Int      @default(0)
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  post posts @relation(fields: [post_id], references: [id], onDelete: Cascade)
+
+  @@id([post_id, locale])
+  @@index([locale, is_source], map: "post_translations_locale_source_index")
+  @@index([post_id, is_source], map: "post_translations_post_source_index")
+  @@map("post_translations")
+}
+
+model topic_tags {
+  topic_id   BigInt   @db.BigInt
+  tag_id     BigInt   @db.BigInt
+  created_at DateTime @default(now())
+
+  topic topics @relation(fields: [topic_id], references: [id])
+  tag   tags   @relation(fields: [tag_id], references: [id])
+
+  @@id([topic_id, tag_id])
+  @@index([tag_id], map: "topic_tags_tag_index")
+  @@index([topic_id], map: "topic_tags_topic_index")
+  @@map("topic_tags")
+}
+
+model post_likes {
+  post_id    BigInt   @db.BigInt
+  user_id    BigInt   @db.BigInt
+  created_at DateTime @default(now())
+
+  post posts @relation("post_likes_post", fields: [post_id], references: [id])
+  user users @relation("post_likes_user", fields: [user_id], references: [id])
+
+  @@id([post_id, user_id])
+  @@index([user_id], map: "post_likes_user_index")
+  @@index([post_id], map: "post_likes_post_index")
+  @@map("post_likes")
+}
+
+model post_bookmarks {
+  post_id    BigInt   @db.BigInt
+  user_id    BigInt   @db.BigInt
+  created_at DateTime @default(now())
+
+  post posts @relation("post_bookmarks_post", fields: [post_id], references: [id])
+  user users @relation("post_bookmarks_user", fields: [user_id], references: [id])
+
+  @@id([post_id, user_id])
+  @@index([user_id], map: "post_bookmarks_user_index")
+  @@index([post_id], map: "post_bookmarks_post_index")
+  @@map("post_bookmarks")
+}
+
+model badges {
+  id            BigInt   @id @db.BigInt
+  source_locale String   @default("zh") @db.VarChar(8)
+  icon          String   @db.VarChar(32)
+  badge_type    String   @db.VarChar(32)
+  level         Int      @default(1)
+  sort          Int      @default(0)
+  bg_color        String?  @db.VarChar(16)
+  text_color      String?  @db.VarChar(16)
+  dark_bg_color   String?  @db.VarChar(16)
+  dark_text_color String?  @db.VarChar(16)
+  is_enabled    Boolean  @default(true)
+  is_visible    Boolean  @default(true)
+  is_deleted    Boolean  @default(false)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  user_badges      user_badges[]        @relation("user_badges_badge")
+  users_with_title users[]              @relation("user_title_badge")
+  translations     badge_translations[]
+
+  @@index([badge_type], map: "badges_type_index")
+  @@index([is_deleted, is_enabled], map: "badges_status_index")
+  @@map("badges")
+}
+
+model badge_translations {
+  badge_id    BigInt   @db.BigInt
+  locale      String   @db.VarChar(8)
+  name        String   @db.VarChar(32)
+  description String?  @db.VarChar(255)
+  is_source   Boolean  @default(false)
+  version     Int      @default(0)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  badge badges @relation(fields: [badge_id], references: [id], onDelete: Cascade)
+
+  @@id([badge_id, locale])
+  @@index([locale, is_source], map: "badge_translations_locale_source_index")
+  @@index([badge_id, is_source], map: "badge_translations_badge_source_index")
+  @@map("badge_translations")
+}
+
+model user_badges {
+  user_id    BigInt   @db.BigInt
+  badge_id   BigInt   @db.BigInt
+  awarded_at DateTime @default(now())
+  awarded_by BigInt?  @db.BigInt
+  is_deleted Boolean  @default(false)
+
+  user    users  @relation("user_badges_user", fields: [user_id], references: [id])
+  badge   badges @relation("user_badges_badge", fields: [badge_id], references: [id])
+  awarder users? @relation("user_badges_awarder", fields: [awarded_by], references: [id])
+
+  @@id([user_id, badge_id])
+  @@index([user_id, is_deleted], map: "user_badges_user_index")
+  @@index([badge_id, is_deleted], map: "user_badges_badge_index")
+  @@index([is_deleted], map: "user_badges_deleted_index")
+  @@map("user_badges")
+}
+
+model system_configs {
+  id            BigInt   @id @db.BigInt
+  config_key    String   @unique @db.VarChar(64)
+  config_value  String   @db.Text
+  config_type   String   @db.VarChar(16)
+  category      String   @db.VarChar(32)
+  description   String?  @db.VarChar(255)
+  is_public     Boolean  @default(false)
+  is_sensitive  Boolean  @default(false)
+  default_value String   @db.Text
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@index([category], map: "system_configs_category_index")
+  @@index([is_public], map: "system_configs_public_index")
+  @@map("system_configs")
+}
+
+model user_follows {
+  follower_id  BigInt   @db.BigInt
+  following_id BigInt   @db.BigInt
+  created_at   DateTime @default(now())
+
+  follower  users @relation("user_follows_follower", fields: [follower_id], references: [id])
+  following users @relation("user_follows_following", fields: [following_id], references: [id])
+
+  @@id([follower_id, following_id])
+  @@index([follower_id], map: "user_follows_follower_index")
+  @@index([following_id], map: "user_follows_following_index")
+  @@map("user_follows")
+}
+
+model conversations {
+  id            BigInt   @id @db.BigInt
+  type          ConversationType @default(SINGLE)
+  source_locale String   @default("zh") @db.VarChar(8)
+  avatar        String?  @db.VarChar(256)
+  hash          String   @db.VarChar(64)
+  created_by_id BigInt?  @db.BigInt
+  last_message_id BigInt? @db.BigInt
+  is_deleted    Boolean  @default(false)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  created_by   users?                      @relation("conversations_created_by", fields: [created_by_id], references: [id])
+  members      conversation_members[]      @relation("conversation_members_conversation")
+  messages     messages[]                  @relation("messages_conversation")
+  translations conversation_translations[]
+
+  @@unique([hash], map: "conversations_hash_unique")
+  @@index([type], map: "conversations_type_index")
+  @@index([created_by_id], map: "conversations_created_by_index")
+  @@index([last_message_id], map: "conversations_last_message_index")
+  @@map("conversations")
+}
+
+model conversation_translations {
+  conversation_id BigInt   @db.BigInt
+  locale          String   @db.VarChar(8)
+  title           String   @db.VarChar(64)
+  is_source       Boolean  @default(false)
+  version         Int      @default(0)
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  conversation conversations @relation(fields: [conversation_id], references: [id], onDelete: Cascade)
+
+  @@id([conversation_id, locale])
+  @@index([locale, is_source], map: "conversation_translations_locale_source_index")
+  @@index([conversation_id, is_source], map: "conversation_translations_conversation_source_index")
+  @@map("conversation_translations")
+}
+
+model conversation_members {
+  conversation_id      BigInt    @db.BigInt
+  user_id              BigInt    @db.BigInt
+  joined_at            DateTime  @default(now())
+  is_muted             Boolean   @default(false)
+  is_deleted           Boolean   @default(false)
+  last_read_message_id BigInt?   @db.BigInt
+  last_read_at         DateTime?
+
+  conversation conversations @relation("conversation_members_conversation", fields: [conversation_id], references: [id])
+  user         users         @relation("conversation_members_user", fields: [user_id], references: [id])
+
+  @@id([conversation_id, user_id])
+  @@index([user_id], map: "conversation_members_user_index")
+  @@index([conversation_id], map: "conversation_members_conversation_index")
+  @@map("conversation_members")
+}
+
+model messages {
+  id              BigInt   @id @db.BigInt
+  conversation_id BigInt   @db.BigInt
+  sender_id       BigInt   @db.BigInt
+  content         String   @db.Text
+  source_locale   String   @default("zh") @db.VarChar(8)
+  is_read         Boolean  @default(false)
+  is_deleted      Boolean  @default(false)
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  conversation conversations          @relation("messages_conversation", fields: [conversation_id], references: [id])
+  sender       users                  @relation("messages_sender", fields: [sender_id], references: [id])
+  translations message_translations[]
+
+  @@index([conversation_id], map: "messages_conversation_index")
+  @@index([conversation_id, created_at], map: "messages_conversation_created_index")
+  @@index([sender_id], map: "messages_sender_index")
+  @@index([is_read], map: "messages_read_index")
+  @@map("messages")
+}
+
+model message_translations {
+  message_id   BigInt   @db.BigInt
+  locale       String   @db.VarChar(8)
+  content_html String   @db.Text
+  is_source    Boolean  @default(false)
+  version      Int      @default(0)
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  message messages @relation(fields: [message_id], references: [id], onDelete: Cascade)
+
+  @@id([message_id, locale])
+  @@index([locale, is_source], map: "message_translations_locale_source_index")
+  @@index([message_id, is_source], map: "message_translations_message_source_index")
+  @@map("message_translations")
+}
+
+model poll_options {
+  id          BigInt   @id @db.BigInt
+  topic_id    BigInt   @db.BigInt
+  option_text String   @db.VarChar(256)
+  sort        Int
+  is_deleted  Boolean  @default(false)
+  created_at  DateTime @default(now())
+
+  topic topics       @relation(fields: [topic_id], references: [id])
+  votes poll_votes[]
+
+  @@index([topic_id], map: "poll_options_topic_index")
+  @@map("poll_options")
+}
+
+model poll_votes {
+  option_id  BigInt   @db.BigInt
+  user_id    BigInt   @db.BigInt
+  created_at DateTime @default(now())
+
+  option poll_options @relation(fields: [option_id], references: [id])
+  user   users        @relation("poll_votes_user", fields: [user_id], references: [id])
+
+  @@id([option_id, user_id])
+  @@index([option_id], map: "poll_votes_option_index")
+  @@index([user_id], map: "poll_votes_user_index")
+  @@map("poll_votes")
+}
+
+model lottery_participants {
+  topic_id   BigInt   @db.BigInt
+  user_id    BigInt   @db.BigInt
+  is_winner  Boolean  @default(false)
+  created_at DateTime @default(now())
+
+  topic topics @relation(fields: [topic_id], references: [id])
+  user  users  @relation("lottery_participants_user", fields: [user_id], references: [id])
+
+  @@id([topic_id, user_id])
+  @@index([topic_id], map: "lottery_participants_topic_index")
+  @@index([user_id], map: "lottery_participants_user_index")
+  @@index([is_winner], map: "lottery_participants_winner_index")
+  @@map("lottery_participants")
+}
+
+model poll_configs {
+  topic_id                 BigInt   @id @db.BigInt
+  allow_multiple           Boolean  @default(false)
+  max_choices              Int?
+  show_results_before_vote Boolean  @default(false)
+  show_voter_list          Boolean  @default(false)
+  created_at               DateTime @default(now())
+  updated_at               DateTime @updatedAt
+
+  topic topics @relation(fields: [topic_id], references: [id])
+
+  @@index([topic_id], map: "poll_configs_topic_index")
+  @@map("poll_configs")
+}
+
+model lottery_configs {
+  topic_id              BigInt    @id @db.BigInt
+  draw_type             String    @db.VarChar(32)
+  end_time              DateTime?
+  participant_threshold Int?
+  algorithm_type        String    @db.VarChar(32)
+  floor_interval        Int?
+  fixed_floors          String?   @db.VarChar(500)
+  winner_count          Int?
+  entry_cost            Int       @default(0)
+  is_drawn              Boolean   @default(false)
+  drawn_at              DateTime?
+  created_at            DateTime  @default(now())
+  updated_at            DateTime  @updatedAt
+
+  topic topics @relation(fields: [topic_id], references: [id])
+
+  @@index([draw_type], map: "lottery_configs_drawtype_index")
+  @@index([is_drawn], map: "lottery_configs_drawn_index")
+  @@index([end_time], map: "lottery_configs_endtime_index")
+  @@index([draw_type, is_drawn], map: "lottery_configs_type_drawn_index")
+  @@map("lottery_configs")
+}
+
+model lottery_winners {
+  id           BigInt   @id @db.BigInt
+  topic_id     BigInt   @db.BigInt
+  post_id      BigInt   @db.BigInt
+  user_id      BigInt   @db.BigInt
+  floor_number Int
+  won_at       DateTime @default(now())
+  created_at   DateTime @default(now())
+
+  topic topics @relation(fields: [topic_id], references: [id])
+  post  posts  @relation(fields: [post_id], references: [id])
+  user  users  @relation("lottery_winners_user", fields: [user_id], references: [id])
+
+  @@unique([topic_id, post_id], map: "lottery_winners_topic_post_unique")
+  @@unique([topic_id, user_id], map: "lottery_winners_topic_user_unique")
+  @@index([topic_id], map: "lottery_winners_topic_index")
+  @@index([user_id], map: "lottery_winners_user_index")
+  @@index([won_at], map: "lottery_winners_wonat_index")
+  @@map("lottery_winners")
+}
+
+model bounty_configs {
+  topic_id        BigInt   @id @db.BigInt
+  bounty_total    Int
+  bounty_type     String   @db.VarChar(32)
+  bounty_slots    Int
+  remaining_slots Int
+  single_amount   Int?
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  topic topics @relation(fields: [topic_id], references: [id])
+
+  @@index([bounty_type], map: "bounty_configs_type_index")
+  @@map("bounty_configs")
+}
+
+model bounty_rewards {
+  id          BigInt   @id @db.BigInt
+  topic_id    BigInt   @db.BigInt
+  post_id     BigInt   @db.BigInt
+  giver_id    BigInt   @db.BigInt
+  receiver_id BigInt   @db.BigInt
+  amount      Int
+  created_at  DateTime @default(now())
+
+  topic    topics @relation(fields: [topic_id], references: [id])
+  post     posts  @relation(fields: [post_id], references: [id])
+  giver    users  @relation("bounty_rewards_giver", fields: [giver_id], references: [id])
+  receiver users  @relation("bounty_rewards_receiver", fields: [receiver_id], references: [id])
+
+  @@unique([topic_id, receiver_id], map: "bounty_rewards_topic_receiver_unique")
+  @@index([topic_id], map: "bounty_rewards_topic_index")
+  @@index([receiver_id], map: "bounty_rewards_receiver_index")
+  @@index([giver_id], map: "bounty_rewards_giver_index")
+  @@map("bounty_rewards")
+}
+
+model question_acceptances {
+  topic_id    BigInt   @id @db.BigInt
+  post_id     BigInt   @unique @db.BigInt
+  accepted_by BigInt   @db.BigInt
+  accepted_at DateTime @default(now())
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  topic    topics @relation(fields: [topic_id], references: [id])
+  post     posts  @relation(fields: [post_id], references: [id])
+  accepter users  @relation("question_acceptances_accepter", fields: [accepted_by], references: [id])
+
+  @@index([post_id], map: "question_acceptances_post_index")
+  @@index([accepted_by], map: "question_acceptances_accepter_index")
+  @@map("question_acceptances")
+}
+
+model user_checkins {
+  id             BigInt   @id @db.BigInt
+  user_id        BigInt   @db.BigInt
+  checkin_date   DateTime @db.Date
+  credits_earned Int      @default(0)
+  created_at     DateTime @default(now())
+
+  user users @relation("user_checkins_user", fields: [user_id], references: [id])
+
+  @@unique([user_id, checkin_date], map: "user_checkins_user_date_unique")
+  @@index([user_id], map: "user_checkins_user_index")
+  @@index([checkin_date], map: "user_checkins_date_index")
+  @@index([created_at], map: "user_checkins_created_index")
+  @@map("user_checkins")
+}
+
+model user_login_stats {
+  user_id                BigInt   @id @db.BigInt
+  last_login_at          DateTime @default(now())
+  last_login_ip          String   @db.VarChar(64)
+  consecutive_login_days Int      @default(0)
+  total_login_days       Int      @default(1)
+  location_lat           String?  @db.VarChar(32)
+  location_long          String?  @db.VarChar(32)
+  created_at             DateTime @default(now())
+  updated_at             DateTime @updatedAt
+
+  user users @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("user_login_stats")
+}
+
+model user_login_logs {
+  id            BigInt   @id @db.BigInt
+  user_id       BigInt?  @db.BigInt
+  ip            String   @db.VarChar(64)
+  user_agent    String?  @db.VarChar(512)
+  location_lat  String?  @db.VarChar(32)
+  location_long String?  @db.VarChar(32)
+  status        String   @db.VarChar(16) // SUCCESS, FAILED
+  login_method  String   @db.VarChar(32) // FORM, GITHUB, GOOGLE, LINUXDO, etc.
+  login_at      DateTime @default(now())
+
+  user users? @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id], map: "user_login_logs_user_index")
+  @@index([login_at], map: "user_login_logs_time_index")
+  @@index([status], map: "user_login_logs_status_index")
+  @@map("user_login_logs")
+}
+
+enum ConversationType {
+  SINGLE
+  GROUP
+}
+
+enum CreditLogType {
+  CHECKIN
+  POST_REWARD
+  BOUNTY_RECEIVED
+  BOUNTY_GIVEN
+  LOTTERY_ENTRY
+  ADMIN_ADJUSTMENT
+  OTHER
+}
+
+// 捐赠来源类型
+enum DonationSource {
+  KOFI // Ko-fi 平台
+  PATREON // Patreon 平台
+  PAYPAL // PayPal 直接捐赠
+  ALIPAY // 支付宝
+  WECHAT_PAY // 微信支付
+  BANK_TRANSFER // 银行转账/线下转账
+  CRYPTO // 加密货币
+  OTHER // 其它来源
+}
+
+// 捐赠状态
+enum DonationStatus {
+  PENDING // 待确认（线下转账等需要人工确认）
+  CONFIRMED // 已确认
+  FAILED // 失败/无效
+  REFUNDED // 已退款
+  CANCELLED // 已取消
+}
+
+model user_credit_logs {
+  id          BigInt        @id @db.BigInt
+  user_id     BigInt        @db.BigInt
+  amount      Int
+  balance     Int
+  type        CreditLogType
+  description String        @default("") @db.VarChar(256)
+  created_at  DateTime      @default(now())
+
+  user users @relation("user_credit_logs_user", fields: [user_id], references: [id])
+
+  @@index([user_id], map: "user_credit_logs_user_index")
+  @@index([type], map: "user_credit_logs_type_index")
+  @@index([created_at], map: "user_credit_logs_created_index")
+  @@map("user_credit_logs")
+}
+
+// 捐赠记录表
+model donations {
+  id BigInt @id @db.BigInt
+
+  // 捐赠用户（可为空，支持非注册用户捐赠）
+  user_id BigInt? @db.BigInt
+
+  // 金额相关
+  amount   Decimal @db.Decimal(10, 2) // 捐赠金额，支持小数
+  currency String  @default("CNY") @db.VarChar(8) // 货币类型：CNY, USD, EUR 等
+
+  // 来源区分
+  source DonationSource // 捐赠来源
+
+  // 状态
+  status DonationStatus @default(PENDING)
+
+  // 外部关联ID（用于对接第三方平台的交易ID）
+  external_id String? @db.VarChar(128)
+
+  // 是否匿名捐赠
+  is_anonymous Boolean @default(false)
+
+  // 捐赠者显示名称（用于非注册用户或匿名用户的展示名）
+  donor_name String? @db.VarChar(64)
+
+  // 捐赠者邮箱（用于非注册用户联系或发送感谢）
+  donor_email String? @db.VarChar(256)
+
+  // 捐赠留言
+  message String? @db.VarChar(500)
+
+  // 管理员备注（仅管理员可见）
+  admin_note String? @db.VarChar(500)
+
+  // 确认信息
+  confirmed_by BigInt?   @db.BigInt // 确认人（管理员）
+  confirmed_at DateTime? // 确认时间
+
+  // 通用字段
+  is_deleted Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  // 关联关系
+  user      users? @relation("donations_user", fields: [user_id], references: [id])
+  confirmer users? @relation("donations_confirmer", fields: [confirmed_by], references: [id])
+
+  @@index([user_id], map: "donations_user_index")
+  @@index([source], map: "donations_source_index")
+  @@index([status], map: "donations_status_index")
+  @@index([external_id], map: "donations_external_index")
+  @@index([is_anonymous], map: "donations_anonymous_index")
+  @@index([created_at], map: "donations_created_index")
+  @@index([status, source], map: "donations_status_source_index")
+  @@map("donations")
+}
+
+// ==================== 自动化规则系统 ====================
+
+// 触发器类型枚举
+enum RuleTriggerType {
+  CRON // 定时任务
+  POST_CREATE // 发帖
+  POST_REPLY // 回帖
+  CHECKIN // 签到
+  DONATION // 捐赠
+  POST_LIKE_GIVEN // 送出的赞
+  POST_LIKE_RECEIVED // 收到的赞
+  USER_REGISTER // 注册
+  USER_LOGIN // 登录
+}
+
+// 执行动作类型枚举
+enum RuleActionType {
+  CREDIT_CHANGE // 积分变动
+  BADGE_GRANT // 授予徽章
+  BADGE_REVOKE // 撤销徽章
+  USER_GROUP_CHANGE // 用户组变更（预留）
+}
+
+// 自动化规则表
+model automation_rules {
+  id BigInt @id @db.BigInt
+
+  // 规则基本信息
+  name        String  @db.VarChar(128) // 规则名称
+  description String? @db.VarChar(512) // 规则描述
+
+  // 触发器配置
+  trigger_type       RuleTriggerType // 触发器类型
+  trigger_conditions Json? // 触发条件（JSON格式存储动态配置）
+  // 示例:
+  // CRON: {"cron": "0 0 * * *", "timezone": "Asia/Shanghai"}
+  // POST_CREATE: {"category_ids": [1,2,3], "min_content_length": 100}
+  // POST_REPLY: {"topic_type": "BOUNTY", "is_first_reply": true}
+  // CHECKIN: {"consecutive_days": 7}
+  // DONATION: {"min_amount": 100, "currency": "CNY", "sources": ["ALIPAY", "WECHAT_PAY"]}
+  // POST_LIKE_GIVEN: {"min_count": 10}
+  //   - min_count: 用户送出的赞达到此数量才触发
+  // POST_LIKE_RECEIVED: {"min_count": 10}
+  //   - min_count: 用户收到的赞达到此数量才触发
+  // USER_REGISTER: {"oauth_provider": "github"}
+  // USER_LOGIN: {"consecutive_days": 30}
+
+  // 执行动作配置（支持多个动作）
+  actions Json // 动作列表（JSON数组格式）
+  // 示例:
+  // [
+  //   {"type": "CREDIT_CHANGE", "params": {"amount": 10, "description": "每日签到奖励"}},
+  //   {"type": "BADGE_GRANT", "params": {"badge_id": 5, "auto_grant": true}},
+  //   {"type": "BADGE_REVOKE", "params": {"badge_id": 3, "reason": "条件不满足"}}
+  // ]
+  // 每个 action 对象包含:
+  // - type: 动作类型字符串 ("CREDIT_CHANGE" | "BADGE_GRANT" | "BADGE_REVOKE" | "USER_GROUP_CHANGE")
+  // - params: 动作参数对象
+
+  // 规则控制
+  priority         Int     @default(0) // 优先级（数字越大优先级越高）
+  is_enabled       Boolean @default(true) // 是否启用
+  is_repeatable    Boolean @default(true) // 是否可重复触发
+  max_executions   Int? // 最大执行次数（null表示无限制）
+  cooldown_seconds Int? // 冷却时间（秒）
+
+  // 时间限制
+  start_time DateTime? // 规则生效开始时间
+  end_time   DateTime? // 规则生效结束时间
+
+  // 审计字段
+  created_by BigInt?  @db.BigInt // 创建人（管理员ID）
+  updated_by BigInt?  @db.BigInt // 最后更新人
+  is_deleted Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  // 关联关系
+  execution_logs automation_rule_logs[]
+
+  @@index([trigger_type], map: "automation_rules_trigger_index")
+  @@index([is_enabled, is_deleted], map: "automation_rules_status_index")
+  @@index([trigger_type, is_enabled], map: "automation_rules_trigger_enabled_index")
+  @@index([priority], map: "automation_rules_priority_index")
+  @@index([start_time, end_time], map: "automation_rules_time_range_index")
+  @@map("automation_rules")
+}
+
+// 规则执行日志表
+model automation_rule_logs {
+  id BigInt @id @db.BigInt
+
+  // 关联规则
+  rule_id BigInt @db.BigInt
+
+  // 触发信息
+  triggered_by    BigInt? @db.BigInt // 触发用户ID(可为空,如定时任务)
+  target_user_id  BigInt? @db.BigInt // 执行对象的用户ID(如授予徽章的目标用户)
+  trigger_context Json? // 触发上下文数据
+  // 示例:
+  // {"topic_id": 123, "post_id": 456, "category_id": 1}
+  // {"donation_id": 789, "amount": 500}
+  // {"checkin_id": 111, "consecutive_days": 7}
+
+  // 执行结果
+  execution_status String @db.VarChar(32) // SUCCESS, FAILED, SKIPPED (按优先级: FAILED > SKIPPED > SUCCESS)
+  execution_result Json? // 执行结果详情(聚合所有动作的结果)
+  // 格式示例(一次规则执行记录一条日志，包含所有动作结果):
+  // [
+  //   {"actionType": "CREDIT_CHANGE", "status": "SUCCESS", "data": {"credit_changed": 10, "new_balance": 1000}},
+  //   {"actionType": "BADGE_GRANT", "status": "SKIPPED", "message": "Automation.skipReason.badgeAlreadyOwned", "messageParams": {"badgeName": "活跃用户"}}
+  // ]
+  // 每个 actionResult 包含:
+  // - actionType: RuleActionType 枚举值
+  // - status: 动作执行状态 (SUCCESS/FAILED/SKIPPED)
+  // - data: 成功执行的数据
+  // - message: 失败/跳过的多语言键值
+  // - messageParams: 失败/跳过消息的参数
+
+  error_message String? @db.Text // 错误信息（如果失败）
+
+  // 执行时间
+  executed_at DateTime @default(now())
+  created_at  DateTime @default(now())
+
+  // 关联关系
+  rule automation_rules @relation(fields: [rule_id], references: [id])
+
+  @@index([rule_id], map: "automation_logs_rule_index")
+  @@index([triggered_by], map: "automation_logs_user_index")
+  @@index([target_user_id], map: "automation_logs_target_index")
+  @@index([execution_status], map: "automation_logs_status_index")
+  @@index([executed_at], map: "automation_logs_executed_index")
+  @@index([rule_id, execution_status], map: "automation_logs_rule_status_index")
+  @@index([rule_id, target_user_id], map: "automation_logs_rule_target_index") // 优化：支持不可重复检查
+  @@index([rule_id, target_user_id, execution_status], map: "automation_logs_rule_target_status_index")
+  @@index([triggered_by, executed_at], map: "automation_logs_user_time_index")
+  @@map("automation_rule_logs")
+}
+
+// ==================== 翻译任务系统 ====================
+
+// 翻译实体类型枚举
+enum TranslationEntityType {
+  CATEGORY // 分类
+  TAG // 标签
+  BADGE // 徽章
+  TOPIC // 话题
+  POST // 帖子
+  EXPRESSION_GROUP // 表情分组
+  EXPRESSION // 表情
+  MESSAGE // 消息
+}
+
+// 翻译任务状态枚举
+enum TranslationTaskStatus {
+  PENDING // 待处理
+  PROCESSING // 处理中
+  COMPLETED // 已完成
+  FAILED // 失败
+  CANCELLED // 已取消
+}
+
+// 翻译任务优先级枚举
+enum TranslationTaskPriority {
+  LOWEST // 最低优先级
+  LOW // 低优先级
+  NORMAL // 普通优先级
+  HIGH // 高优先级
+  URGENT // 紧急优先级
+}
+
+// 注册审核状态枚举
+enum RegistrationApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+// 翻译任务表
+model translation_tasks {
+  id BigInt @id @db.BigInt
+
+  // 目标实体信息
+  entity_type TranslationEntityType // 实体类型
+  entity_id   BigInt                @db.BigInt // 目标实体ID
+
+  // 翻译配置
+  source_locale  String @db.VarChar(8) // 源语言代码
+  target_locale  String @db.VarChar(8) // 目标语言代码
+  source_version Int    @default(1) // 源内容版本号
+
+  // 任务状态
+  status   TranslationTaskStatus   @default(PENDING) // 任务状态
+  priority TranslationTaskPriority @default(NORMAL) // 任务优先级
+
+  // 重试机制
+  retry_count   Int     @default(0) // 重试次数
+  error_message String? @db.Text // 错误信息
+
+  // 时间追踪
+  started_at   DateTime? // 开始处理时间
+  completed_at DateTime? // 完成时间
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+
+  // 复合索引：按状态和优先级查询待处理任务(用于任务队列)
+  @@index([status, priority], map: "translation_tasks_status_priority_index")
+  // 复合索引：查询特定实体的所有翻译任务
+  @@index([entity_type, entity_id], map: "translation_tasks_entity_index")
+  // 复合索引：查询特定实体和语言的任务(避免重复创建)
+  @@index([entity_type, entity_id, target_locale], map: "translation_tasks_entity_locale_index")
+  @@map("translation_tasks")
+}
+
+enum NotificationType {
+  SYSTEM // System announcement
+  TOPIC_REPLY // Someone replied to your topic
+  POST_REPLY // Someone replied to your post
+  MENTION // Someone @mentioned you
+  LIKE // Someone liked your post
+  BADGE_AWARD // You received a badge
+  BOUNTY_REWARD // You received a bounty reward
+  LOTTERY_WIN // You won a lottery
+}
+
+model notifications {
+  id         BigInt           @id @db.BigInt
+  user_id    BigInt           @db.BigInt // Recipient
+  sender_id  BigInt           @db.BigInt // Triggered by (e.g., the person who replied)
+  type       NotificationType
+  read       Boolean          @default(false)
+  is_deleted Boolean          @default(false)
+
+  // Context References
+  topic_id BigInt? @db.BigInt
+  post_id  BigInt? @db.BigInt
+
+  // Flexible data for other types (e.g., badge_id, system message content)
+  data Json?
+
+  created_at DateTime @default(now())
+
+  // Relations
+  user   users   @relation("notifications_user", fields: [user_id], references: [id])
+  sender users?  @relation("notifications_sender", fields: [sender_id], references: [id])
+  topic  topics? @relation(fields: [topic_id], references: [id])
+  post   posts?  @relation(fields: [post_id], references: [id])
+
+  // Indexes for performance
+  @@index([user_id], map: "notifications_user_index")
+  @@index([read], map: "notifications_read_index")
+  @@index([type], map: "notifications_type_index")
+  @@index([created_at], map: "notifications_created_index")
+  // Composite index for fetching unread notifications efficiently
+  @@index([user_id, read, created_at], map: "notifications_user_read_created_index")
+  @@map("notifications")
+}
+
+model uploads {
+  id           BigInt   @id @db.BigInt
+  user_id      BigInt   @db.BigInt
+  url          String   @db.VarChar(255)
+  pathname     String   @db.VarChar(255)
+  content_type String   @db.VarChar(64)
+  size         Int
+  created_at   DateTime @default(now())
+
+  user users @relation(fields: [user_id], references: [id])
+
+  @@index([user_id], map: "uploads_user_index")
+  @@index([created_at], map: "uploads_created_index")
+  @@map("uploads")
+}
+
+enum LLMInterfaceMode {
+  OPENAI
+  GEMINI
+  DEEPSEEK
+  ANTHROPIC
+  GROK
+}
+
+enum LLMUsage {
+  TRANSLATION
+  CHAT
+  SUMMARIZATION
+}
+
+enum ExpressionGroupSize {
+  SMALL
+  MEDIUM
+  LARGE
+}
+
+model llm_configs {
+  id             BigInt           @id @default(autoincrement()) @db.BigInt
+  interface_mode LLMInterfaceMode
+  name           String           @db.VarChar(100)
+  base_url       String?          @db.VarChar(255)
+  api_key        String           @db.VarChar(255)
+  usage          LLMUsage         @unique
+  is_enabled     Boolean          @default(true)
+  created_at     DateTime         @default(now()) @db.Timestamptz(6)
+  updated_at     DateTime         @updatedAt @db.Timestamptz(6)
+}
+
+// 用户自定义状态表
+model user_custom_statuses {
+  user_id     BigInt    @id @db.BigInt // 用户ID,作为主键保证一对一关系
+  emoji       String?   @db.VarChar(16) // emoji 表情(可为空,支持仅文本状态)
+  status_text String    @db.VarChar(100) // 状态描述文本
+  expires_at  DateTime? // 自动移除状态的时间(可为空,表示永不过期)
+  is_deleted  Boolean   @default(false)
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+
+  // 关联关系
+  user users @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([expires_at], map: "user_custom_statuses_expires_index") // 用于定时清理过期状态
+  @@index([is_deleted], map: "user_custom_statuses_deleted_index")
+  @@map("user_custom_statuses")
+}
+
+model social_providers {
+  id             BigInt   @id @db.BigInt
+  provider_key   String   @unique @db.VarChar(32)
+  name           String   @db.VarChar(64)
+  client_id      String   @db.VarChar(256)
+  client_secret  String   @db.VarChar(256)
+  authorize_url  String?  @db.VarChar(512)
+  token_url      String?  @db.VarChar(512)
+  userinfo_url   String?  @db.VarChar(512)
+  well_known_url String?  @db.VarChar(512)
+  scope          String?  @db.VarChar(256)
+  icon           String?  @db.VarChar(512)
+  sort           Int      @default(0)
+  is_enabled     Boolean  @default(true)
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  user_accounts user_social_accounts[] @relation("user_social_accounts_provider")
+
+  @@index([is_enabled], map: "social_providers_enabled_index")
+  @@map("social_providers")
+}
+
+model user_social_accounts {
+  id                BigInt    @id @db.BigInt
+  user_id           BigInt    @db.BigInt
+  provider_key      String    @db.VarChar(32)
+  provider_uid      String    @db.VarChar(128)
+  provider_username String?   @db.VarChar(128)
+  provider_email    String?   @db.VarChar(256)
+  provider_avatar   String?   @db.VarChar(512)
+  access_token      String?   @db.VarChar(2048)
+  refresh_token     String?   @db.VarChar(2048)
+  token_expires_at  DateTime?
+  extra_data        Json?
+  last_used_at      DateTime?
+  created_at        DateTime  @default(now())
+  updated_at        DateTime  @updatedAt
+
+  user     users            @relation("user_social_accounts_user", fields: [user_id], references: [id])
+  provider social_providers @relation("user_social_accounts_provider", fields: [provider_key], references: [provider_key])
+
+  @@unique([provider_key, provider_uid], map: "user_social_accounts_provider_uid_unique")
+  @@index([user_id], map: "user_social_accounts_user_index")
+  @@index([provider_key], map: "user_social_accounts_provider_index")
+  @@map("user_social_accounts")
+}
+
+model seed_migrations {
+  version    Int      @id
+  name       String   @db.VarChar(128)
+  applied_at DateTime @default(now())
+
+  @@map("seed_migrations")
+}
+
+model user_two_factor {
+  user_id      BigInt    @id @db.BigInt
+  secret       String    @db.VarChar(256) // Base32 encoded secret
+  is_enabled   Boolean   @default(false)
+  backup_codes Json? // Encrypted backup codes
+  enabled_at   DateTime?
+  last_used_at DateTime?
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+
+  user users @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("user_two_factor")
+}
+
+// ==================== 表情系统 ====================
+
+model expression_groups {
+  id              BigInt              @id @db.BigInt
+  source_locale   String              @default("zh") @db.VarChar(8)
+  code            String              @unique @db.VarChar(32) // e.g. "default", "onion"
+  icon_id         BigInt?             @db.BigInt // Reference to expression ID for group icon
+  expression_size ExpressionGroupSize @default(SMALL) // 表情展示大小
+  sort            Int                 @default(0)
+  is_enabled      Boolean             @default(true)
+  is_deleted      Boolean             @default(false)
+  created_at      DateTime            @default(now())
+  updated_at      DateTime            @updatedAt
+
+  icon_expression expressions?                    @relation("GroupIcon", fields: [icon_id], references: [id], onDelete: SetNull)
+  expressions     expressions[]                   @relation("GroupExpressions")
+  translations    expression_group_translations[]
+
+  @@map("expression_groups")
+}
+
+model expression_group_translations {
+  group_id   BigInt   @db.BigInt
+  locale     String   @db.VarChar(8)
+  name       String   @db.VarChar(32)
+  is_source  Boolean  @default(false)
+  version    Int      @default(0)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  group expression_groups @relation(fields: [group_id], references: [id], onDelete: Cascade)
+
+  @@id([group_id, locale])
+  @@index([locale, is_source], map: "expression_group_trans_locale_source_index")
+  @@index([group_id, is_source], map: "expression_group_trans_group_source_index")
+  @@map("expression_group_translations")
+}
+
+model expressions {
+  id            BigInt   @id @db.BigInt
+  group_id      BigInt   @db.BigInt
+  source_locale String   @default("zh") @db.VarChar(8)
+  code          String   @db.VarChar(32) // e.g. "smile", "001"
+  image_path    String   @db.VarChar(256) // e.g. "onion/001.gif"
+  width         Int?
+  height        Int?
+  sort          Int      @default(0)
+  is_enabled    Boolean  @default(true)
+  is_deleted    Boolean  @default(false)
+  is_animated   Boolean  @default(false) // 是否为动画表情
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  group              expression_groups         @relation("GroupExpressions", fields: [group_id], references: [id])
+  translations       expression_translations[]
+  used_as_group_icon expression_groups[]       @relation("GroupIcon")
+
+  @@unique([group_id, code], map: "expressions_group_code_unique")
+  @@index([group_id], map: "expressions_group_index")
+  @@map("expressions")
+}
+
+model expression_translations {
+  expression_id BigInt   @db.BigInt
+  locale        String   @db.VarChar(8)
+  name          String   @db.VarChar(64) // e.g. "Smile"
+  is_source     Boolean  @default(false)
+  version       Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  expression expressions @relation(fields: [expression_id], references: [id], onDelete: Cascade)
+
+  @@id([expression_id, locale])
+  @@index([locale, is_source], map: "expression_trans_locale_source_index")
+  @@index([expression_id, is_source], map: "expression_trans_expression_source_index")
+  @@map("expression_translations")
+}
+
+// ==================== 对象存储系统 ====================
+
+// 存储供应商类型枚举
+enum StorageProviderType {
+  LOCAL // 本地文件系统存储
+  VERCEL_BLOB // Vercel Blob 存储
+  ALIYUN_OSS // 阿里云对象存储
+  AWS_S3 // AWS S3 对象存储
+  TENCENT_COS // 腾讯云对象存储
+  QINIU // 七牛云存储
+  UPYUN // 又拍云存储
+  MINIO // MinIO 对象存储
+}
+
+// 存储文件引用类型枚举
+enum StorageReferenceType {
+  POST // 帖子附件
+  AVATAR // 用户头像
+  EXPRESSION // 表情图片
+  SITE // 站点相关资源（如logo、favicon等）
+  OTHER // 其他资源
+}
+
+// 存储供应商配置表
+model storage_providers {
+  id BigInt @id @db.BigInt
+
+  // 供应商基本信息
+  name          String              @db.VarChar(64) // 供应商名称，如 "默认 OSS"
+  provider_type StorageProviderType // 供应商类型
+
+  // 供应商配置（JSON格式存储不同供应商的配置参数）
+  config Json
+  // LOCAL: {"base_path": "/uploads"}
+  // VERCEL_BLOB: {"token": "vercel_blob_xxx"}
+  // ALIYUN_OSS: {"access_key_id": "xxx", "access_key_secret": "xxx", "region": "oss-cn-shanghai", "bucket": "my-bucket", "endpoint": "oss-cn-shanghai.aliyuncs.com"}
+  // AWS_S3: {"access_key_id": "xxx", "secret_access_key": "xxx", "region": "us-east-1", "bucket": "my-bucket"}
+  // TENCENT_COS: {"secret_id": "xxx", "secret_key": "xxx", "region": "ap-shanghai", "bucket": "my-bucket"}
+  // QINIU: {"access_key": "xxx", "secret_key": "xxx", "bucket": "my-bucket"}
+  // UPYUN: {"operator": "xxx", "password": "xxx", "bucket": "my-bucket"}
+  // MINIO: {"endpoint": "minio.example.com", "port": 9000, "access_key": "xxx", "secret_key": "xxx", "bucket": "my-bucket", "use_ssl": true}
+
+  // 文件访问基础地址（用于生成文件访问URL）
+  base_url String @db.VarChar(512) // 如 "https://cdn.example.com" 或 "https://example.com/uploads"
+
+  // 供应商控制
+  is_default Boolean @default(false) // 是否为默认供应商（全局只能有一个默认）
+  is_active  Boolean @default(true) // 是否启用
+  sort       Int     @default(0) // 排序（数字越小越靠前）
+
+  // 配额限制（可选）
+  max_file_size BigInt? @db.BigInt // 最大单文件大小（字节），null 表示无限制
+  allowed_types String? @db.VarChar(512) // 允许的 MIME 类型（逗号分隔），null 表示不限制，如 "image/*,video/mp4"
+
+  // 审计字段
+  is_deleted Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  // 关联关系
+  storage_files storage_files[]
+
+  @@index([provider_type], map: "storage_providers_type_index")
+  @@index([is_active, is_deleted], map: "storage_providers_status_index")
+  @@index([is_default, is_active], map: "storage_providers_default_index")
+  @@map("storage_providers")
+}
+
+// 文件存储记录表
+model storage_files {
+  id BigInt @id @db.BigInt
+
+  // 供应商和用户关联
+  provider_id BigInt @db.BigInt // 存储供应商ID
+  user_id     BigInt @db.BigInt // 上传用户ID
+
+  // 文件基本信息
+  original_filename String @db.VarChar(256) // 原始文件名
+  mime_type         String @db.VarChar(128) // MIME 类型，如 "image/jpeg"
+  file_size         BigInt @db.BigInt // 文件大小（字节）
+
+  // 存储位置信息
+  storage_key String @db.VarChar(512) // 在供应商处的存储键/路径，如 "uploads/2024/01/abc123.jpg"
+
+  // 文件元数据
+  metadata Json? // 额外的元信息（JSON格式）
+  // 示例:
+  // 图片: {"width": 1920, "height": 1080, "format": "jpeg"}
+  // 视频: {"duration": 120, "width": 1920, "height": 1080, "codec": "h264"}
+  // 文档: {"pages": 10, "author": "John Doe"}
+
+  // 文件哈希和去重
+  file_hash String @db.VarChar(128) // 文件哈希值（用于去重检测，如 MD5/SHA256）
+
+  // 访问控制
+  is_public Boolean @default(true) // 是否公开访问
+
+  // 使用追踪（可选，用于统计和清理未使用文件）
+  reference_type StorageReferenceType // 引用类型
+
+  // 审计字段
+  is_deleted Boolean  @default(false)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  // 关联关系
+  provider storage_providers @relation(fields: [provider_id], references: [id])
+  user     users             @relation("storage_files_user", fields: [user_id], references: [id])
+
+  @@index([provider_id], map: "storage_files_provider_index")
+  @@index([user_id], map: "storage_files_user_index")
+  @@index([mime_type], map: "storage_files_mime_index")
+  @@index([file_hash], map: "storage_files_hash_index")
+  @@index([reference_type], map: "storage_files_reference_index")
+  @@index([is_deleted, created_at], map: "storage_files_deleted_created_index")
+  @@index([created_at], map: "storage_files_created_index")
+  @@map("storage_files")
+}
+
+// ==================== 邀请注册系统 ====================
+
+model user_invite_codes {
+  id         BigInt    @id @db.BigInt
+  user_id    BigInt    @db.BigInt
+  code       String    @unique @db.VarChar(32)
+  note       String    @default("") @db.VarChar(256)
+  max_uses   Int?
+  used_count Int       @default(0)
+  is_active  Boolean   @default(true)
+  expires_at DateTime?
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+
+  user        users              @relation("user_invite_codes_user", fields: [user_id], references: [id])
+  invitations user_invitations[] @relation("user_invitations_code")
+  registration_applications registration_applications[] @relation("registration_applications_invite_code")
+
+  @@index([user_id], map: "user_invite_codes_user_index")
+  @@index([code], map: "user_invite_codes_code_index")
+  @@map("user_invite_codes")
+}
+
+model user_invitations {
+  id             BigInt   @id @db.BigInt
+  inviter_id     BigInt   @db.BigInt
+  invitee_id     BigInt   @unique @db.BigInt
+  invite_code_id BigInt   @db.BigInt
+  created_at     DateTime @default(now())
+
+  inviter     users             @relation("user_invitations_inviter", fields: [inviter_id], references: [id])
+  invitee     users             @relation("user_invitations_invitee", fields: [invitee_id], references: [id])
+  invite_code user_invite_codes @relation("user_invitations_code", fields: [invite_code_id], references: [id])
+
+  @@index([inviter_id], map: "user_invitations_inviter_index")
+  @@index([invitee_id], map: "user_invitations_invitee_index")
+  @@index([invite_code_id], map: "user_invitations_code_index")
+  @@map("user_invitations")
+}
+
+model registration_applications {
+  id                 BigInt   @id @db.BigInt
+  email              String   @db.VarChar(256)
+  username           String   @db.VarChar(32)
+  password_hash      String   @db.VarChar(255)
+  application_reason String   @db.Text
+  status             RegistrationApplicationStatus @default(PENDING)
+  review_reason      String?  @db.Text
+  reviewer_id        BigInt?  @db.BigInt
+  reviewed_at        DateTime?
+  invite_code_id     BigInt?  @db.BigInt
+  user_id            BigInt?  @unique @db.BigInt
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+
+  reviewer    users?             @relation("registration_applications_reviewer", fields: [reviewer_id], references: [id])
+  invite_code user_invite_codes? @relation("registration_applications_invite_code", fields: [invite_code_id], references: [id])
+  user        users?             @relation("registration_applications_user", fields: [user_id], references: [id])
+
+  @@index([email, status], map: "registration_applications_email_status_index")
+  @@index([created_at], map: "registration_applications_created_at_index")
+  @@map("registration_applications")
+}

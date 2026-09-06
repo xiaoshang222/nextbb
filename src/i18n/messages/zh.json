@@ -1,0 +1,3140 @@
+{
+  "Index": {
+    "title": "欢迎来到 NextBB，共建和谐之社区！",
+    "description": "这是一个生产级多语言示例。"
+  },
+  "Dashboard": {
+    "title": "欢迎来到 NextBB！",
+    "description": "这是一个生产级多语言示例。"
+  },
+  "Common": {
+    "Search": {
+      "placeholder": "搜索...",
+      "noResults": "无结果"
+    },
+    "Filters": {
+      "title": "话题筛选",
+      "category": "分类",
+      "tag": "标签",
+      "tags": "标签",
+      "all": "☑️ 全部"
+    },
+    "Tabs": {
+      "latest": "最新动态",
+      "new": "最新发布",
+      "hot": "热门",
+      "top": "排行",
+      "community": "社区推荐",
+      "follow": "关注",
+      "my": "我的话题",
+      "leaderboard": "排行榜",
+      "categories": "分类",
+      "myPosts": "我的帖子",
+      "bookmark": "书签",
+      "like": "喜欢"
+    },
+    "Table": {
+      "topic": "话题",
+      "author": "作者",
+      "replies": "回复",
+      "views": "浏览量",
+      "participants": "参与者",
+      "activity": "活动",
+      "empty": "暂无数据",
+      "related": "相关话题",
+      "inTopic": "来自话题: {topic}"
+    },
+    "Title": {
+      "latestComments": "最新评论"
+    },
+    "Footer": {
+      "terms": "服务条款",
+      "privacy": "隐私政策",
+      "cookie": "Cookie 政策",
+      "copyright": "© 2026 NextBB"
+    },
+    "Loading": {
+      "loading": "加载中...",
+      "noMore": "没有更多了"
+    },
+    "Mention": {
+      "noUsersFound": "未找到用户"
+    },
+    "Badge": {
+      "secondary": "次要",
+      "verified": "已验证",
+      "destructive": "危险",
+      "outline": "描边"
+    },
+    "LocaleSwitcher": {
+      "auto": "自动选择",
+      "zh": "中文",
+      "en": "English",
+      "ariaLabel": "语言"
+    },
+    "Time": {
+      "minutesAgo": "{count} 分钟前",
+      "second": "{count}秒",
+      "minute": "{count}分钟",
+      "hour": "{count}小时",
+      "day": "{count}天"
+    },
+    "ThemeSwitcher": {
+      "light": "浅色",
+      "dark": "深色",
+      "system": "系统",
+      "ariaLabel": "切换主题"
+    },
+    "Action": {
+      "cancel": "取消",
+      "save": "保存",
+      "success": "操作成功",
+      "goBack": "返回上一页"
+    },
+    "ContentLabel": {
+      "image": "[图片]",
+      "expression": "[表情]",
+      "video": "[视频]"
+    },
+    "credits": "积分",
+    "floor": "楼层",
+    "winners": "中奖名单",
+    "won": "中奖",
+    "notWon": "未中奖",
+    "noWinners": "暂无中奖者",
+    "welcome": "欢迎",
+    "Stats": {
+      "topics": "话题",
+      "posts": "帖子",
+      "users": "用户",
+      "interactions": "互动"
+    }
+  },
+  "Checkin": {
+    "pageTitle": "签到",
+    "title": "每日签到",
+    "description": "每天签到一次，赚取积分奖励，连续签到让你进步更快",
+    "button": "签到",
+    "checking": "签到中.........",
+    "checkedIn": "已签到",
+    "consecutiveDays": "连续签到 {days} 天",
+    "monthlyCheckins": "本月签到 {days} 天",
+    "earnCredits": "今日签到 +{credits} 积分",
+    "todayEarned": "今日已签到，获得 {credits} 积分",
+    "credits": "积分",
+    "todayList": "今日签到榜",
+    "todayListDescription": "共 {count} 人已签到",
+    "noCheckinToday": "今天还没有人签到，快来成为第一名！",
+    "success": "签到成功！获得 {credits} 积分",
+    "alreadyCheckedIn": "今天已经签到过了",
+    "error": "签到失败，请稍后重试",
+    "loginRequired": "请先登录后签到",
+    "fullList": "完整榜单",
+    "noMoreData": "没有更多数据了",
+    "loadFailed": "加载失败",
+    "retryLater": "请稍后重试"
+  },
+  "Error": {
+    "unauthorized": "请先登录",
+    "forbidden": "没有权限",
+    "requestFailed": "请求失败",
+    "network": "网络错误"
+  },
+  "Category": {
+    "defaultName": "类别 {id}",
+    "noDescription": "暂无描述"
+  },
+  "Topic": {
+    "Post": {
+      "originallyWrittenIn": "此帖子最初使用 {locale} 编写",
+      "languageSelection": "多语言选择",
+      "source": "(原文)",
+      "firstUserPost": "这是 {name} 首次发帖 - 让我们欢迎他/她加入社区吧！"
+    },
+    "edit": "编辑",
+    "delete": "删除",
+    "deleted": "该楼层已被删除",
+    "notFound": "话题不存在",
+    "deleteConfirm": "确认删除当前楼层？",
+    "reply": "回复",
+    "replies": "个回复",
+    "replyPlaceholder": "请输入您的回复...",
+    "toc": "目录导航",
+    "floor": {
+      "op": "楼主",
+      "notFound": "楼层 {floor} 不存在",
+      "outOfRange": "楼层号超出范围",
+      "loading": "正在加载第 {floor} 楼..."
+    },
+    "Navigator": {
+      "title": "楼层导航",
+      "toFirst": "到首楼",
+      "toLast": "到末楼",
+      "aria": {
+        "toFirst": "到首楼",
+        "toLast": "到末楼"
+      },
+      "counter": "{current}/{total}",
+      "replyToTopic": "回复主题",
+      "goLogin": "去登录",
+      "sort": "楼层排序",
+      "noReplies": "暂无回复，请开始你的精彩评论"
+    },
+    "New": {
+      "title": "新建话题",
+      "description": "创建新话题与社区成员分享您的想法",
+      "button": "新建话题",
+      "goLogin": "去登录",
+      "form": {
+        "title": {
+          "label": "话题标题",
+          "placeholder": "请输入话题标题",
+          "counter": "{count}/100 字符"
+        },
+        "category": {
+          "label": "分类",
+          "placeholder": "请选择分类",
+          "info": "话题所属分类"
+        },
+        "content": {
+          "label": "话题内容",
+          "placeholder": "请详细描述您的话题内容...",
+          "counter": "{count}/10000 字符"
+        },
+        "tags": {
+          "label": "标签",
+          "placeholder": "选择标签",
+          "info": "{used}/{max} 标签"
+        },
+        "isPinned": {
+          "label": "话题置顶"
+        },
+        "isCommunity": {
+          "label": "话题推送到社区栏目"
+        },
+        "actions": {
+          "cancel": "取消",
+          "preview": "预览",
+          "publish": "发布话题",
+          "publishing": "发布中..."
+        }
+      },
+      "preview": {
+        "title": "预览",
+        "close": "关闭预览",
+        "field": {
+          "title": "标题:",
+          "category": "分类:",
+          "tags": "标签:",
+          "content": "内容:"
+        }
+      },
+      "submit": {
+        "success": "话题创建成功！",
+        "failed": "话题创建失败",
+        "unauthorized": "请先登录后再发布"
+      }
+    },
+    "QuickPost": {
+      "titlePlaceholder": "输入标题",
+      "publish": "发布",
+      "publishing": "发布中...",
+      "cancel": "取消",
+      "success": "发布成功！",
+      "failed": "发布失败",
+      "unauthorized": "请先登录后再发布",
+      "hints": {
+        "0": "✨ 今天有什么新发现？分享给大家吧。",
+        "1": "💡 遇到难题了？发个帖子一起讨论。",
+        "2": "🎯 有什么经验技巧？写下来帮助更多人。"
+      }
+    },
+    "Categories": {
+      "tech": "技术讨论",
+      "resource": "资源分享",
+      "help": "求助问答",
+      "chat": "闲聊",
+      "announcement": "公告"
+    },
+    "Validation": {
+      "title": {
+        "min": "标题至少需要5个字符",
+        "max": "标题不能超过100个字符"
+      },
+      "category": {
+        "required": "请选择分类"
+      },
+      "content": {
+        "min": "内容至少需要20个字符",
+        "max": "内容不能超过5000个字符"
+      },
+      "tag": {
+        "maxLength": "单个标签不能超过15个字符"
+      },
+      "tags": {
+        "maxCount": "最多5个标签"
+      },
+      "rewardPoints": {
+        "required": "请输入悬赏积分",
+        "positive": "悬赏积分必须大于0",
+        "exceedBalance": "悬赏积分不能超过您的可用积分"
+      },
+      "pollOptions": {
+        "min": "至少需要2个投票选项",
+        "max": "投票选项最多10个",
+        "optionMaxLength": "选项文本不能超过256个字符"
+      },
+      "lotteryEndTime": {
+        "required": "请选择开奖时间",
+        "future": "开奖时间必须晚于当前时间"
+      },
+      "lotteryRules": {
+        "min": "参与规则至少需要10个字符",
+        "max": "参与规则不能超过500个字符"
+      },
+      "winnerCount": {
+        "required": "请输入中奖人数",
+        "positive": "中奖人数必须大于0",
+        "max": "中奖人数必须为1-100的整数"
+      },
+      "categoryId": {
+        "invalid": "分类ID无效"
+      },
+      "pollEndTime": {
+        "future": "投票结束时间必须晚于当前时间"
+      },
+      "pollConfig": {
+        "maxChoices": "最大选择数必须大于1且不能超过选项数量"
+      },
+      "lottery": {
+        "endTimeFuture": "结束时间必须晚于当前时间",
+        "floorInterval": "楼层间隔必须为正整数",
+        "participantThreshold": "参与人数阈值必须为正整数",
+        "winnerCount": "中奖人数必须为1-100的整数",
+        "fixedFloors": "楼层号必须大于1",
+        "entryCost": "参与门槛必须为非负整数"
+      },
+      "bounty": {
+        "totalPositive": "悬赏总额必须为正整数",
+        "slotsMin": "多人模式的悬赏名额至少为2",
+        "singleAmountPositive": "单次金额必须为正整数",
+        "insufficientCredits": "积分不足",
+        "typeMismatch": "悬赏类型不匹配"
+      }
+    },
+    "Type": {
+      "general": "普通讨论",
+      "question": "提问",
+      "bounty": "悬赏",
+      "poll": "投票",
+      "lottery": "抽奖",
+      "tutorial": "教程",
+      "description": {
+        "general": "发起自由讨论",
+        "question": "提出问题并等待最佳答案",
+        "bounty": "为解决方案提供奖励",
+        "poll": "创建投票收集意见",
+        "lottery": "设置抽奖活动",
+        "tutorial": "发布教程文档"
+      }
+    },
+    "Bounty": {
+      "single": "单人悬赏",
+      "multiple": "多人悬赏",
+      "form": {
+        "totalAmount": "总赏金",
+        "totalAmountPlaceholder": "请输入总赏金额度",
+        "bountyType": "悬赏类型",
+        "slots": "悬赏名额",
+        "slotsPlaceholder": "请输入悬赏名额",
+        "singleAmount": "单次金额",
+        "singleAmountPlaceholder": "请输入每次发赏金额",
+        "currentCredits": "您的当前积分",
+        "totalHint": "总赏金 = 单次金额 × 名额",
+        "confirmMessage": "您将预扣 {amount} 积分作为悬赏，确认发布？",
+        "insufficientWarning": "您的积分不足，请先充值或调整赏金金额"
+      },
+      "action": {
+        "reward": "给赏",
+        "rewardFull": "给赏（全额）",
+        "rewardAmount": "给赏（{amount} 积分）",
+        "confirmTitle": "确认给赏",
+        "confirmMessage": "您将给 {user} 的回复发放 {amount} 积分，确认继续？"
+      },
+      "status": {
+        "rewarded": "已获赏 {amount} 积分",
+        "settled": "悬赏已结算"
+      },
+      "info": {
+        "title": "悬赏信息",
+        "totalAmount": "总赏金",
+        "bountyType": "悬赏类型",
+        "remainingSlots": "剩余名额",
+        "singleAmount": "单次金额",
+        "rewardedList": "已获赏名单",
+        "noRewardsYet": "暂无获赏记录，快来回答问题吧！"
+      },
+      "error": {
+        "insufficientCredits": "积分不足，无法发布悬赏",
+        "alreadySettled": "悬赏已结算，无法继续给赏",
+        "cannotRewardSelf": "不能给自己发赏",
+        "alreadyRewarded": "该用户已获赏，不可重复领赏",
+        "noRemainingSlots": "悬赏名额已用完",
+        "onlyOwnerCanReward": "仅楼主可以给赏"
+      },
+      "success": {
+        "created": "悬赏主题发布成功，已扣除 {amount} 积分",
+        "rewarded": "给赏成功，剩余 {remaining} 个名额"
+      },
+      "validation": {
+        "totalRequired": "请输入总赏金",
+        "totalPositive": "赏金金额必须大于0",
+        "slotsRequired": "请输入悬赏名额",
+        "slotsSingle": "单人悬赏名额必须为1",
+        "slotsMultiple": "多人悬赏名额必须大于1",
+        "singleAmountRequired": "多人模式下必须输入单次金额",
+        "totalMismatch": "总赏金必须等于单次金额乘以名额"
+      }
+    },
+    "Question": {
+      "acceptance": {
+        "title": "最佳答案",
+        "status": {
+          "settled": "已采纳",
+          "noAnswer": "暂无最佳答案",
+          "bestAnswer": "最佳答案"
+        },
+        "info": {
+          "acceptedBy": "采纳人",
+          "acceptedAt": "采纳时间",
+          "acceptedPost": "最佳答案楼层",
+          "answeredBy": "回答者"
+        }
+      },
+      "actions": {
+        "accept": "采纳",
+        "cancelAccept": "取消采纳",
+        "accepting": "采纳中",
+        "canceling": "取消中"
+      },
+      "messages": {
+        "acceptSuccess": "采纳成功",
+        "cancelSuccess": "取消采纳成功",
+        "acceptError": "采纳失败",
+        "cancelError": "取消采纳失败"
+      }
+    },
+    "Form": {
+      "rewardPoints": {
+        "label": "悬赏积分",
+        "placeholder": "输入悬赏积分数",
+        "info": "可用积分: {credits}"
+      },
+      "pollOptions": {
+        "label": "投票选项",
+        "placeholder": "请输入选项{index}",
+        "addOption": "添加选项",
+        "removeOption": "删除选项"
+      },
+      "endTime": {
+        "label": "投票截止时间",
+        "placeholder": "选择投票截止时间"
+      },
+      "pollConfig": {
+        "label": "投票配置",
+        "allowMultiple": "允许多选",
+        "maxChoices": "最大选择数",
+        "maxChoicesPlaceholder": "输入最大可选数（多选时必填）",
+        "showResultsBeforeVote": "投票前显示结果",
+        "showVoterList": "公开投票者名单"
+      },
+      "lotteryEndTime": {
+        "label": "开奖时间",
+        "placeholder": "选择开奖时间"
+      },
+      "lotteryRules": {
+        "label": "参与规则",
+        "placeholder": "描述参与条件和中奖规则"
+      },
+      "winnerCount": {
+        "label": "中奖人数",
+        "placeholder": "输入中奖人数"
+      },
+      "minCredits": {
+        "label": "最低积分要求",
+        "placeholder": "输入参与所需最低积分(可选)",
+        "info": "0或留空表示无限制"
+      }
+    },
+    "Lottery": {
+      "info": {
+        "title": "抽奖信息"
+      },
+      "drawType": {
+        "label": "开奖类型",
+        "scheduled": "定时开奖",
+        "threshold": "满人开奖",
+        "instant": "即抽即中"
+      },
+      "algorithmType": {
+        "label": "抽奖算法",
+        "interval": "间隔楼层",
+        "random": "随机楼层",
+        "fixed": "指定楼层"
+      },
+      "endTime": {
+        "label": "开奖时间",
+        "info": "请选择未来的时间"
+      },
+      "participantThreshold": {
+        "label": "参与人数阈值",
+        "placeholder": "例如：100",
+        "info": "达到此回复数时自动开奖"
+      },
+      "floorInterval": {
+        "label": "楼层间隔",
+        "placeholder": "例如：10（每 10 楼中奖一次）",
+        "info": "每隔多少楼层中奖一次"
+      },
+      "winnerCount": {
+        "label": "中奖人数",
+        "placeholder": "例如：5",
+        "info": "随机抽取的中奖人数（1-100）"
+      },
+      "fixedFloors": {
+        "label": "指定中奖楼层",
+        "placeholder": "例如：8, 88, 188（多个楼层用逗号分隔）",
+        "info": "指定哪些楼层中奖"
+      },
+      "entryCost": {
+        "label": "参与门槛（积分）",
+        "placeholder": "0 表示免费参与",
+        "info": "用户参与时将扣除相应积分"
+      },
+      "participation": {
+        "method": "参与方式",
+        "replyToJoin": "回复主题参与抽奖",
+        "replyAndCost": "回复并扣除 {cost} 积分参与抽奖"
+      },
+      "status": {
+        "pending": "等待开奖",
+        "drawn": "已开奖",
+        "progress": "{current} / {threshold} 条回复"
+      },
+      "error": {
+        "alreadyWon": "您已中奖，无法再次中奖",
+        "insufficientCredits": "积分不足，需要 {required} 积分",
+        "lotteryEnded": "抽奖已结束"
+      },
+      "success": {
+        "won": "恭喜中奖！",
+        "participated": "参与成功，等待开奖"
+      }
+    },
+    "Status": {
+      "active": "进行中",
+      "closed": "已结束",
+      "draft": "草稿",
+      "ending": "即将结束",
+      "answered": "已采纳",
+      "waiting": "等待采纳",
+      "drawn": "已开奖",
+      "pin": "置顶",
+      "community": "推荐"
+    },
+    "Poll": {
+      "title": "投票",
+      "options": "选项",
+      "votes": "票",
+      "totalVotes": "共{count}人投票",
+      "myChoice": "我的选择",
+      "timeRemaining": "离投票结束还有",
+      "voteClosed": "投票已关闭",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒",
+      "vote": "投票",
+      "cancelVote": "取消投票",
+      "viewDetails": "查看详情",
+      "singleChoice": "单选",
+      "multipleChoice": "多选（最多{max}项）",
+      "selectOption": "请选择投票选项",
+      "voteSuccess": "投票成功",
+      "voteCanceled": "投票已取消",
+      "alreadyVoted": "您已投票",
+      "cannotVote": "投票已关闭",
+      "invalidOptions": "无效的选项",
+      "rank": "第{rank}名",
+      "changeVote": "修改投票"
+    },
+    "Action": {
+      "vote": "投票",
+      "participate": "参与抽奖",
+      "acceptAnswer": "采纳为最佳答案"
+    }
+  },
+  "Auth": {
+    "Login": {
+      "title": "登录",
+      "email": "邮箱",
+      "emailPlaceholder": "name@example.com",
+      "signInWith": "使用 {provider} 登录",
+      "password": "密码",
+      "passwordPlaceholder": "请输入密码",
+      "submit": "登录",
+      "or": "或",
+      "questionNoAccount": "还没有账号？",
+      "toRegister": "去注册",
+      "welcomeBack": "欢迎回来，登录以继续您的旅程。",
+      "Branding": {
+        "titlePart1": "Next 论坛系统，",
+        "titlePart2": "重构想象",
+        "description": "采用尖端技术构建的下一代社区平台，只为更有意义的对话。",
+        "fastTitle": "极速",
+        "fastDesc": "基于 Next.js 16",
+        "secureTitle": "安全",
+        "secureDesc": "企业级认证",
+        "modernTitle": "现代",
+        "modernDesc": "精美界面"
+      },
+      "error": {
+        "failed": "登录失败",
+        "emailInvalid": "邮箱格式不正确",
+        "passwordMin": "密码至少需要6个字符"
+      }
+    },
+    "Register": {
+      "title": "创建账号",
+      "email": "邮箱",
+      "emailPlaceholder": "name@example.com",
+      "emailCode": "邮箱验证码",
+      "emailCodePlaceholder": "请输入 6 位验证码",
+      "password": "密码",
+      "passwordPlaceholder": "请设置密码（至少 8 位）",
+      "username": "用户名",
+      "usernamePlaceholder": "设置一个用户名",
+      "sendCode": "发送验证码",
+      "resendCode": "重新发送",
+      "sendingCode": "发送中...",
+      "codeCooldown": "{seconds}s 后可重发",
+      "codeHint": "验证码有效期 10 分钟，请查看收件箱或垃圾邮件",
+      "submit": "注册",
+      "inviteCode": "邀请码",
+      "inviteCodePlaceholder": "请输入 32 位邀请码",
+      "applicationReason": "注册申请说明",
+      "applicationReasonPlaceholder": "请简要说明注册目的、背景或兴趣",
+      "applicationReasonHint": "请填写注册申请说明，审核结果将通过邮件通知",
+      "pendingTitle": "申请已提交",
+      "pendingDescription": "我们会在审核完成后通过邮件通知您，请留意收件箱",
+      "hintTitle": "创建账号以加入社区讨论",
+      "questionHaveAccount": "已有账号？",
+      "toLogin": "去登录",
+      "verification": {
+        "subject": "注册验证码",
+        "textBody": "您的注册验证码是：{code}，有效期 {minutes} 分钟。",
+        "htmlLine1": "您的注册验证码是：",
+        "htmlLine2": "有效期 {minutes} 分钟。"
+      },
+      "review": {
+        "approved": {
+          "subject": "注册审核通过",
+          "textBody": "您的注册申请已通过审核，现在可以使用邮箱登录。审核说明：{reason}",
+          "htmlLine1": "您的注册申请已通过审核，现在可以使用邮箱登录。",
+          "htmlLine2": "审核说明：{reason}"
+        },
+        "rejected": {
+          "subject": "注册审核未通过",
+          "textBody": "很抱歉，您的注册申请未通过审核。原因：{reason}",
+          "htmlLine1": "很抱歉，您的注册申请未通过审核。",
+          "htmlLine2": "原因：{reason}"
+        }
+      },
+      "error": {
+        "failed": "注册失败，请稍后再试",
+        "emailInvalid": "请输入正确的邮箱地址",
+        "passwordMin": "密码至少需要 8 个字符",
+        "passwordMax": "密码长度不能超过 72 个字符",
+        "usernameMin": "用户名至少需要 {min} 个字符",
+        "usernameMax": "用户名长度不能超过 {max} 个字符",
+        "usernameFormat": "用户名只能包含字母、数字、下划线、中文和连字符",
+        "usernameInvalid": "用户名格式不正确，请避免使用特殊字符",
+        "codeRequired": "请输入邮箱验证码",
+        "codeInvalid": "请输入 6 位数字验证码",
+        "sendCodeFailed": "验证码发送失败，请稍后再试",
+        "emailExists": "该邮箱已被注册，请直接登录或使用其他邮箱",
+        "usernameExists": "该用户名已被使用，请换一个试试",
+        "invalidParams": "提交信息有误，请检查后重试",
+        "codeVerificationFailed": "验证码验证失败，请检查后重新输入",
+        "codeInvalidOrExpired": "验证码无效或已过期，请重新获取",
+        "registrationFailed": "注册失败，请稍后重试",
+        "registrationNotEnabled": "当前暂未开放注册，如需帮助请联系管理员",
+        "emailVerificationNotEnabled": "邮箱验证未开启",
+        "sendTooFrequent": "发送过于频繁，请稍后再试",
+        "codeExpired": "验证码发送失败，请稍后再试",
+        "inviteCodeRequired": "请输入邀请码",
+        "inviteCodeInvalid": "邀请码无效，请检查后重新输入",
+        "inviteCodeInactive": "该邀请码已停用",
+        "inviteCodeExpired": "该邀请码已过期",
+        "inviteCodeMaxUsed": "该邀请码已达到最大使用次数",
+        "applicationReasonRequired": "请填写注册申请说明",
+        "applicationReasonMin": "申请说明至少需要 {min} 个字符",
+        "applicationReasonMax": "申请说明长度不能超过 {max} 个字符",
+        "applicationPending": "该邮箱或用户名已提交注册申请，请耐心等待审核结果"
+      }
+    },
+    "PasswordReset": {
+      "title": "重置密码",
+      "description": "输入您的新密码以完成重置。",
+      "newPassword": "新密码",
+      "newPasswordPlaceholder": "请输入新密码",
+      "confirmPassword": "确认密码",
+      "confirmPasswordPlaceholder": "请再次输入新密码",
+      "submit": "重置密码",
+      "success": "密码重置成功，请使用新密码登录。",
+      "backToLogin": "返回登录",
+      "invalidToken": "重置链接无效或已过期，请重新发起密码重置。",
+      "noToken": "缺少重置令牌，正在跳转到登录页面...",
+      "email": {
+        "subject": "密码重置",
+        "textBody": "您正在重置密码，请点击以下链接完成重置：{link}\n\n链接有效期 {minutes} 分钟。如果不是您本人操作，请忽略此邮件。",
+        "htmlLine1": "您正在重置密码，请点击以下链接完成重置：",
+        "htmlLine2": "链接有效期 {minutes} 分钟。如果不是您本人操作，请忽略此邮件。"
+      },
+      "error": {
+        "passwordMin": "密码至少需要 8 个字符",
+        "passwordMax": "密码最多 72 个字符",
+        "passwordMismatch": "两次输入的密码不一致",
+        "tokenRequired": "缺少重置令牌",
+        "tokenInvalid": "重置链接无效或已过期",
+        "resetFailed": "密码重置失败，请重试",
+        "sendFailed": "发送重置邮件失败，请重试",
+        "sendTooFrequent": "发送过于频繁，请稍后再试",
+        "noEmail": "您的账号没有绑定邮箱，无法发送重置邮件",
+        "passwordWeak": "密码过于简单，请选择更强的密码（避免使用常见密码、连续数字或字母）"
+      }
+    }
+  },
+  "Nav": {
+    "main": {
+      "menu": "菜单",
+      "topics": "话题",
+      "myPosts": "帖子",
+      "notifications": "通知",
+      "conversations": "会话",
+      "checkin": "签到",
+      "donation": "捐赠",
+      "leaderboard": "排行榜",
+      "sharedResources": "共享资源",
+      "more": "更多"
+    },
+    "user": {
+      "notLoggedIn": "未登录",
+      "profile": "我的主页",
+      "activity": "我的活动",
+      "notifications": "我的通知",
+      "invitations": "邀请",
+      "settings": "个人设置",
+      "logout": "退出登录"
+    }
+  },
+  "Conversations": {
+    "title": "会话",
+    "tabs": {
+      "mine": "我的会话",
+      "discover": "发现群聊"
+    },
+    "actions": {
+      "back": "返回",
+      "join": "加入",
+      "joining": "加入中",
+      "loadMore": "加载更多",
+      "createGroup": "创建群聊"
+    },
+    "meta": {
+      "members": "{count} 位成员",
+      "you": "你",
+      "privateChat": "私聊",
+      "unknownUser": "未知用户",
+      "deletedUser": "已注销用户",
+      "untitledGroup": "未命名群聊"
+    },
+    "empty": {
+      "mine": "暂无会话",
+      "discover": "暂无可加入的群聊",
+      "noMessages": "暂无消息",
+      "messages": "还没有消息，开始你的第一条吧",
+      "select": "选择一个会话",
+      "selectDescription": "从左侧选择一个会话开始聊天",
+      "joinTitle": "加入群聊查看消息",
+      "joinDescription": "加入后即可查看并参与群聊"
+    },
+    "error": {
+      "notFound": "会话不存在",
+      "notFoundDescription": "该会话可能已被删除或无访问权限"
+    },
+    "editor": {
+      "placeholder": "输入消息...",
+      "slashPlaceholder": "输入 / 查看命令",
+      "send": "发送",
+      "sending": "发送中...",
+      "cancel": "取消",
+      "writeMessage": "写消息",
+      "title": "发送消息",
+      "emptyError": "消息不能为空",
+      "tooLongError": "消息过长 (最多 10000 字)",
+      "sendSuccess": "消息已发送",
+      "sendError": "发送失败，请重试",
+      "networkError": "网络连接失败",
+      "syncingHint": "正在同步..."
+    },
+    "message": {
+      "languageSelection": "选择语言",
+      "originallyWrittenIn": "原文: {locale}",
+      "source": "原文",
+      "translationError": "加载翻译失败"
+    },
+    "createGroup": {
+      "title": "创建群聊",
+      "description": "创建一个新的群聊，邀请好友一起交流",
+      "avatarLabel": "群聊头像",
+      "avatarHint": "上传一张图片作为群聊头像",
+      "uploadAvatar": "上传头像",
+      "nameLabel": "群聊名称",
+      "namePlaceholder": "输入群聊名称",
+      "cancel": "取消",
+      "create": "创建",
+      "creating": "创建中..."
+    },
+    "editGroup": {
+      "title": "编辑群聊",
+      "description": "修改群聊名称和头像",
+      "avatarLabel": "群聊头像",
+      "avatarHint": "上传一张图片作为群聊头像",
+      "uploadAvatar": "上传头像",
+      "nameLabel": "群聊名称",
+      "namePlaceholder": "输入群聊名称",
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "保存中...",
+      "saveSuccess": "保存成功",
+      "saveError": "保存失败"
+    }
+  },
+  "AdminOverview": {
+    "title": "管理概览",
+    "description": "实时数据与社区趋势监控",
+    "map": {
+      "title": "全球活动",
+      "description": "实时展示全球用户的活跃轨迹与互动热点。\n通过动态地图追踪各大洲的成员活动，为您提供直观的社区增长动态与地理分布趋势分析。"
+    },
+    "header": {
+      "status": "实时看板",
+      "title": "运营数据概览",
+      "description": "监控社区核心指标、用户活动和系统运行状况，通过详细的实时数据和历史趋势洞察社区动态。",
+      "actions": {
+        "download": "下载报表",
+        "settings": "看板设置"
+      }
+    },
+    "stats": {
+      "users": "总用户",
+      "topics": "总话题",
+      "posts": "总回复",
+      "interactions": "总互动",
+      "activeUsers7d": "活跃用户 (7d)",
+      "checkins7d": "总签到 (7d)",
+      "categories": "总分类",
+      "tags": "总标签",
+      "badges": "总徽章"
+    },
+    "charts": {
+      "userGrowth": {
+        "title": "用户增长趋势 (30d)",
+        "description": "每日新增注册用户数",
+        "label": "新用户"
+      },
+      "contentActivity": {
+        "title": "内容活跃趋势 (30d)",
+        "description": "每日话题与回复总量",
+        "total": "总活跃",
+        "topics": "话题",
+        "posts": "回复"
+      },
+      "categoryTrends": {
+        "title": "分类话题分布 (30d)",
+        "description": "热门分类下每日新增话题数"
+      },
+      "tagTrends": {
+        "title": "标签使用趋势 (30d)",
+        "description": "热门标签下每日新增话题数"
+      },
+      "topN": {
+        "label": "显示 Top",
+        "all": "全部"
+      }
+    },
+    "logs": {
+      "badges": {
+        "title": "徽章授予记录",
+        "description": "社区成就与荣誉发放动态",
+        "awardedTo": "授予给",
+        "system": "系统自动"
+      },
+      "registrations": {
+        "title": "最新注册记录",
+        "description": "最近加入社区的新成员"
+      },
+      "logins": {
+        "title": "最新登录记录",
+        "description": "实时监控用户登录动态",
+        "success": "成功",
+        "failed": "失败",
+        "table": {
+          "user": "用户",
+          "status": "状态",
+          "method": "登录方式",
+          "ip": "IP 地址",
+          "userAgent": "浏览器标识",
+          "location": "地理位置",
+          "time": "登录时间"
+        },
+        "pagination": {
+          "total": "共 {count} 条记录",
+          "page": "第 {page} 页",
+          "prev": "上一页",
+          "next": "下一页"
+        },
+        "empty": "暂无登录记录"
+      },
+      "loading": "加载中...",
+      "noMore": "已显示全部记录",
+      "empty": "暂无记录"
+    }
+  },
+  "Admin": {
+    "entry": "管理后台",
+    "title": "NextBB 管理后台",
+    "description": "NextBB 管理后台页面。",
+    "nav": {
+      "overview": "概览",
+      "topics": "话题",
+      "userManagement": "用户管理",
+      "users": "用户",
+      "registrationApplications": "注册审核",
+      "categories": "分类",
+      "tags": "标签",
+      "badges": "徽章",
+      "socialProviders": "社交登录",
+      "storageProviders": "对象存储",
+      "translationTasks": "翻译任务",
+      "automationRules": "自动化规则",
+      "llmConfigs": "大模型配置",
+      "contentStructure": "内容结构",
+      "intelligence": "智能服务",
+      "extensions": "扩展功能",
+      "expressions": "表情管理",
+      "donations": "捐赠",
+      "settings": "系统配置"
+    },
+    "translationDialog": {
+      "title": "管理翻译",
+      "sourceLanguage": "源语言",
+      "translated": "已翻译",
+      "missing": "未翻译",
+      "noName": "无名称",
+      "edit": "编辑",
+      "save": "保存",
+      "cancel": "取消",
+      "name": "名称",
+      "description": "描述"
+    },
+    "settings": {
+      "title": "系统配置",
+      "description": "管理论坛的系统配置项",
+      "save": "保存配置",
+      "reset": "重置",
+      "resetAll": "全部重置",
+      "saving": "保存中...",
+      "upload": "上传",
+      "uploading": "上传中...",
+      "basic": "基础信息",
+      "registration": "用户注册",
+      "content": "内容管理",
+      "system": "系统运行",
+      "smtp": "邮件服务",
+      "message": {
+        "saveSuccess": "配置保存成功",
+        "saveError": "配置保存失败",
+        "resetSuccess": "配置已重置",
+        "resetError": "配置重置失败",
+        "uploadSuccess": "上传成功",
+        "uploadError": "上传失败"
+      }
+    }
+  },
+  "AdminUsers": {
+    "title": "用户管理",
+    "description": "管理系统中的所有用户,包括角色分配、状态管理等",
+    "searchPlaceholder": "搜索邮箱或用户名",
+    "stats": {
+      "total": "总用户数",
+      "active": "活跃用户",
+      "admin": "管理员",
+      "deleted": "已删除"
+    },
+    "card": {
+      "admin": "管理员",
+      "deleted": "已删除",
+      "joined": "加入于",
+      "role": "角色",
+      "active": "激活",
+      "deletedStatus": "删除"
+    },
+    "filter": {
+      "title": "筛选",
+      "status": {
+        "all": "全部状态",
+        "active": "正常",
+        "disabled": "禁用"
+      },
+      "deleted": {
+        "all": "全部删除状态",
+        "normal": "正常",
+        "deleted": "已删除"
+      },
+      "apply": "应用筛选"
+    },
+    "table": {
+      "user": "用户",
+      "email": "邮箱",
+      "role": "角色",
+      "status": "状态",
+      "deleted": "删除状态",
+      "createdAt": "注册时间"
+    },
+    "role": {
+      "admin": "管理员",
+      "user": "普通用户"
+    },
+    "status": {
+      "active": "正常",
+      "disabled": "禁用"
+    },
+    "deleted": {
+      "deleted": "已删除",
+      "normal": "正常"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据",
+    "pagination": {
+      "total": "共 {count} 条",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "badges": {
+      "title": "用户徽章",
+      "manage": "管理徽章",
+      "assigned": "已赋予",
+      "empty": "暂无徽章"
+    },
+    "badgeDialog": {
+      "title": "管理用户徽章",
+      "assignTitle": "为 {name} 赋予徽章",
+      "currentBadges": "当前徽章",
+      "availableBadges": "可赋予徽章",
+      "search": "搜索徽章",
+      "filterByType": "按类型筛选",
+      "assign": "赋予选中徽章",
+      "remove": "移除选中徽章",
+      "cancel": "取消",
+      "confirm": "确认",
+      "success": "操作成功",
+      "error": "操作失败",
+      "alreadyOwned": "已拥有",
+      "selectAtLeastOne": "请至少选择一个徽章",
+      "empty": "暂无徽章"
+    }
+  },
+  "AdminRegistrationApplications": {
+    "title": "注册审核",
+    "description": "审核和管理新用户的注册申请",
+    "filter": {
+      "title": "筛选",
+      "status": "状态",
+      "statusAll": "全部状态",
+      "searchPlaceholder": "搜索邮箱或用户名",
+      "apply": "应用筛选"
+    },
+    "table": {
+      "applicant": "申请人",
+      "reason": "申请说明",
+      "status": "状态",
+      "reviewer": "审核人",
+      "reviewReason": "审核原因",
+      "createdAt": "提交时间",
+      "reviewedAt": "审核时间",
+      "actions": "操作"
+    },
+    "status": {
+      "pending": "待审核",
+      "approved": "已通过",
+      "rejected": "已拒绝"
+    },
+    "actions": {
+      "approve": "通过",
+      "reject": "拒绝"
+    },
+    "dialog": {
+      "titleApprove": "通过申请",
+      "titleReject": "拒绝申请",
+      "reasonLabel": "审核原因",
+      "reasonPlaceholder": "请填写审核原因",
+      "submitApprove": "通过并通知",
+      "submitReject": "拒绝并通知",
+      "cancel": "取消"
+    },
+    "message": {
+      "approveSuccess": "申请已通过",
+      "rejectSuccess": "申请已拒绝",
+      "updateFailed": "更新申请失败",
+      "emailFailed": "申请已更新，但邮件通知失败"
+    },
+    "empty": "暂无申请",
+    "loading": "加载中...",
+    "pagination": {
+      "total": "共 {count} 条",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    }
+  },
+  "AdminDonations": {
+    "title": "捐赠管理",
+    "description": "管理和查看所有捐赠记录，统计捐赠数据",
+    "searchPlaceholder": "搜索捐赠者名称或邮箱",
+    "createButton": "添加捐赠",
+    "stats": {
+      "total": "总捐赠数",
+      "totalAmount": "总金额",
+      "confirmed": "已确认",
+      "pending": "待确认"
+    },
+    "filter": {
+      "title": "筛选",
+      "donorType": {
+        "all": "全部捐赠者",
+        "guest": "非注册用户",
+        "registered": "注册用户"
+      },
+      "donorNamePlaceholder": "搜索捐赠者名称",
+      "userSearchPlaceholder": "搜索用户名或邮箱",
+      "noUserFound": "未找到用户",
+      "status": {
+        "all": "全部状态",
+        "pending": "待确认",
+        "confirmed": "已确认",
+        "failed": "失败",
+        "refunded": "已退款",
+        "cancelled": "已取消"
+      },
+      "source": {
+        "all": "全部来源",
+        "KOFI": "Ko-fi",
+        "PATREON": "Patreon",
+        "PAYPAL": "PayPal",
+        "ALIPAY": "支付宝",
+        "WECHAT_PAY": "微信支付",
+        "BANK_TRANSFER": "银行转账",
+        "CRYPTO": "加密货币",
+        "OTHER": "其它"
+      },
+      "apply": "应用筛选"
+    },
+    "table": {
+      "donor": "捐赠者",
+      "amount": "金额",
+      "source": "来源",
+      "status": "状态",
+      "message": "留言",
+      "createdAt": "捐赠时间",
+      "actions": "操作"
+    },
+    "status": {
+      "PENDING": "待确认",
+      "CONFIRMED": "已确认",
+      "FAILED": "失败",
+      "REFUNDED": "已退款",
+      "CANCELLED": "已取消"
+    },
+    "source": {
+      "KOFI": "Ko-fi",
+      "PATREON": "Patreon",
+      "PAYPAL": "PayPal",
+      "ALIPAY": "支付宝",
+      "WECHAT_PAY": "微信支付",
+      "BANK_TRANSFER": "银行转账",
+      "CRYPTO": "加密货币",
+      "OTHER": "其它"
+    },
+    "loading": "加载中...",
+    "empty": "暂无捐赠数据",
+    "pagination": {
+      "total": "共 {count} 条",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "dialog": {
+      "createTitle": "添加捐赠记录",
+      "editTitle": "编辑捐赠记录",
+      "form": {
+        "donorType": "捐赠者类型",
+        "guestDonor": "非注册用户",
+        "registeredDonor": "注册用户",
+        "selectUser": "选择用户",
+        "searchUserPlaceholder": "搜索用户名或邮箱",
+        "noUserFound": "未找到用户",
+        "donorName": "捐赠者名称",
+        "donorNamePlaceholder": "请输入捐赠者名称",
+        "donorEmail": "捐赠者邮箱",
+        "donorEmailPlaceholder": "请输入捐赠者邮箱",
+        "amount": "金额",
+        "amountPlaceholder": "请输入捐赠金额",
+        "currency": "货币",
+        "source": "来源",
+        "status": "状态",
+        "externalId": "外部交易ID",
+        "externalIdPlaceholder": "第三方平台交易ID（可选）",
+        "isAnonymous": "匿名捐赠",
+        "message": "捐赠留言",
+        "messagePlaceholder": "捐赠者留言（可选）",
+        "adminNote": "管理员备注",
+        "adminNotePlaceholder": "管理员备注（仅管理员可见）"
+      },
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "保存中...",
+      "success": "保存成功",
+      "error": "保存失败"
+    },
+    "actions": {
+      "edit": "编辑",
+      "confirm": "确认",
+      "delete": "删除",
+      "confirmTitle": "确认捐赠",
+      "confirmMessage": "确认此笔捐赠已收款？",
+      "deleteTitle": "删除捐赠",
+      "deleteMessage": "确定要删除此笔捐赠记录吗？此操作不可撤销。",
+      "confirmSuccess": "确认成功",
+      "deleteSuccess": "删除成功",
+      "error": "操作失败"
+    },
+    "anonymous": "匿名",
+    "error": {
+      "unauthorized": "未授权",
+      "invalidQuery": "无效的查询参数",
+      "invalidJson": "无效的 JSON 格式",
+      "invalidBody": "无效的请求体",
+      "invalidId": "无效的 ID",
+      "notFound": "捐赠记录不存在"
+    },
+    "message": {
+      "createSuccess": "捐赠记录创建成功",
+      "updateSuccess": "捐赠记录更新成功",
+      "deleteSuccess": "捐赠记录删除成功"
+    }
+  },
+  "AdminCategories": {
+    "title": "分类管理",
+    "description": "管理论坛分类，包括创建、编辑、排序等",
+    "createButton": "创建分类",
+    "searchPlaceholder": "搜索分类名称",
+    "stats": {
+      "total": "总分类数",
+      "active": "活跃分类",
+      "deleted": "已删除",
+      "hottest": "最热门"
+    },
+    "filter": {
+      "title": "筛选",
+      "deleted": {
+        "all": "全部删除状态",
+        "normal": "正常",
+        "deleted": "已删除"
+      },
+      "sortBy": "排序方式",
+      "sortByOptions": {
+        "updatedAt": "更新时间",
+        "sort": "排序值",
+        "topicCount": "话题数"
+      },
+      "apply": "应用筛选"
+    },
+    "list": {
+      "dragHint": "拖拽可调整排序",
+      "reordering": "正在更新排序..."
+    },
+    "card": {
+      "topics": "话题",
+      "updatedAt": "更新于",
+      "deleted": "已删除",
+      "edit": "编辑",
+      "delete": "删除",
+      "sourceLocale": "分类源语言"
+    },
+    "dialog": {
+      "createTitle": "创建分类",
+      "editTitle": "编辑分类",
+      "name": "名称",
+      "namePlaceholder": "请输入分类名称",
+      "icon": "图标",
+      "iconPlaceholder": "点击选择 emoji",
+      "description": "描述",
+      "descriptionPlaceholder": "请输入分类描述",
+      "sortValue": "排序值",
+      "lightModeColors": "浅色模式",
+      "bgColor": "背景色",
+      "bgColorPlaceholder": "点击选择颜色",
+      "textColor": "字体颜色",
+      "textColorPlaceholder": "点击选择颜色",
+      "darkModeColors": "深色模式",
+      "darkBgColor": "深色模式背景色",
+      "darkBgColorPlaceholder": "点击选择深色模式颜色",
+      "darkTextColor": "深色模式文字颜色",
+      "darkTextColorPlaceholder": "点击选择深色模式颜色",
+      "cancel": "取消",
+      "submit": "提交",
+      "colorPreview": "颜色预览",
+      "lightPreview": "浅色预览",
+      "darkPreview": "深色预览",
+      "clearColor": "清除颜色"
+    },
+    "deleteConfirm": {
+      "title": "确认删除分类",
+      "description": "此操作将软删除该分类，相关联的话题不会受到影响。删除后可以通过筛选器查看和恢复。",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "message": {
+      "createSuccess": "分类创建成功",
+      "updateSuccess": "分类更新成功",
+      "deleteSuccess": "分类删除成功",
+      "reorderSuccess": "排序更新成功",
+      "createError": "分类创建失败",
+      "updateError": "分类更新失败",
+      "deleteError": "分类删除失败",
+      "reorderError": "排序更新失败"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据",
+    "pagination": {
+      "total": "共 {count} 条",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "translationDialog": {
+      "title": "管理多语言翻译",
+      "sourceLanguage": "源语言",
+      "translated": "已翻译",
+      "missing": "未翻译",
+      "noName": "未填写名称",
+      "edit": "编辑",
+      "save": "保存",
+      "cancel": "取消",
+      "name": "名称",
+      "description": "描述"
+    }
+  },
+  "AdminTags": {
+    "title": "标签管理",
+    "description": "管理论坛标签，包括创建、编辑、排序等",
+    "createButton": "创建标签",
+    "searchPlaceholder": "搜索标签名称",
+    "stats": {
+      "total": "总标签数",
+      "active": "活跃标签",
+      "deleted": "已删除",
+      "hottest": "最热门"
+    },
+    "filter": {
+      "title": "筛选",
+      "deleted": {
+        "all": "全部删除状态",
+        "normal": "正常",
+        "deleted": "已删除"
+      },
+      "sortBy": "排序方式",
+      "sortByOptions": {
+        "updatedAt": "更新时间",
+        "sort": "排序值",
+        "usageCount": "使用次数"
+      },
+      "apply": "应用筛选"
+    },
+    "card": {
+      "sort": "排序",
+      "usages": "使用",
+      "times": "次",
+      "updatedAt": "更新于",
+      "deleted": "已删除",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "dialog": {
+      "createTitle": "创建标签",
+      "editTitle": "编辑标签",
+      "name": "名称",
+      "namePlaceholder": "请输入标签名称",
+      "icon": "图标",
+      "iconPlaceholder": "点击选择 emoji",
+      "description": "描述",
+      "descriptionPlaceholder": "请输入标签描述",
+      "sortValue": "排序值",
+      "lightModeColors": "浅色模式",
+      "bgColor": "背景色",
+      "bgColorPlaceholder": "点击选择颜色",
+      "textColor": "字体颜色",
+      "textColorPlaceholder": "点击选择颜色",
+      "darkModeColors": "深色模式",
+      "darkBgColor": "深色模式背景色",
+      "darkBgColorPlaceholder": "点击选择深色模式颜色",
+      "darkTextColor": "深色模式文字颜色",
+      "darkTextColorPlaceholder": "点击选择深色模式颜色",
+      "cancel": "取消",
+      "submit": "提交",
+      "colorPreview": "颜色预览",
+      "lightPreview": "浅色预览",
+      "darkPreview": "深色预览",
+      "clearColor": "清除颜色"
+    },
+    "deleteConfirm": {
+      "title": "确认删除标签",
+      "description": "此操作将软删除该标签，相关联的话题不会受到影响。删除后可以通过筛选器查看和恢复。",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "message": {
+      "createSuccess": "标签创建成功",
+      "updateSuccess": "标签更新成功",
+      "deleteSuccess": "标签删除成功",
+      "createError": "标签创建失败",
+      "updateError": "标签更新失败",
+      "deleteError": "标签删除失败"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据",
+    "pagination": {
+      "total": "共 {count} 条",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "translationDialog": {
+      "title": "管理多语言翻译",
+      "sourceLanguage": "源语言",
+      "translated": "已翻译",
+      "missing": "未翻译",
+      "noName": "未填写名称",
+      "edit": "编辑",
+      "save": "保存",
+      "cancel": "取消",
+      "name": "名称",
+      "description": "描述"
+    }
+  },
+  "AdminTopics": {
+    "title": "主题管理",
+    "description": "管理论坛中的所有主题，包括编辑、置顶、删除等",
+    "createButton": "创建主题",
+    "searchPlaceholder": "搜索主题标题",
+    "selected": "已选择 {count} 项",
+    "batchPin": "批量置顶",
+    "batchDelete": "批量删除",
+    "columns": "列配置",
+    "columnsConfig": "自定义显示列",
+    "stats": {
+      "total": "总主题数",
+      "pinned": "置顶主题",
+      "community": "推荐主题",
+      "deleted": "已删除"
+    },
+    "filter": {
+      "title": "筛选",
+      "category": {
+        "all": "全部分类"
+      },
+      "tag": {
+        "all": "全部标签"
+      },
+      "status": {
+        "all": "全部状态",
+        "pinned": "置顶",
+        "community": "推荐",
+        "deleted": "已删除",
+        "normal": "正常"
+      },
+      "sortBy": "排序方式",
+      "sortByOptions": {
+        "createdAt": "创建时间",
+        "updatedAt": "更新时间",
+        "views": "浏览数",
+        "replies": "回复数"
+      },
+      "order": "排序方向",
+      "orderOptions": {
+        "desc": "降序",
+        "asc": "升序"
+      },
+      "apply": "应用筛选"
+    },
+    "table": {
+      "selectAll": "全选",
+      "selectRow": "选择这一行",
+      "selectColumn": "选择列",
+      "title": "标题",
+      "author": "作者",
+      "category": "分类",
+      "authorCategory": "作者/分类",
+      "tags": "标签",
+      "replies": "回复",
+      "views": "浏览",
+      "stats": "统计",
+      "status": "状态",
+      "createdAt": "创建时间",
+      "activity": "最后活跃",
+      "time": "时间",
+      "created": "创建",
+      "active": "活跃",
+      "actions": "操作",
+      "more": "更多",
+      "empty": "暂无数据",
+      "pinned": "置顶",
+      "community": "推荐",
+      "deleted": "已删除",
+      "normal": "正常",
+      "edit": "编辑",
+      "delete": "删除",
+      "restore": "恢复",
+      "pin": "置顶",
+      "unpin": "取消置顶",
+      "recommend": "推荐",
+      "unrecommend": "取消推荐"
+    },
+    "card": {
+      "author": "作者",
+      "category": "分类",
+      "replies": "回复",
+      "views": "浏览",
+      "created": "创建于",
+      "lastActivity": "最后活跃",
+      "pinned": "置顶",
+      "community": "推荐",
+      "deleted": "已删除",
+      "edit": "编辑",
+      "delete": "删除",
+      "restore": "恢复",
+      "pin": "置顶",
+      "unpin": "取消置顶",
+      "recommend": "推荐",
+      "unrecommend": "取消推荐"
+    },
+    "dialog": {
+      "createTitle": "创建新主题",
+      "editTitle": "编辑主题",
+      "titleLabel": "标题",
+      "titlePlaceholder": "请输入主题标题",
+      "categoryLabel": "分类",
+      "categoryPlaceholder": "请选择分类",
+      "tagsLabel": "标签",
+      "tagsPlaceholder": "选择标签",
+      "pinnedLabel": "置顶",
+      "communityLabel": "推荐",
+      "cancel": "取消",
+      "submit": "提交"
+    },
+    "deleteConfirm": {
+      "title": "确认删除",
+      "description": "此操作将软删除该主题，主题将不会在前台显示，但可以恢复。确定要继续吗？",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "restoreConfirm": {
+      "title": "确认恢复",
+      "description": "此操作将恢复已删除的主题，主题将重新在前台显示。确定要继续吗？",
+      "cancel": "取消",
+      "confirm": "确认恢复"
+    },
+    "message": {
+      "updateSuccess": "主题更新成功",
+      "updateError": "主题更新失败",
+      "deleteSuccess": "主题删除成功",
+      "deleteError": "主题删除失败",
+      "restoreSuccess": "主题恢复成功",
+      "restoreError": "主题恢复失败",
+      "pinSuccess": "置顶成功",
+      "pinError": "置顶失败",
+      "unpinSuccess": "取消置顶成功",
+      "unpinError": "取消置顶失败",
+      "recommendSuccess": "推荐成功",
+      "recommendError": "推荐失败",
+      "unrecommendSuccess": "取消推荐成功",
+      "unrecommendError": "取消推荐失败",
+      "batchDeleteSuccess": "批量删除成功",
+      "batchDeleteError": "批量删除失败",
+      "batchPinSuccess": "批量置顶成功",
+      "batchPinError": "批量置顶失败"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据",
+    "pagination": {
+      "total": "共 {count} 个主题",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    }
+  },
+  "AdminBadges": {
+    "title": "徽章管理",
+    "description": "管理论坛徽章系统，创建和配置各类成就徽章",
+    "createButton": "创建徽章",
+    "loading": "加载中...",
+    "empty": "暂无徽章数据",
+    "stats": {
+      "total": "徽章总数",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "deleted": "已删除",
+      "byType": "按类型统计"
+    },
+    "filter": {
+      "title": "筛选条件",
+      "badgeType": "徽章类型",
+      "level": "徽章等级",
+      "status": "状态",
+      "sortBy": "排序方式",
+      "apply": "应用筛选",
+      "badgeTypeOptions": {
+        "all": "全部类型",
+        "achievement": "成就徽章",
+        "honor": "荣誉徽章",
+        "role": "角色徽章",
+        "event": "活动徽章",
+        "special": "特殊徽章"
+      },
+      "levelOptions": {
+        "all": "全部等级",
+        "1": "普通",
+        "2": "优秀",
+        "3": "稀有",
+        "4": "史诗",
+        "5": "传说"
+      },
+      "statusOptions": {
+        "all": "全部状态",
+        "enabled": "已启用",
+        "disabled": "已禁用",
+        "deleted": "已删除"
+      },
+      "sortByOptions": {
+        "updatedAt": "更新时间",
+        "sort": "排序值",
+        "level": "等级"
+      }
+    },
+    "searchPlaceholder": "搜索徽章名称或描述",
+    "badgeType": {
+      "achievement": "成就徽章",
+      "honor": "荣誉徽章",
+      "role": "角色徽章",
+      "event": "活动徽章",
+      "special": "特殊徽章"
+    },
+    "level": {
+      "common": "普通",
+      "excellent": "优秀",
+      "rare": "稀有",
+      "epic": "史诗",
+      "legendary": "传说"
+    },
+    "card": {
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "deleted": "已删除",
+      "visible": "可见",
+      "hidden": "隐藏",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "dialog": {
+      "createTitle": "创建徽章",
+      "editTitle": "编辑徽章",
+      "name": "徽章名称",
+      "namePlaceholder": "请输入徽章名称",
+      "icon": "徽章图标",
+      "iconPlaceholder": "选择一个表情符号",
+      "description": "徽章描述",
+      "descriptionPlaceholder": "请输入徽章描述",
+      "badgeType": "徽章类型",
+      "badgeTypePlaceholder": "选择徽章类型",
+      "level": "徽章等级",
+      "levelPlaceholder": "选择徽章等级",
+      "sortValue": "排序值",
+      "lightModeColors": "浅色模式",
+      "bgColor": "背景颜色",
+      "bgColorPlaceholder": "选择背景颜色",
+      "textColor": "文字颜色",
+      "textColorPlaceholder": "选择文字颜色",
+      "darkModeColors": "深色模式",
+      "darkBgColor": "深色模式背景色",
+      "darkBgColorPlaceholder": "点击选择深色模式颜色",
+      "darkTextColor": "深色模式文字颜色",
+      "darkTextColorPlaceholder": "点击选择深色模式颜色",
+      "isEnabled": "启用徽章",
+      "isVisible": "前台可见",
+      "colorPreview": "颜色预览",
+      "lightPreview": "浅色预览",
+      "darkPreview": "深色预览",
+      "cancel": "取消",
+      "submit": "保存"
+    },
+    "deleteConfirm": {
+      "title": "确认删除徽章",
+      "description": "此操作将软删除该徽章，数据仍会保留。确认继续？",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "message": {
+      "createSuccess": "徽章创建成功",
+      "createError": "徽章创建失败",
+      "updateSuccess": "徽章更新成功",
+      "updateError": "徽章更新失败",
+      "deleteSuccess": "徽章删除成功",
+      "deleteError": "徽章删除失败"
+    },
+    "pagination": {
+      "total": "共 {count} 个徽章",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    }
+  },
+  "Config": {
+    "basic": {
+      "name": {
+        "label": "论坛名称",
+        "description": "显示在网站标题、页眉等位置"
+      },
+      "description": {
+        "label": "论坛描述",
+        "description": "SEO 元数据描述"
+      },
+      "logo": {
+        "label": "论坛 Logo",
+        "description": "用于网站标识的图片地址"
+      },
+      "contact_email": {
+        "label": "联系邮箱",
+        "description": "管理员联系邮箱"
+      },
+      "icp": {
+        "label": "网站备案信息",
+        "description": "ICP 备案号等"
+      },
+      "welcome_message": {
+        "label": "首页欢迎语",
+        "description": "自定义首页标题,留空则使用默认多语言标题"
+      }
+    },
+    "registration": {
+      "enabled": {
+        "label": "允许注册",
+        "description": "全局开关，控制是否开放新用户注册"
+      },
+      "email_verify": {
+        "label": "邮箱验证",
+        "description": "注册后是否必须验证邮箱"
+      },
+      "username_min_length": {
+        "label": "用户名最小长度",
+        "description": "用户名允许的最小字符数"
+      },
+      "username_max_length": {
+        "label": "用户名最大长度",
+        "description": "用户名允许的最大字符数"
+      },
+      "require_invite_code": {
+        "label": "邀请码注册",
+        "description": "开启后新用户必须提供有效邀请码才能注册"
+      },
+      "review_enabled": {
+        "label": "注册审核",
+        "description": "开启后新用户提交申请并等待管理员审核"
+      }
+    },
+    "content": {
+      "topic": {
+        "publish_permission": {
+          "label": "话题发布权限",
+          "description": "控制哪些用户可以发布话题（all/verified/admin）"
+        }
+      },
+      "post": {
+        "reply_permission": {
+          "label": "回复权限",
+          "description": "控制哪些用户可以回复帖子（all/verified/admin）"
+        }
+      },
+      "moderation": {
+        "enabled": {
+          "label": "内容审核",
+          "description": "是否启用内容审核机制"
+        }
+      },
+      "filter": {
+        "enabled": {
+          "label": "敏感词过滤",
+          "description": "是否启用敏感词过滤功能"
+        }
+      },
+      "upload": {
+        "max_size": {
+          "label": "上传文件大小限制",
+          "description": "上传文件的最大大小（MB）"
+        }
+      }
+    },
+    "system": {
+      "pagination": {
+        "page_size": {
+          "label": "分页大小",
+          "description": "列表页面每页显示的条目数"
+        }
+      },
+      "cache": {
+        "ttl": {
+          "label": "缓存过期时间",
+          "description": "缓存数据的过期时间（秒）"
+        }
+      },
+      "maintenance": {
+        "enabled": {
+          "label": "维护模式",
+          "description": "是否开启网站维护模式"
+        },
+        "message": {
+          "label": "维护提示信息",
+          "description": "维护模式下显示的提示文字"
+        }
+      },
+      "translation": {
+        "enabled_locales": {
+          "label": "启用自动翻译的语言",
+          "description": "选择自动翻译任务需要生成的目标语言，可多选"
+        }
+      }
+    },
+    "smtp": {
+      "host": {
+        "label": "SMTP 服务器地址",
+        "description": "SMTP 服务器主机名或 IP 地址"
+      },
+      "port": {
+        "label": "SMTP 端口",
+        "description": "SMTP 服务器端口号"
+      },
+      "secure": {
+        "label": "使用 TLS/SSL",
+        "description": "是否启用 TLS/SSL 加密连接"
+      },
+      "auth_user": {
+        "label": "SMTP 用户名",
+        "description": "SMTP 登录用户名"
+      },
+      "auth_pass": {
+        "label": "SMTP 密码",
+        "description": "SMTP 登录密码"
+      },
+      "from_name": {
+        "label": "发件人名称",
+        "description": "邮件显示的发件人名称"
+      },
+      "from_email": {
+        "label": "发件人邮箱",
+        "description": "邮件显示的发件人邮箱地址"
+      }
+    }
+  },
+  "User": {
+    "profile": {
+      "title": "用户主页",
+      "badges": "徽章",
+      "preferences": "设置",
+      "joinedAt": "加入于",
+      "statistics": {
+        "topics": "话题",
+        "posts": "回复",
+        "likes": "点赞",
+        "bookmarks": "收藏",
+        "badges": "徽章",
+        "credits": "积分"
+      },
+      "overview": {
+        "title": "概览",
+        "statistics": {
+          "title": "统计数据"
+        },
+        "activeStats": {
+          "title": "活跃指标",
+          "joinDays": "加入天数",
+          "topicsCreated": "创建的主题",
+          "repliesCount": "回复总数",
+          "unit": {
+            "day": "天",
+            "topic": "条",
+            "reply": "条",
+            "joinedToday": "今天加入"
+          }
+        },
+        "interactionStats": {
+          "title": "互动指标",
+          "likesGiven": "送出的赞",
+          "likesReceived": "收到的赞",
+          "bookmarksCount": "收藏数量",
+          "bookmarkedCount": "被收藏数量"
+        },
+        "honorStats": {
+          "title": "荣誉指标",
+          "badgesCount": "获得的徽章",
+          "checkinCount": "签到总次数",
+          "unit": {
+            "badge": "枚",
+            "checkin": "次"
+          }
+        },
+        "topContent": {
+          "title": "热门内容",
+          "topTopics": "热门主题",
+          "topReplies": "热门回复",
+          "views": "浏览",
+          "likes": "点赞",
+          "emptyTopics": "还没有发布主题，快去分享你的想法吧！",
+          "emptyReplies": "还没有参与讨论，快去回复感兴趣的话题吧！",
+          "inTopic": "在话题中"
+        },
+        "socialInteraction": {
+          "title": "社交互动",
+          "topLikers": "赞我最多",
+          "topLiked": "我赞最多",
+          "likesCount": "{count} 个赞",
+          "emptyLikers": "还没有收到点赞，继续加油！",
+          "emptyLiked": "还没有给他人点赞，快去支持优质内容吧！"
+        }
+      },
+      "actions": {
+        "edit": "编辑资料",
+        "manage": "管理用户",
+        "message": "发送私信",
+        "follow": "关注",
+        "unfollow": "取消关注"
+      },
+      "notFound": "用户不存在或已被禁用",
+      "notFoundDescription": "该用户可能已被删除、禁用或从未存在。",
+      "backToHome": "返回首页",
+      "unauthorized": "您无权访问此页面",
+      "empty": {
+        "activity": "暂无活动记录",
+        "topics": "暂无发布的话题",
+        "posts": "暂无回复的帖子",
+        "likes": "暂无点赞记录",
+        "bookmarks": "暂无收藏内容",
+        "badges": "暂未获得徽章",
+        "followers": "暂无粉丝",
+        "following": "暂无关注的用户"
+      },
+      "follows": {
+        "title": "关注",
+        "followers": "粉丝",
+        "following": "关注中",
+        "followersCount": "位粉丝",
+        "followingCount": "位关注",
+        "followedAt": "关注于"
+      },
+      "badgeList": {
+        "title": "徽章列表",
+        "description": "用户获得的所有徽章及获得时间线",
+        "journey": "徽章旅程",
+        "awardedAt": "授予时间",
+        "awardedBy": "授予人",
+        "system": "系统",
+        "empty": "暂未获得任何徽章",
+        "emptyDescription": "参与社区活动获取徽章吧！",
+        "totalBadges": "共获得{count}个徽章"
+      },
+      "activity": {
+        "title": "活动",
+        "timelineTitle": "活动时间线",
+        "timelineDescription": "记录每一次互动和贡献",
+        "scrollLoadMore": "向下滚动加载更多...",
+        "allLoaded": "已加载全部活动",
+        "filter": {
+          "all": "所有",
+          "topics": "主题",
+          "posts": "回复",
+          "likes": "赞",
+          "bookmarks": "收藏"
+        },
+        "empty": {
+          "all": "暂无任何活动记录",
+          "topics": "暂未发布任何主题",
+          "posts": "暂未发表任何回复",
+          "likes": "暂未点赞任何内容",
+          "bookmarks": "暂未收藏任何内容"
+        },
+        "item": {
+          "topic": "发布了主题",
+          "post": "回复了",
+          "like": "点赞了",
+          "bookmark": "收藏了",
+          "views": "浏览",
+          "replies": "回复",
+          "floor": "楼"
+        },
+        "permission": {
+          "denied": "仅本人或管理员可查看此内容"
+        }
+      }
+    },
+    "notifications": {
+      "title": "通知",
+      "nav": {
+        "all": "全部",
+        "mentions": "提及",
+        "replies": "回复",
+        "likes": "赞",
+        "awards": "奖励",
+        "system": "系统",
+        "prevPage": "上一页",
+        "nextPage": "下一页",
+        "pageCounter": "第 {page} 页"
+      },
+      "empty": {
+        "all": "暂无通知",
+        "mentions": "暂无被提及的记录",
+        "replies": "暂无回复通知",
+        "likes": "暂无点赞通知",
+        "awards": "暂无奖励通知",
+        "system": "暂无系统通知"
+      },
+      "item": {
+        "TOPIC_REPLY": "在话题 {topic} 中回复了你",
+        "POST_REPLY": "回复了你在 {topic} 中的帖子",
+        "MENTION": "在 {topic} 中提到了你",
+        "LIKE": "点赞了你在 {topic} 中的帖子",
+        "BADGE_AWARD": "恭喜！你获得了勋章 {badge}",
+        "BOUNTY_REWARD": "你在 {topic} 中的回答获得了悬赏奖励",
+        "LOTTERY_WIN": "恭喜！你在 {topic} 的抽奖中中奖了",
+        "SYSTEM": "系统通知: {message}"
+      }
+    },
+    "activity": {
+      "all": "全部活动",
+      "topics": "发布话题",
+      "posts": "回复帖子",
+      "likes": "点赞记录",
+      "bookmarks": "收藏夹"
+    },
+    "preferences": {
+      "title": "设置",
+      "account": {
+        "title": "账户",
+        "description": "管理你的账户信息和关联账号",
+        "basicInfo": "基本信息",
+        "username": "用户名",
+        "email": "邮箱",
+        "avatar": "头像",
+        "uploadAvatar": "上传头像",
+        "uploading": "上传中...",
+        "uploadSuccess": "头像上传成功",
+        "uploadError": "头像上传失败，请重试",
+        "fileTooLarge": "文件大小不能超过 5MB",
+        "invalidFileType": "只支持 JPG、PNG、WEBP 和 GIF 格式",
+        "titleBadge": "头衔",
+        "titleBadgePlaceholder": "选择一个徽章作为头衔",
+        "noTitleBadge": "使用默认头衔",
+        "save": "保存更改",
+        "saving": "保存中...",
+        "saveSuccess": "保存成功",
+        "saveError": "保存失败，请重试",
+        "usernameHelper": "用户名可修改，但需要保证唯一性",
+        "emailHelper": "邮箱用于登录和接收通知",
+        "usernameInvalid": "用户名格式不正确",
+        "usernameTaken": "该用户名已被使用",
+        "usernameCheckError": "检查用户名失败,请重试",
+        "usernameChecking": "正在检查用户名...",
+        "customStatus": "自定义状态",
+        "customStatusHelper": "设置一个个性化状态，让其他人了解你当前的状态",
+        "customStatusPlaceholder": "你在忙什么...",
+        "statusExpiry": "状态过期时间",
+        "statusExpiryPlaceholder": "选择过期时间",
+        "statusExpiryNever": "永不过期",
+        "statusExpiry1Hour": "1 小时后",
+        "statusExpiry4Hours": "4 小时后",
+        "statusExpiryToday": "今天结束时",
+        "statusExpiry1Week": "1 周后",
+        "statusExpiry1Month": "1 月后",
+        "notSet": "未设置",
+        "expiresAt": "过期于",
+        "emoji": "表情",
+        "statusText": "状态文本",
+        "clearStatus": "清除状态",
+        "saveStatus": "保存",
+        "cancel": "取消",
+        "statusExpiryCustom": "快捷设置",
+        "statusExpiryCustomPlaceholder": "选择过期时间",
+        "selectedExpiry": "已选择过期时间",
+        "apply": "应用"
+      },
+      "profile": {
+        "title": "个人资料",
+        "description": "管理你的个人资料信息",
+        "bio": "个人简介",
+        "bioPlaceholder": "介绍一下你自己...",
+        "bioHelper": "介绍一下自己",
+        "website": "个人网站",
+        "websitePlaceholder": "https://example.com",
+        "location": "所在地",
+        "locationPlaceholder": "你的城市或国家",
+        "birthday": "生日",
+        "birthdayPlaceholder": "选择日期",
+        "save": "保存更改",
+        "saving": "保存中...",
+        "saveSuccess": "保存成功",
+        "saveError": "保存失败，请重试"
+      },
+      "security": {
+        "title": "安全",
+        "description": "管理密码和第三方账号绑定",
+        "passwordManagement": {
+          "title": "密码管理",
+          "descriptionHasPassword": "您可以通过邮件重置密码来更改当前密码。",
+          "descriptionNoPassword": "您的账号尚未设置密码，可以通过邮件设置一个密码。",
+          "sendResetEmail": "发送密码重置电子邮件",
+          "sending": "发送中...",
+          "cooldown": "{seconds}s 后可重发",
+          "emailSent": "重置邮件已发送，请检查您的邮箱，点击邮件中的链接重置密码。",
+          "sendError": "发送失败，请重试",
+          "sendTooFrequent": "发送过于频繁，请稍后再试"
+        },
+        "socialAccounts": {
+          "title": "关联账号",
+          "description": "管理与第三方平台的账号关联，方便快捷登录",
+          "linked": "已关联",
+          "notLinked": "未关联",
+          "link": "关联",
+          "unlink": "解除关联",
+          "lastUsed": "最近使用于",
+          "linkSuccess": "账号关联成功",
+          "linkError": "账号关联失败，请重试",
+          "unlinkSuccess": "已解除账号关联",
+          "unlinkError": "解除关联失败，请重试",
+          "alreadyLinked": "此账号已关联到您的账户",
+          "linkedToOther": "此社交账号已关联到其他用户",
+          "cannotUnlinkLast": "无法解除最后一个关联账号（您尚未设置密码）",
+          "unlinkConfirmTitle": "确认解除关联",
+          "unlinkConfirmDescription": "确定要解除与 {provider} 的账号关联吗？解除后将无法使用该平台登录。",
+          "cancel": "取消",
+          "confirmUnlink": "确认解除"
+        }
+      },
+      "interface": {
+        "title": "界面"
+      },
+      "notifications": {
+        "title": "通知偏好"
+      },
+      "privacy": {
+        "title": "隐私"
+      }
+    },
+    "invitations": {
+      "title": "邀请",
+      "description": "创建和管理邀请码，邀请新用户加入社区",
+      "createCode": "创建邀请码",
+      "creating": "创建中...",
+      "note": "备注",
+      "notePlaceholder": "可选，为这个邀请码添加备注",
+      "maxUses": "最大使用次数",
+      "maxUsesPlaceholder": "留空为不限次数",
+      "expiresAt": "过期时间",
+      "expiresAtPlaceholder": "留空为永不过期",
+      "code": "邀请码",
+      "copyCode": "复制邀请码",
+      "codeCopied": "邀请码已复制到剪贴板",
+      "statusActive": "生效中",
+      "statusInactive": "已停用",
+      "statusExpired": "已过期",
+      "statusMaxUsed": "已用完",
+      "usedCount": "已使用 {used} 次",
+      "usedCountWithMax": "已使用 {used}/{max} 次",
+      "noExpiry": "永不过期",
+      "expiresAtLabel": "过期于 {date}",
+      "enable": "启用",
+      "disable": "停用",
+      "delete": "删除",
+      "deleteConfirmTitle": "确认删除邀请码",
+      "deleteConfirmDescription": "确定要删除这个邀请码吗？此操作不可撤销。",
+      "deleteHasInvitations": "该邀请码已有邀请记录，无法删除",
+      "deleteSuccess": "邀请码已删除",
+      "deleteError": "删除失败，请重试",
+      "updateSuccess": "邀请码已更新",
+      "updateError": "更新失败，请重试",
+      "createSuccess": "邀请码创建成功",
+      "createError": "创建失败，请重试",
+      "cancel": "取消",
+      "confirm": "确认",
+      "invitedUsers": "已邀请用户",
+      "noInvitedUsers": "暂无邀请记录",
+      "emptyState": "你还没有创建邀请码",
+      "emptyStateHint": "创建邀请码来邀请新用户加入社区"
+    }
+  },
+  "UserCard": {
+    "viewProfile": "查看主页",
+    "follow": "关注",
+    "following": "已关注",
+    "message": "私信",
+    "admin": "管理员",
+    "badges": "徽章",
+    "allBadges": "所有徽章",
+    "joinedAt": "加入于",
+    "statistics": {
+      "topics": "主题",
+      "posts": "回复",
+      "likes": "点赞",
+      "followers": "粉丝",
+      "credits": "积分"
+    },
+    "loading": "加载中...",
+    "loadingStats": "加载统计中...",
+    "followSuccess": "关注成功",
+    "unfollowSuccess": "已取消关注",
+    "followError": "操作失败，请稍后再试",
+    "messageLoginRequired": "请先登录后再发送私信",
+    "messageError": "创建会话失败，请稍后再试",
+    "website": "个人网站",
+    "location": "所在地",
+    "birthday": "生日"
+  },
+  "Leaderboard": {
+    "title": "社区排行榜",
+    "subtitle": "社区排行榜展示不同维度的优秀用户",
+    "wealth": "富豪榜",
+    "wealthDesc": "财富积累 - 基于用户当前的积分余额",
+    "pioneer": "先锋榜",
+    "pioneerDesc": "动态活跃 - 基于近7天内的话题和帖子数量",
+    "expert": "智囊榜",
+    "expertDesc": "专业贡献 - 基于被采纳为最佳答案的次数",
+    "reputation": "声望榜",
+    "reputationDesc": "社区认可 - 基于获得的点赞数和收藏数总和",
+    "credits": "积分",
+    "activities": "活跃度",
+    "acceptances": "被采纳次数",
+    "likesAndBookmarks": "声望值",
+    "rank": "排名",
+    "user": "用户",
+    "value": "数值",
+    "noData": "暂无排名数据",
+    "loadError": "加载失败，请稍后重试",
+    "lastUpdated": "最后更新时间",
+    "loading": "加载中...",
+    "loadingData": "正在获取排行榜数据",
+    "loadFailed": "加载失败",
+    "retryLater": "请稍后重试或刷新页面",
+    "noRankingData": "暂无排名数据",
+    "joinCommunity": "快来参与社区活动,冲上排行榜吧!",
+    "yourRanking": "你的排名",
+    "fullLeaderboard": "完整排行榜",
+    "wealthShort": "富豪",
+    "pioneerShort": "先锋",
+    "expertShort": "智囊",
+    "reputationShort": "声望",
+    "noMoreData": "没有更多数据了"
+  },
+  "Donation": {
+    "pageTitle": "捐赠荣誉榜",
+    "title": "捐赠荣誉榜",
+    "subtitle": "感谢每一位支持者的慷慨捐赠",
+    "monthTab": "本月榜单",
+    "yearTab": "本年榜单",
+    "allTab": "历史总榜",
+    "monthDesc": "展示本月捐赠记录",
+    "yearDesc": "展示本年度捐赠记录",
+    "allDesc": "展示所有历史捐赠记录",
+    "totalAmount": "总捐赠金额",
+    "totalCount": "捐赠人次",
+    "amount": "金额",
+    "message": "留言",
+    "anonymous": "匿名善心人士",
+    "noData": "暂无捐赠记录",
+    "noDataDesc": "成为第一个捐赠者吧！",
+    "loading": "正在加载",
+    "loadingData": "获取捐赠数据中...",
+    "loadFailed": "加载失败",
+    "retryLater": "请稍后重试",
+    "lastUpdated": "最后更新",
+    "people": "人次",
+    "donatedAt": "捐赠于",
+    "fullLeaderboard": "完整排行榜",
+    "noMoreData": "没有更多数据了"
+  },
+  "AdminTranslationTasks": {
+    "title": "翻译任务管理",
+    "description": "管理系统中的所有翻译任务，监控状态和处理异常",
+    "refresh": "刷新",
+    "loading": "加载中...",
+    "empty": "暂无翻译任务",
+    "locales": {
+      "en": "英语",
+      "zh": "中文"
+    },
+    "status": {
+      "all": "全部状态",
+      "pending": "等待中",
+      "processing": "进行中",
+      "completed": "已完成",
+      "failed": "失败",
+      "cancelled": "已取消"
+    },
+    "priority": {
+      "all": "全部优先级",
+      "urgent": "紧急",
+      "high": "高",
+      "normal": "普通",
+      "low": "低",
+      "lowest": "最低"
+    },
+    "entityType": {
+      "category": "分类",
+      "tag": "标签",
+      "badge": "徽章",
+      "topic": "话题",
+      "post": "帖子",
+      "message": "消息",
+      "expression_group": "表情分组",
+      "expression": "表情"
+    },
+    "filter": {
+      "title": "筛选",
+      "entityType": {
+        "all": "全部类型"
+      },
+      "sourceLocale": {
+        "all": "全部源语言"
+      },
+      "targetLocale": {
+        "all": "全部目标语言"
+      }
+    },
+    "table": {
+      "entity": "实体",
+      "language": "语言",
+      "statusLabel": "状态",
+      "priorityLabel": "优先级",
+      "retry": "重试",
+      "time": "时间",
+      "actions": "操作",
+      "empty": "暂无数据",
+      "created": "创建于",
+      "updated": "更新于",
+      "action": {
+        "retry": "重试",
+        "delete": "删除",
+        "cancel": "取消",
+        "execute": "执行"
+      }
+    },
+    "selectedCount": "已选择 {count} 项",
+    "clearSelection": "清除选择",
+    "batch": {
+      "retry": "批量重试",
+      "cancel": "批量取消",
+      "delete": "批量删除"
+    },
+    "batchDeleteConfirm": "确认删除选中的任务？",
+    "message": {
+      "retrySuccess": "任务已重置，等待处理",
+      "retryError": "任务重试失败",
+      "executeSuccess": "任务已触发执行",
+      "executeError": "任务执行触发失败",
+      "deleteSuccess": "任务已删除",
+      "deleteError": "任务删除失败",
+      "cancelSuccess": "任务已取消",
+      "cancelError": "任务取消失败",
+      "batchSuccess": "批量操作成功",
+      "batchError": "批量操作失败"
+    },
+    "deleteConfirm": {
+      "description": "确定要删除此翻译任务吗？此操作无法撤销。"
+    },
+    "pagination": {
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "error": {
+      "unauthorized": "未授权",
+      "invalidId": "无效的 ID",
+      "taskNotFound": "任务未找到",
+      "internalServerError": "服务器内部错误",
+      "invalidJson": "无效的 JSON",
+      "invalidAction": "无效的操作",
+      "taskPendingOrProcessing": "任务正在等待或进行中",
+      "taskNotPending": "任务不在等待中",
+      "invalidIds": "无效的 ID 列表"
+    }
+  },
+  "AdminLLMConfigs": {
+    "title": "大模型配置",
+    "description": "管理大语言模型配置信息",
+    "createButton": "新建配置",
+    "searchPlaceholder": "搜索配置名称",
+    "table": {
+      "name": "名称",
+      "interfaceMode": "接口模式",
+      "baseUrl": "接口地址",
+      "apiKey": "密钥",
+      "usage": "用途",
+      "status": "状态",
+      "actions": "操作",
+      "edit": "编辑",
+      "delete": "删除",
+      "enabled": "启用",
+      "disabled": "禁用",
+      "notConfigured": "未配置",
+      "noConfig": "暂无配置",
+      "configure": "去配置"
+    },
+    "usages": {
+      "TRANSLATION": "翻译",
+      "CHAT": "聊天",
+      "SUMMARIZATION": "摘要"
+    },
+    "dialog": {
+      "title": "大模型配置",
+      "createTitle": "新建配置",
+      "editTitle": "编辑配置",
+      "interfaceMode": "接口模式",
+      "name": "名称",
+      "baseUrl": "接口地址",
+      "apiKey": "密钥",
+      "apiKeyPlaceholder": "留空则保留原有密钥",
+      "usage": "用途",
+      "isEnabled": "启用",
+      "cancel": "取消",
+      "submit": "提交"
+    },
+    "deleteConfirm": {
+      "title": "确认删除",
+      "description": "确定要删除此配置吗？此操作无法撤销。",
+      "cancel": "取消",
+      "confirm": "删除"
+    },
+    "message": {
+      "createSuccess": "配置创建成功",
+      "updateSuccess": "配置更新成功",
+      "deleteSuccess": "配置删除成功",
+      "createError": "配置创建失败",
+      "updateError": "配置更新失败",
+      "deleteError": "配置删除失败"
+    }
+  },
+  "AdminAutomationRules": {
+    "title": "自动化规则",
+    "description": "管理系统自动化规则配置",
+    "createButton": "创建规则",
+    "actionTypes": {
+      "CREDIT_CHANGE": "积分变动",
+      "BADGE_GRANT": "授予徽章",
+      "BADGE_REVOKE": "撤销徽章",
+      "USER_GROUP_CHANGE": "用户组变更"
+    },
+    "stats": {
+      "total": "总规则数",
+      "enabled": "启用规则",
+      "disabled": "禁用规则",
+      "deleted": "已删除规则",
+      "triggerDistribution": "触发器分布",
+      "actionDistribution": "动作分布"
+    },
+    "filter": {
+      "title": "筛选条件",
+      "searchPlaceholder": "搜索规则名称或描述",
+      "triggerType": "触发器类型",
+      "actionType": "动作类型",
+      "status": "状态",
+      "sortBy": "排序方式",
+      "triggerTypeOptions": {
+        "all": "全部触发器",
+        "CRON": "定时任务",
+        "POST_CREATE": "发帖",
+        "POST_REPLY": "回帖",
+        "CHECKIN": "签到",
+        "DONATION": "捐赠",
+        "POST_LIKE_GIVEN": "送出的赞",
+        "POST_LIKE_RECEIVED": "收到的赞",
+        "USER_REGISTER": "注册",
+        "USER_LOGIN": "登录"
+      },
+      "actionTypeOptions": {
+        "all": "全部动作",
+        "CREDIT_CHANGE": "积分变动",
+        "BADGE_GRANT": "授予徽章",
+        "BADGE_REVOKE": "撤销徽章",
+        "USER_GROUP_CHANGE": "用户组变更"
+      },
+      "statusOptions": {
+        "all": "全部状态",
+        "enabled": "启用",
+        "disabled": "禁用",
+        "deleted": "已删除"
+      },
+      "sortByOptions": {
+        "updatedAt": "更新时间",
+        "createdAt": "创建时间",
+        "priority": "优先级"
+      }
+    },
+    "card": {
+      "priority": "优先级",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "deleted": "已删除",
+      "repeatable": "可重复",
+      "nonRepeatable": "不可重复",
+      "maxExecutions": "最大执行次数",
+      "cooldown": "冷却时间",
+      "noLimit": "无限制",
+      "timeRange": "生效时间",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间",
+      "actions": {
+        "viewLogs": "查看日志",
+        "edit": "编辑",
+        "enable": "启用",
+        "disable": "禁用",
+        "delete": "删除"
+      }
+    },
+    "dialog": {
+      "createTitle": "创建规则",
+      "editTitle": "编辑规则",
+      "name": "规则名称",
+      "namePlaceholder": "请输入规则名称",
+      "description": "规则描述",
+      "descriptionPlaceholder": "请输入规则描述",
+      "triggerType": "触发器类型",
+      "actionType": "动作类型",
+      "addAction": "添加动作",
+      "actionIndex": "动作 {index}",
+      "priority": "优先级",
+      "isEnabled": "启用规则",
+      "isRepeatable": "可重复触发",
+      "maxExecutions": "最大执行次数",
+      "maxExecutionsPlaceholder": "留空表示无限制",
+      "cooldownSeconds": "冷却时间（秒）",
+      "cooldownSecondsPlaceholder": "留空表示无冷却",
+      "timeRangeTitle": "生效时间范围",
+      "timeRangeHint": "不选择则规则在所有时间段都生效",
+      "startTime": "开始时间",
+      "endTime": "结束时间",
+      "cancel": "取消",
+      "submit": "提交",
+      "submitting": "提交中...",
+      "triggerConditions": "触发条件配置",
+      "actionParams": "动作参数配置",
+      "noTriggerConfig": "此触发器类型无需额外配置",
+      "featureNotImplemented": "此功能暂未实现",
+      "basicInfo": {
+        "title": "基本信息",
+        "name": "规则名称",
+        "namePlaceholder": "请输入规则名称",
+        "description": "规则描述",
+        "descriptionPlaceholder": "请输入规则描述",
+        "priority": "优先级",
+        "priorityHelp": "数字越大优先级越高"
+      },
+      "trigger": {
+        "title": "触发器配置",
+        "type": "触发器类型",
+        "conditions": "触发条件"
+      },
+      "action": {
+        "title": "动作配置",
+        "type": "动作类型",
+        "params": "动作参数"
+      },
+      "control": {
+        "title": "执行控制",
+        "isEnabled": "启用规则",
+        "isRepeatable": "可重复触发",
+        "maxExecutions": "最大执行次数",
+        "maxExecutionsPlaceholder": "留空表示无限制",
+        "cooldownSeconds": "冷却时间（秒）",
+        "cooldownPlaceholder": "留空表示无冷却"
+      },
+      "timeRange": {
+        "title": "生效时间范围",
+        "startTime": "开始时间",
+        "endTime": "结束时间"
+      },
+      "actions": {
+        "title": "执行动作列表",
+        "cancel": "取消",
+        "submit": "提交"
+      }
+    },
+    "logsDialog": {
+      "title": "规则执行日志",
+      "filter": {
+        "status": "执行状态",
+        "timeRange": "时间范围",
+        "statusOptions": {
+          "all": "全部状态",
+          "SUCCESS": "成功",
+          "FAILED": "失败",
+          "SKIPPED": "跳过"
+        },
+        "timeRangeOptions": {
+          "last7days": "最近7天",
+          "last30days": "最近30天",
+          "custom": "自定义"
+        }
+      },
+      "log": {
+        "executedAt": "执行时间",
+        "triggeredBy": "触发用户",
+        "status": "状态",
+        "context": "触发上下文",
+        "result": "执行结果",
+        "error": "错误信息"
+      }
+    },
+    "deleteConfirm": {
+      "title": "确认删除",
+      "description": "确定要删除此规则吗？此操作不可恢复。",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "message": {
+      "createSuccess": "创建成功",
+      "createError": "创建失败",
+      "updateSuccess": "更新成功",
+      "updateError": "更新失败",
+      "deleteSuccess": "删除成功",
+      "deleteError": "删除失败",
+      "enableSuccess": "启用成功",
+      "enableError": "启用失败",
+      "disableSuccess": "禁用成功",
+      "disableError": "禁用失败"
+    },
+    "pagination": {
+      "total": "共 {count} 条记录",
+      "page": "第 {page} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "error": {
+      "unauthorized": "未授权",
+      "ruleNotFound": "规则未找到",
+      "nameLengthInvalid": "名称长度必须在 1-128 个字符之间",
+      "descriptionLengthInvalid": "描述不能超过 512 个字符",
+      "invalidTriggerType": "无效的触发器类型",
+      "invalidActions": "无效的动作：必须是非空数组且包含有效的动作对象",
+      "priorityMustBeInteger": "优先级必须是整数",
+      "invalidDateFormat": "无效的日期格式",
+      "endTimeMustBeAfterStartTime": "结束时间必须大于开始时间",
+      "internalServerError": "服务器内部错误"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据",
+    "triggerConfig": {
+      "cron": {
+        "cronExpression": "Cron 表达式",
+        "cronExpressionHint": "格式：秒 分 时 日 月 周，例：0 0 * * * 代表每天零点",
+        "timezone": "时区"
+      },
+      "postCreate": {
+        "categories": "指定分类",
+        "categoriesHint": "不选择则适用于所有分类",
+        "minContentLength": "最小内容长度",
+        "minContentLengthHint": "内容字符数需要达到此数值才触发"
+      },
+      "checkin": {
+        "consecutiveDays": "连续签到天数",
+        "consecutiveDaysHint": "不填写则为每次签到都触发"
+      },
+      "donation": {
+        "minAmount": "最小捐赠金额",
+        "minAmountHint": "捐赠金额需达到此数值才触发",
+        "currency": "货币类型",
+        "sources": "捐赠来源",
+        "sourcesHint": "不选择则适用于所有来源",
+        "sourceOptions": {
+          "KOFI": "Ko-fi",
+          "PATREON": "Patreon",
+          "PAYPAL": "PayPal",
+          "ALIPAY": "支付宝",
+          "WECHAT_PAY": "微信支付",
+          "BANK_TRANSFER": "银行转账",
+          "CRYPTO": "加密货币",
+          "OTHER": "其他"
+        }
+      },
+      "postLike": {
+        "minCount": "最小数量",
+        "minCountHint": "用户的点赞数量需达到此数值才触发"
+      }
+    },
+    "actionConfig": {
+      "creditChange": {
+        "amount": "积分数量",
+        "amountHint": "正数表示增加，负数表示扣除",
+        "description": "变动说明",
+        "descriptionPlaceholder": "请输入积分变动说明"
+      },
+      "badgeGrant": {
+        "badge": "选择徽章",
+        "badgePlaceholder": "请选择要授予的徽章",
+        "autoGrant": "自动授予（跳过审核）"
+      },
+      "badgeRevoke": {
+        "badge": "选择徽章",
+        "badgePlaceholder": "请选择要撤销的徽章",
+        "reason": "撤销原因",
+        "reasonPlaceholder": "请输入撤销原因（可选）"
+      }
+    }
+  },
+  "Automation": {
+    "skipReason": {
+      "badgeAlreadyOwned": "用户已拥有徽章: {badgeName}",
+      "badgeNotOwned": "用户未拥有徽章: {badgeName}",
+      "insufficientCredits": "积分不足,当前积分: {currentCredits},需要变动: {amount}"
+    },
+    "error": {
+      "userNotFound": "用户不存在: {userId}",
+      "badgeNotFound": "徽章不存在: {badgeId}",
+      "databaseError": "数据库错误: {message}",
+      "invalidParams": "参数无效: {message}",
+      "creditChangeFailed": "积分变动失败: {error}",
+      "unexpectedError": "意外错误: {error}",
+      "unknownError": "未知错误: {message}"
+    }
+  },
+  "Editor": {
+    "SlashCommand": {
+      "heading1": "标题 1",
+      "heading2": "标题 2",
+      "heading3": "标题 3",
+      "heading4": "标题 4",
+      "bulletList": "无序列表",
+      "orderedList": "有序列表",
+      "codeBlock": "代码块",
+      "quote": "引用",
+      "image": "图片",
+      "divider": "分割线",
+      "noCommands": "未找到命令",
+      "slashPlaceholder": "输入 '/' 查看命令"
+    },
+    "ImageBlock": {
+      "title": "添加图片",
+      "upload": "上传",
+      "link": "嵌入链接",
+      "uploadInstruction": "从您的设备上传图片",
+      "chooseFile": "选择文件",
+      "placeholder": "粘贴图片链接...",
+      "embed": "嵌入图片"
+    },
+    "Upload": {
+      "uploading": "正在上传 {name}...",
+      "success": "已上传 {name}",
+      "error": "上传失败: {name}",
+      "genericError": "上传失败",
+      "widgetText": "正在上传图片..."
+    },
+    "Toolbar": {
+      "bold": "粗体",
+      "italic": "斜体",
+      "strikethrough": "删除线",
+      "code": "代码",
+      "paragraph": "段落",
+      "heading1": "标题 1",
+      "heading2": "标题 2",
+      "heading3": "标题 3",
+      "heading4": "标题 4",
+      "bulletList": "无序列表",
+      "orderedList": "有序列表",
+      "blockquote": "引用",
+      "codeBlock": "代码块",
+      "link": "链接",
+      "image": "图片",
+      "hr": "分割线",
+      "insertLink": "插入链接",
+      "editLink": "编辑链接",
+      "linkUrl": "链接地址",
+      "linkText": "链接文本",
+      "linkTextPlaceholder": "显示的链接文本（默认为链接地址）",
+      "cancel": "取消",
+      "insert": "插入",
+      "update": "更新",
+      "more": "更多",
+      "ExpressionPicker": {
+        "title": "选择表情",
+        "searchPlaceholder": "搜索表情...",
+        "noResults": "未找到表情",
+        "error": "加载表情失败",
+        "loading": "加载中..."
+      }
+    }
+  },
+  "EmojiPicker": {
+    "placeholder": "点击选择 emoji",
+    "clear": "清除"
+  },
+  "EmojiMart": {
+    "search": "搜索",
+    "search_no_results_1": "哎呀！",
+    "search_no_results_2": "未找到任何结果",
+    "pick": "选择一个表情...",
+    "add_custom": "添加自定义表情",
+    "categories": {
+      "activity": "活动",
+      "custom": "自定义",
+      "flags": "旗帜",
+      "foods": "食物与饮料",
+      "frequency": "常用",
+      "nature": "动物与自然",
+      "objects": "物体",
+      "people": "表情与人物",
+      "places": "旅行与地点",
+      "search": "搜索结果",
+      "symbols": "符号"
+    },
+    "skins": {
+      "choose": "选择默认肤色",
+      "1": "默认",
+      "2": "浅色",
+      "3": "中浅色",
+      "4": "中色",
+      "5": "中深色",
+      "6": "深色"
+    }
+  },
+  "AdminSocialProviders": {
+    "title": "社交登录管理",
+    "description": "配置 OAuth 社交登录提供商",
+    "createButton": "添加提供商",
+    "loading": "加载中...",
+    "empty": "暂无社交登录配置，点击上方按钮添加",
+    "list": {
+      "dragHint": "拖拽调整排序"
+    },
+    "card": {
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "clientId": "Client ID",
+      "scope": "授权范围",
+      "endpoints": "端点配置",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "dialog": {
+      "createTitle": "添加社交登录提供商",
+      "editTitle": "编辑社交登录提供商",
+      "template": "选择模板",
+      "templatePlaceholder": "选择预设模板",
+      "custom": "自定义",
+      "providerKey": "提供商标识",
+      "name": "显示名称",
+      "icon": "图标",
+      "uploadIcon": "上传图标",
+      "uploading": "上传中...",
+      "uploadSuccess": "上传成功",
+      "uploadError": "上传失败",
+      "clientId": "Client ID",
+      "clientSecret": "Client Secret",
+      "secretPlaceholder": "留空保持不变",
+      "wellKnownUrl": "Well-Known 地址",
+      "wellKnownHint": "填写后可自动发现授权端点，适用于标准OIDC提供商",
+      "authorizeUrl": "授权地址",
+      "tokenUrl": "令牌地址",
+      "userinfoUrl": "用户信息地址",
+      "scope": "授权范围",
+      "cancel": "取消",
+      "submit": "保存",
+      "submitting": "保存中..."
+    },
+    "deleteDialog": {
+      "title": "确认删除",
+      "description": "确定要删除此社交登录提供商吗？删除后用户将无法通过该方式登录。",
+      "cancel": "取消",
+      "confirm": "删除"
+    },
+    "message": {
+      "createSuccess": "创建成功",
+      "createError": "创建失败",
+      "updateSuccess": "更新成功",
+      "updateError": "更新失败",
+      "deleteSuccess": "删除成功",
+      "deleteError": "删除失败",
+      "reorderSuccess": "排序更新成功",
+      "reorderError": "排序更新失败"
+    }
+  },
+  "AdminStorageProviders": {
+    "title": "对象存储管理",
+    "description": "管理文件存储供应商配置",
+    "createButton": "添加供应商",
+    "loading": "加载中...",
+    "empty": "暂无存储供应商",
+    "list": {
+      "default": "默认",
+      "setDefault": "设为默认",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "dragHint": "拖拽调整排序"
+    },
+    "providerTypes": {
+      "LOCAL": "本地存储",
+      "VERCEL_BLOB": "Vercel Blob",
+      "ALIYUN_OSS": "阿里云 OSS",
+      "AWS_S3": "AWS S3",
+      "TENCENT_COS": "腾讯云 COS",
+      "QINIU": "七牛云",
+      "UPYUN": "又拍云",
+      "MINIO": "MinIO"
+    },
+    "dialog": {
+      "createTitle": "添加存储供应商",
+      "editTitle": "编辑存储供应商",
+      "name": "供应商名称",
+      "providerType": "供应商类型",
+      "providerTypePlaceholder": "选择供应商类型",
+      "baseUrl": "访问基础地址",
+      "isActive": "启用此供应商",
+      "maxFileSize": "最大文件大小 (MB)",
+      "allowedTypes": "允许的文件类型",
+      "allowedTypesPlaceholder": "例如: image/*,application/pdf",
+      "configSection": "供应商配置",
+      "cancel": "取消",
+      "submit": "保存",
+      "submitting": "保存中...",
+      "secretPlaceholder": "留空保持不变",
+      "config": {
+        "basePath": "基础路径",
+        "token": "访问令牌",
+        "accessKeyId": "Access Key ID",
+        "accessKeySecret": "Access Key Secret",
+        "secretAccessKey": "Secret Access Key",
+        "secretId": "Secret ID",
+        "secretKey": "Secret Key",
+        "region": "区域",
+        "bucket": "存储桶",
+        "endpoint": "端点地址",
+        "accessKey": "Access Key",
+        "operator": "操作员",
+        "password": "密码",
+        "port": "端口",
+        "useSsl": "使用 SSL"
+      }
+    },
+    "deleteDialog": {
+      "title": "确认删除",
+      "description": "确定要删除此存储供应商吗?如果有文件正在使用该供应商,删除后可能导致文件无法访问。",
+      "cannotDeleteDefault": "无法删除默认供应商,请先设置其他供应商为默认。",
+      "cancel": "取消",
+      "confirm": "删除"
+    },
+    "message": {
+      "createSuccess": "创建成功",
+      "createError": "创建失败",
+      "updateSuccess": "更新成功",
+      "updateError": "更新失败",
+      "deleteSuccess": "删除成功",
+      "deleteError": "删除失败",
+      "setDefaultSuccess": "默认供应商设置成功",
+      "setDefaultError": "设置失败",
+      "reorderSuccess": "排序更新成功",
+      "reorderError": "排序更新失败",
+      "cannotDisableDefault": "无法禁用默认供应商"
+    }
+  },
+  "AdminExpressions": {
+    "title": "表情管理",
+    "description": "管理论坛表情包，包括分组、图片表情和文本表情",
+    "createGroupButton": "创建分组",
+    "createExpressionButton": "添加表情",
+    "searchPlaceholder": "搜索分组或表情名称",
+    "stats": {
+      "totalGroups": "分组总数",
+      "totalExpressions": "表情总数",
+      "imageExpressions": "图片表情",
+      "textExpressions": "文本表情"
+    },
+    "filter": {
+      "title": "筛选",
+      "type": {
+        "all": "全部类型",
+        "image": "图片表情",
+        "text": "文本表情"
+      },
+      "enabled": {
+        "all": "全部状态",
+        "enabled": "已启用",
+        "disabled": "已禁用"
+      },
+      "deleted": {
+        "all": "全部",
+        "normal": "正常",
+        "deleted": "已删除"
+      },
+      "sortBy": "排序方式",
+      "sortByOptions": {
+        "sort": "自定义排序",
+        "updatedAt": "更新时间"
+      }
+    },
+    "group": {
+      "code": "分组代码",
+      "icon": "分组图标",
+      "expressionCount": "表情数量",
+      "expand": "展开",
+      "collapse": "收起",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "enable": "启用",
+      "disable": "禁用"
+    },
+    "expression": {
+      "code": "表情代码",
+      "type": "类型",
+      "image": "图片",
+      "text": "文本",
+      "dimensions": "尺寸",
+      "preview": "预览"
+    },
+    "groupDialog": {
+      "createTitle": "创建表情分组",
+      "editTitle": "编辑表情分组",
+      "code": "分组代码",
+      "codePlaceholder": "如: default, onion (仅字母数字下划线)",
+      "codeHint": "创建后不可修改",
+      "name": "分组名称",
+      "namePlaceholder": "如: 默认表情, 洋葱表情",
+      "expressionSize": "表情大小",
+      "expressionSizePlaceholder": "请选择表情大小",
+      "expressionSizeHint": "仅影响前台展示尺寸：小 32px / 中 64px / 大 96px",
+      "expressionSizePreview": "预览尺寸：{size}px",
+      "sizeOptions": {
+        "large": "大",
+        "medium": "中",
+        "small": "小"
+      },
+      "icon": "分组图标",
+      "iconPlaceholder": "点击选择 emoji",
+      "selectIconPlaceholder": "从表情中选择图标",
+      "noIcon": "不设置图标",
+      "iconHint": "从分组下的表情中选择一个作为分组图标",
+      "sortValue": "排序值",
+      "cancel": "取消",
+      "submit": "保存"
+    },
+    "expressionDialog": {
+      "createTitle": "添加表情",
+      "editTitle": "编辑表情",
+      "selectGroup": "选择分组",
+      "selectGroupPlaceholder": "请选择表情分组",
+      "code": "表情代码",
+      "codePlaceholder": "如: smile, 001",
+      "codeHint": "同一分组内唯一",
+      "codeFormatHint": "⚠️ 仅允许字母、数字、下划线和连字符，用于生成图片路径",
+      "codeWarning": "💡 保存后不可修改，请谨慎填写",
+      "codeLockedAfterUpload": "ℹ️ 图片已上传，代码已锁定无法修改",
+      "codeRequiredForUpload": "⚠️ 请先填写表情代码（Code）才能上传图片",
+      "codeFormatInvalid": "❌ 表情代码格式不正确，仅允许字母、数字、下划线和连字符",
+      "codeDuplicateError": "该代码在当前分组中已存在，请使用其他代码",
+      "name": "表情名称",
+      "namePlaceholder": "如: 微笑, 开心",
+      "type": "表情类型",
+      "imageTab": "图片表情",
+      "textTab": "文本表情",
+      "uploadImage": "上传图片",
+      "uploadHint": "支持 PNG/GIF/JPG/WEBP, 最大 2MB",
+      "dragHint": "点击或拖拽文件到此处",
+      "textContent": "文本内容",
+      "textPlaceholder": "输入 emoji 或文本符号",
+      "dimensions": "尺寸",
+      "width": "宽度",
+      "height": "高度",
+      "autoDetect": "自动检测",
+      "sortValue": "排序值",
+      "cancel": "取消",
+      "submit": "保存",
+      "animatedBadge": "动画",
+      "storagePathLabel": "📁 存储路径：",
+      "formatConversionHint": "💡 静态图片（PNG/JPG）将自动转换为 WebP 格式；动画 GIF 保留原格式"
+    },
+    "message": {
+      "createGroupSuccess": "分组创建成功",
+      "createGroupError": "分组创建失败",
+      "updateGroupSuccess": "分组更新成功",
+      "updateGroupError": "分组更新失败",
+      "deleteGroupSuccess": "分组删除成功",
+      "deleteGroupError": "分组删除失败",
+      "reorderGroupSuccess": "分组排序更新成功",
+      "reorderGroupError": "分组排序更新失败",
+      "createExpressionSuccess": "表情创建成功",
+      "createExpressionError": "表情创建失败",
+      "updateExpressionSuccess": "表情更新成功",
+      "updateExpressionError": "表情更新失败",
+      "deleteExpressionSuccess": "表情删除成功",
+      "deleteExpressionError": "表情删除失败",
+      "reorderExpressionSuccess": "表情排序更新成功",
+      "reorderExpressionError": "表情排序更新失败",
+      "uploadImageSuccess": "图片上传成功",
+      "uploadImageError": "图片上传失败",
+      "invalidImageType": "不支持的图片格式",
+      "imageTooLarge": "图片大小超过限制",
+      "translationUpdateSuccess": "翻译更新成功",
+      "translationUpdateError": "翻译更新失败",
+      "codeFormatError": "表情代码格式不正确，仅允许字母、数字、下划线和连字符",
+      "codeDuplicate": "该代码在当前分组中已存在，请使用其他代码",
+      "imageRequired": "请上传表情图片",
+      "textContentRequired": "请填写文本内容"
+    },
+    "deleteConfirm": {
+      "groupTitle": "确认删除分组",
+      "groupDescription": "该分组下有 {count} 个表情。删除后分组将被标记为已删除，但表情会保留。",
+      "expressionTitle": "确认删除表情",
+      "expressionDescription": "此操作将软删除该表情，确定继续吗？",
+      "cancel": "取消",
+      "confirm": "确认删除"
+    },
+    "translationDialog": {
+      "groupTitle": "管理分组多语言翻译",
+      "expressionTitle": "管理表情多语言翻译",
+      "sourceLanguage": "源语言",
+      "translated": "已翻译",
+      "missing": "未翻译",
+      "noName": "未填写名称",
+      "edit": "编辑",
+      "save": "保存",
+      "cancel": "取消",
+      "name": "名称"
+    },
+    "loading": "加载中...",
+    "empty": "暂无数据"
+  }
+}

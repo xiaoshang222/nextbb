@@ -1,0 +1,455 @@
+import { NextResponse } from "next/server"
+import { prisma } from "@/lib/prisma"
+import { z } from "zod"
+import { getServerSessionUser } from "@/lib/server-auth"
+import { generateId } from "@/lib/id"
+import { TopicType, BountyType } from "@/types/topic-type"
+import { topicFormSchema } from "@/lib/topic-validation"
+import { CreditService } from "@/lib/credit-service"
+import { CreditLogType } from "@prisma/client"
+import { getLocale } from "next-intl/server"
+import { notifyMentions } from "@/lib/notification-service"
+import { AutomationEvents } from "@/lib/automation/event-bus"
+import { createTranslationTasks } from "@/lib/services/translation-task"
+import { TranslationEntityType } from "@prisma/client"
+import { getTopicList } from "@/lib/services/topic-service"
+
+interface TopicsDelegate {
+  create(args: unknown): Promise<{ id: bigint }>
+}
+
+interface PostsDelegate {
+  create(args: unknown): Promise<{ id: bigint }>
+  count(args: unknown): Promise<number>
+}
+
+interface TopicTagsDelegate {
+  createMany(args: unknown): Promise<{ count: number }>
+}
+
+interface PollOptionsDelegate {
+  createMany(args: unknown): Promise<{ count: number }>
+}
+
+interface LotteryConfigsDelegate {
+  create(args: unknown): Promise<{ topic_id: bigint }>
+}
+
+interface PollConfigsDelegate {
+  create(args: unknown): Promise<{ topic_id: bigint }>
+}
+
+interface BountyConfigsDelegate {
+  create(args: unknown): Promise<{ topic_id: bigint }>
+}
+
+interface TxClient {
+  topics: TopicsDelegate
+  posts: PostsDelegate
+  topic_tags: TopicTagsDelegate
+  poll_options: PollOptionsDelegate
+  lottery_configs: LotteryConfigsDelegate
+  poll_configs: PollConfigsDelegate
+  bounty_configs: BountyConfigsDelegate
+  users: {
+    findUnique(args: unknown): Promise<{ credits: number } | null>
+    update(args: unknown): Promise<unknown>
+  }
+}
+
+const TopicListQuery = z.object({
+  categoryId: z.string().regex(/^\d+$/).optional(),
+  tagId: z.string().regex(/^\d+$/).optional(),
+  sort: z.enum(["latest", "new"]).optional(),
+  filter: z.enum(["community", "my"]).optional(),
+  page: z.string().regex(/^\d+$/).optional(),
+  pageSize: z.string().regex(/^\d+$/).optional(),
+})
+
+export async function GET(req: Request) {
+  const locale = await getLocale()
+  const url = new URL(req.url)
+  const q = TopicListQuery.safeParse({
+    categoryId: url.searchParams.get("categoryId") ?? undefined,
+    tagId: url.searchParams.get("tagId") ?? undefined,
+    sort: url.searchParams.get("sort") ?? undefined,
+    filter: url.searchParams.get("filter") ?? undefined,
+    page: url.searchParams.get("page") ?? undefined,
+    pageSize: url.searchParams.get("pageSize") ?? undefined,
+  })
+  if (!q.success) {
+    return NextResponse.json({ error: "Invalid query" }, { status: 400 })
+  }
+  const page = q.data.page ? Number(q.data.page) : 1
+  const pageSize = q.data.pageSize ? Number(q.data.pageSize) : 20
+
+  // 获取当前用户（用于 my 过滤）
+  const auth = await getServerSessionUser()
+
+  // 处理 my 过滤需要认证
+  if (q.data.filter === "my" && !auth) {
+    return NextResponse.json(
+      { error: "Unauthorized - login required for my filter" },
+      { status: 401 }
+    )
+  }
+
+  // 使用共享服务查询话题列表
+  const result = await getTopicList(
+    {
+      categoryId: q.data.categoryId,
+      tagId: q.data.tagId,
+      sort: q.data.sort,
+      filter: q.data.filter,
+      userId: q.data.filter === "my" ? auth?.userId : undefined,
+    },
+    page,
+    pageSize,
+    locale
+  )
+
+  return NextResponse.json(result)
+}
+// 使用 topic-validation.ts 中统一的验证 Schema
+type TopicCreateDTO = z.infer<typeof topicFormSchema>
+
+type TopicCreateResult = {
+  topicId: string
+}
+
+export async function POST(req: Request) {
+  const locale = await getLocale()
+  const auth = await getServerSessionUser()
+  if (!auth) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+
+  let body: TopicCreateDTO
+  try {
+    const json = await req.json()
+    body = topicFormSchema.parse(json)
+  } catch (error) {
+    console.error("Validation error:", error)
+    return NextResponse.json({ error: "Invalid body" }, { status: 400 })
+  }
+
+  const user = await prisma.users.findUnique({
+    where: { id: auth.userId },
+    select: { is_admin: true },
+  })
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+  const isAdmin = user.is_admin === true
+  const isPinned = isAdmin ? Boolean(body.isPinned) : false
+  const isCommunity = isAdmin ? Boolean(body.isCommunity) : false
+
+  let categoryId: bigint
+  try {
+    categoryId = BigInt(body.categoryId)
+  } catch {
+    return NextResponse.json({ error: "Invalid categoryId" }, { status: 400 })
+  }
+
+  const category = await prisma.categories.findFirst({
+    where: { id: categoryId, is_deleted: false },
+    select: { id: true },
+  })
+  if (!category) {
+    return NextResponse.json({ error: "Category not found" }, { status: 404 })
+  }
+
+  const tagNames = [...new Set(body.tags.map((t: string) => t.trim()))].filter(
+    (t) => t.length > 0
+  )
+
+  const tags = await prisma.tags.findMany({
+    where: {
+      is_deleted: false,
+      translations: {
+        some: {
+          name: { in: tagNames },
+        },
+      },
+    },
+    select: {
+      id: true,
+      translations: {
+        where: {
+          name: { in: tagNames },
+        },
+        select: {
+          name: true,
+        },
+      },
+    },
+  })
+
+  const foundNames = new Set<string>()
+  tags.forEach((t: { id: bigint; translations: { name: string }[] }) => {
+    t.translations.forEach((trans) => foundNames.add(trans.name))
+  })
+  const missing = tagNames.filter((n) => !foundNames.has(n))
+  if (missing.length > 0) {
+    return NextResponse.json(
+      { error: "Unknown tags", details: missing },
+      { status: 400 }
+    )
+  }
+
+  // BOUNTY 类型需要先扣除积分
+  // 注意：CreditService 有自己的事务，与主事务分离
+  // 如果后续主题创建失败，需要手动回滚积分
+  let bountyDeducted = false
+
+  if (body.type === TopicType.BOUNTY) {
+    // 使用统一的积分服务扣除积分（并发安全）
+    const creditResult = await CreditService.subtractCredits(
+      auth.userId,
+      body.bountyTotal,
+      CreditLogType.BOUNTY_GIVEN,
+      `发布悬赏主题，总赏金 ${body.bountyTotal}`
+    )
+
+    if (!creditResult.success) {
+      return NextResponse.json(
+        { error: creditResult.error || "积分扣除失败" },
+        { status: 400 }
+      )
+    }
+
+    bountyDeducted = true
+  }
+
+  try {
+    const result = await prisma.$transaction(async (tx: unknown) => {
+      const client = tx as TxClient
+      const existingPostCount: number = await client.posts.count({
+        where: { user_id: auth.userId },
+      })
+      const isFirstUserPost: boolean = existingPostCount === 0
+
+      const topic = await client.topics.create({
+        data: {
+          id: generateId(),
+          category_id: categoryId,
+          user_id: auth.userId,
+          source_locale: locale,
+          translations: {
+            create: [
+              {
+                locale: locale,
+                title: body.title,
+                is_source: true,
+              },
+            ],
+          },
+          type: body.type,
+          status:
+            body.type === TopicType.POLL || body.type === TopicType.LOTTERY
+              ? "ACTIVE"
+              : "ACTIVE",
+          end_time:
+            body.type === TopicType.POLL && body.endTime
+              ? new Date(body.endTime)
+              : body.type === TopicType.LOTTERY &&
+                  body.drawType === "SCHEDULED" &&
+                  body.endTime
+                ? new Date(body.endTime)
+                : null,
+          is_settled: false,
+          is_pinned: isPinned,
+          is_community: isCommunity,
+          is_deleted: false,
+        },
+        select: { id: true },
+      })
+
+      const post = await client.posts.create({
+        data: {
+          id: generateId(),
+          topic_id: topic.id,
+          user_id: auth.userId,
+          parent_id: BigInt(0),
+          reply_to_user_id: BigInt(0),
+          floor_number: 0,
+          content: body.content,
+          source_locale: locale,
+          is_first_user_post: isFirstUserPost,
+          translations: {
+            create: [
+              {
+                locale: locale,
+                content_html: body.content_html,
+                is_source: true,
+              },
+            ],
+          },
+          is_deleted: false,
+        },
+        select: { id: true },
+      })
+
+      if (tags.length > 0) {
+        await client.topic_tags.createMany({
+          data: tags.map(
+            (t: { id: bigint; translations: { name: string }[] }) => ({
+              topic_id: topic.id,
+              tag_id: t.id,
+              created_at: new Date(),
+            })
+          ),
+          skipDuplicates: true,
+        })
+      }
+
+      // POLL 类型创建投票选项和配置
+      if (body.type === TopicType.POLL && body.pollOptions) {
+        await client.poll_options.createMany({
+          data: body.pollOptions.map((option, index) => ({
+            id: generateId(),
+            topic_id: topic.id,
+            option_text: option.text,
+            sort: index,
+            is_deleted: false,
+            created_at: new Date(),
+          })),
+        })
+
+        // 创建投票配置
+        const pollConfig = (body.pollConfig || {}) as {
+          allowMultiple?: boolean
+          maxChoices?: number
+          showResultsBeforeVote?: boolean
+          showVoterList?: boolean
+        }
+        await client.poll_configs.create({
+          data: {
+            topic_id: topic.id,
+            allow_multiple: pollConfig.allowMultiple ?? false,
+            max_choices: pollConfig.maxChoices ?? null,
+            show_results_before_vote: pollConfig.showResultsBeforeVote ?? false,
+            show_voter_list: pollConfig.showVoterList ?? false,
+            created_at: new Date(),
+            updated_at: new Date(),
+          },
+        })
+      }
+
+      // LOTTERY 类型创建抽奖配置
+      if (body.type === TopicType.LOTTERY) {
+        await client.lottery_configs.create({
+          data: {
+            topic_id: topic.id,
+            draw_type: body.drawType,
+            end_time:
+              body.drawType === "SCHEDULED" && body.endTime
+                ? new Date(body.endTime)
+                : null,
+            participant_threshold:
+              body.drawType === "THRESHOLD" && body.participantThreshold
+                ? body.participantThreshold
+                : null,
+            algorithm_type: body.algorithmType,
+            floor_interval:
+              body.algorithmType === "INTERVAL" && body.floorInterval
+                ? body.floorInterval
+                : null,
+            fixed_floors:
+              body.algorithmType === "FIXED" && body.fixedFloors
+                ? JSON.stringify(body.fixedFloors)
+                : null,
+            winner_count:
+              body.algorithmType === "RANDOM" && body.winnerCount
+                ? body.winnerCount
+                : null,
+            entry_cost: body.entryCost ?? 0,
+            is_drawn: false,
+            drawn_at: null,
+            created_at: new Date(),
+            updated_at: new Date(),
+          },
+        })
+      }
+
+      // BOUNTY 类型创建悬赏配置
+      if (body.type === TopicType.BOUNTY) {
+        await client.bounty_configs.create({
+          data: {
+            topic_id: topic.id,
+            bounty_total: body.bountyTotal,
+            bounty_type: body.bountyType,
+            bounty_slots: body.bountySlots,
+            remaining_slots: body.bountySlots,
+            single_amount:
+              body.bountyType === BountyType.MULTIPLE
+                ? body.singleAmount
+                : null,
+            created_at: new Date(),
+            updated_at: new Date(),
+          },
+        })
+      }
+
+      return { topicId: String(topic.id), postId: String(post.id) }
+    })
+
+    // Process side effects (Notifications & Events)
+    try {
+      const topicId = BigInt(result.topicId)
+      const postId = BigInt(result.postId)
+
+      // 1. Notify mentioned users
+      await notifyMentions({
+        topicId,
+        postId,
+        senderId: auth.userId,
+        contentHtml: body.content_html,
+      })
+
+      // 2. Emit automation event
+      await AutomationEvents.postCreate({
+        postId,
+        topicId,
+        userId: auth.userId,
+        categoryId,
+        content: body.content,
+        isFirstPost: true,
+      })
+
+      // 3. Create translation tasks
+      await createTranslationTasks(
+        TranslationEntityType.TOPIC,
+        topicId,
+        locale,
+        1
+      )
+      await createTranslationTasks(
+        TranslationEntityType.POST,
+        postId,
+        locale,
+        1
+      )
+    } catch (error) {
+      console.error("Failed to process topic creation side effects:", error)
+    }
+
+    const response: TopicCreateResult = { topicId: result.topicId }
+    return NextResponse.json(response, { status: 201 })
+  } catch (error) {
+    // 如果主题创建失败且已扣除积分，需要回滚积分
+    if (bountyDeducted && body.type === TopicType.BOUNTY) {
+      await CreditService.addCredits(
+        auth.userId,
+        body.bountyTotal,
+        CreditLogType.OTHER,
+        `悬赏主题创建失败，退回赏金 ${body.bountyTotal}`
+      )
+    }
+    console.error("Topic creation failed:", error)
+    return NextResponse.json(
+      { error: "Failed to create topic" },
+      { status: 500 }
+    )
+  }
+}

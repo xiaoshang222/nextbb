@@ -1,0 +1,3140 @@
+{
+  "Index": {
+    "title": "Welcome to NextBB, building a harmonious community together!",
+    "description": "This is a production-ready i18n example."
+  },
+  "Dashboard": {
+    "title": "Welcome to NextBB!",
+    "description": "This is a production-ready i18n example."
+  },
+  "Common": {
+    "Search": {
+      "placeholder": "Search...",
+      "noResults": "No results found"
+    },
+    "Filters": {
+      "title": "Topic Filters",
+      "category": "Category",
+      "tag": "Tag",
+      "tags": "Tags",
+      "all": "☑️ All"
+    },
+    "Tabs": {
+      "latest": "Recent",
+      "new": "New Posts",
+      "hot": "Hot",
+      "top": "Top",
+      "community": "Top Picks",
+      "follow": "Follow",
+      "my": "My Topics",
+      "leaderboard": "Leaderboard",
+      "categories": "Categories",
+      "myPosts": "My Posts",
+      "bookmark": "Bookmark",
+      "like": "Like"
+    },
+    "Table": {
+      "topic": "Topic",
+      "author": "Author",
+      "replies": "Replies",
+      "views": "Views",
+      "participants": "Participants",
+      "activity": "Activity",
+      "empty": "No data",
+      "related": "Related Topics",
+      "inTopic": "In: {topic}"
+    },
+    "Title": {
+      "latestComments": "Latest Comments"
+    },
+    "Footer": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookie": "Cookie Policy",
+      "copyright": "© 2026 NextBB"
+    },
+    "Loading": {
+      "loading": "Loading...",
+      "noMore": "No more"
+    },
+    "Mention": {
+      "noUsersFound": "No users found"
+    },
+    "Badge": {
+      "secondary": "Secondary",
+      "verified": "Verified",
+      "destructive": "Destructive",
+      "outline": "Outline"
+    },
+    "LocaleSwitcher": {
+      "auto": "Auto",
+      "zh": "Chinese",
+      "en": "English",
+      "ariaLabel": "Locale"
+    },
+    "Time": {
+      "minutesAgo": "{count} minutes ago",
+      "second": "{count}s",
+      "minute": "{count}m",
+      "hour": "{count}h",
+      "day": "{count}d"
+    },
+    "ThemeSwitcher": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System",
+      "ariaLabel": "Toggle theme"
+    },
+    "Action": {
+      "cancel": "Cancel",
+      "save": "Save",
+      "success": "Success",
+      "goBack": "Go Back"
+    },
+    "ContentLabel": {
+      "image": "[Image]",
+      "expression": "[Emoji]",
+      "video": "[Video]"
+    },
+    "credits": "credits",
+    "floor": "Floor",
+    "winners": "Winners",
+    "won": "Won",
+    "notWon": "Not won",
+    "noWinners": "No winners yet",
+    "welcome": "Welcome",
+    "Stats": {
+      "topics": "Topics",
+      "posts": "Posts",
+      "users": "Users",
+      "interactions": "Interactions"
+    }
+  },
+  "Checkin": {
+    "pageTitle": "Check-in",
+    "title": "Daily Check-in",
+    "description": "Check in once daily to earn credit rewards. Keep your streak going for faster progress",
+    "button": "Check-in",
+    "checking": "Checking in.........",
+    "checkedIn": "Checked In",
+    "consecutiveDays": "{days} days streak",
+    "monthlyCheckins": "{days} days this month",
+    "earnCredits": "Today's Check-in +{credits} credits",
+    "todayEarned": "Already checked in today, earned {credits} credits",
+    "credits": "credits",
+    "todayList": "Today's Check-ins",
+    "todayListDescription": "{count} users checked in",
+    "noCheckinToday": "No one has checked in today. Be the first!",
+    "success": "Check-in successful! Earned {credits} credits",
+    "alreadyCheckedIn": "Already checked in today",
+    "error": "Check-in failed, please try again later",
+    "loginRequired": "Please sign in to check in",
+    "fullList": "Full List",
+    "noMoreData": "No more data",
+    "loadFailed": "Failed to load",
+    "retryLater": "Please try again later"
+  },
+  "Error": {
+    "unauthorized": "Unauthorized",
+    "forbidden": "Forbidden",
+    "requestFailed": "Request failed",
+    "network": "Network error"
+  },
+  "Category": {
+    "defaultName": "Category {id}",
+    "noDescription": "No description"
+  },
+  "Topic": {
+    "Post": {
+      "originallyWrittenIn": "This post was originally written in {locale}",
+      "languageSelection": "Language Selection",
+      "source": "(Source)",
+      "firstUserPost": "This is {name}'s first post - let's welcome them to the community!"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleted": "This floor has been deleted",
+    "notFound": "Topic not found",
+    "deleteConfirm": "Are you sure to delete this floor?",
+    "reply": "Reply",
+    "replies": "replies",
+    "replyPlaceholder": "Enter your reply...",
+    "toc": "Table of Contents",
+    "floor": {
+      "op": "OP",
+      "notFound": "Floor {floor} does not exist",
+      "outOfRange": "Floor number is out of range",
+      "loading": "Loading floor {floor}..."
+    },
+    "Navigator": {
+      "title": "Floor Nav",
+      "toFirst": "Jump to first",
+      "toLast": "Jump to last",
+      "aria": {
+        "toFirst": "Jump to first",
+        "toLast": "Jump to last"
+      },
+      "counter": "{current}/{total}",
+      "replyToTopic": "Reply to topic",
+      "goLogin": "Go to sign in",
+      "sort": "Sort by floor",
+      "noReplies": "No replies yet — be the first to comment"
+    },
+    "New": {
+      "title": "New Topic",
+      "description": "Create a topic to share with the community",
+      "button": "New Topic",
+      "goLogin": "Go to sign in",
+      "form": {
+        "title": {
+          "label": "Title",
+          "placeholder": "Enter topic title",
+          "counter": "{count}/100 characters"
+        },
+        "category": {
+          "label": "Category",
+          "placeholder": "Select a category",
+          "info": "Topic category"
+        },
+        "content": {
+          "label": "Content",
+          "placeholder": "Describe your topic in detail...",
+          "counter": "{count}/10000 characters"
+        },
+        "tags": {
+          "label": "Tags",
+          "placeholder": "Select tags",
+          "info": "{used}/{max} tags"
+        },
+        "isPinned": {
+          "label": "Topic Pinned"
+        },
+        "isCommunity": {
+          "label": "Topic Pushed to Community Column"
+        },
+        "actions": {
+          "cancel": "Cancel",
+          "preview": "Preview",
+          "publish": "Publish Topic",
+          "publishing": "Publishing..."
+        }
+      },
+      "preview": {
+        "title": "Preview",
+        "close": "Close Preview",
+        "field": {
+          "title": "Title:",
+          "category": "Category:",
+          "tags": "Tags:",
+          "content": "Content:"
+        }
+      },
+      "submit": {
+        "success": "Topic created successfully!",
+        "failed": "Failed to create topic",
+        "unauthorized": "Please sign in to publish"
+      }
+    },
+    "QuickPost": {
+      "titlePlaceholder": "Enter title",
+      "publish": "Publish",
+      "publishing": "Publishing...",
+      "cancel": "Cancel",
+      "success": "Published successfully!",
+      "failed": "Failed to publish",
+      "unauthorized": "Please sign in to publish",
+      "hints": {
+        "0": "✨ Discovered something new? Share it with everyone.",
+        "1": "💡 Stuck on a problem? Start a discussion.",
+        "2": "🎯 Got tips & tricks? Write them down to help others."
+      }
+    },
+    "Categories": {
+      "tech": "Tech Discussion",
+      "resource": "Resource Sharing",
+      "help": "Help & Q&A",
+      "chat": "Casual Chat",
+      "announcement": "Announcement"
+    },
+    "Validation": {
+      "title": {
+        "min": "Title must be at least 5 characters",
+        "max": "Title must be at most 100 characters"
+      },
+      "category": {
+        "required": "Please select a category"
+      },
+      "content": {
+        "min": "Content must be at least 20 characters",
+        "max": "Content must be at most 5000 characters"
+      },
+      "tag": {
+        "maxLength": "A tag must be at most 15 characters"
+      },
+      "tags": {
+        "maxCount": "Up to 5 tags"
+      },
+      "rewardPoints": {
+        "required": "Please enter reward points",
+        "positive": "Reward points must be greater than 0",
+        "exceedBalance": "Reward points cannot exceed your available credits"
+      },
+      "pollOptions": {
+        "min": "At least 2 poll options are required",
+        "max": "Maximum 10 poll options allowed",
+        "optionMaxLength": "Option text must be at most 256 characters"
+      },
+      "lotteryEndTime": {
+        "required": "Please select draw time",
+        "future": "Lottery end time must be in the future"
+      },
+      "lotteryRules": {
+        "min": "Participation rules must be at least 10 characters",
+        "max": "Participation rules must be at most 500 characters"
+      },
+      "winnerCount": {
+        "required": "Please enter winner count",
+        "positive": "Winner count must be greater than 0",
+        "max": "Winner count must be between 1 and 100"
+      },
+      "categoryId": {
+        "invalid": "Invalid category ID"
+      },
+      "pollEndTime": {
+        "future": "Poll end time must be in the future"
+      },
+      "pollConfig": {
+        "maxChoices": "Max choices must be greater than 1 and not exceed the number of options"
+      },
+      "lottery": {
+        "endTimeFuture": "End time must be in the future",
+        "floorInterval": "Floor interval must be a positive number",
+        "participantThreshold": "Participant threshold must be a positive number",
+        "winnerCount": "Winner count must be between 1 and 100",
+        "fixedFloors": "Floor numbers must be greater than 1",
+        "entryCost": "Entry cost must be non-negative"
+      },
+      "bounty": {
+        "totalPositive": "Bounty total must be a positive number",
+        "slotsMin": "Bounty slots must be at least 2 for multiple mode",
+        "singleAmountPositive": "Single amount must be a positive number",
+        "insufficientCredits": "Insufficient credits",
+        "typeMismatch": "Bounty type mismatch"
+      }
+    },
+    "Type": {
+      "general": "General",
+      "question": "Question",
+      "bounty": "Bounty",
+      "poll": "Poll",
+      "lottery": "Lottery",
+      "tutorial": "Tutorial",
+      "description": {
+        "general": "Start a general discussion",
+        "question": "Ask a question and wait for the best answer",
+        "bounty": "Offer rewards for solutions",
+        "poll": "Create a poll to collect opinions",
+        "lottery": "Set up a lottery event",
+        "tutorial": "Publish a tutorial document"
+      }
+    },
+    "Bounty": {
+      "single": "Single Bounty",
+      "multiple": "Multiple Bounty",
+      "form": {
+        "totalAmount": "Total Bounty",
+        "totalAmountPlaceholder": "Enter total bounty amount",
+        "bountyType": "Bounty Type",
+        "slots": "Bounty Slots",
+        "slotsPlaceholder": "Enter number of slots",
+        "singleAmount": "Single Amount",
+        "singleAmountPlaceholder": "Enter amount per reward",
+        "currentCredits": "Your Current Credits",
+        "totalHint": "Total = Single Amount × Slots",
+        "confirmMessage": "You will deduct {amount} credits as bounty, confirm to publish?",
+        "insufficientWarning": "Insufficient credits, please top up or adjust the bounty amount"
+      },
+      "action": {
+        "reward": "Reward",
+        "rewardFull": "Reward (Full)",
+        "rewardAmount": "Reward ({amount} credits)",
+        "confirmTitle": "Confirm Reward",
+        "confirmMessage": "You will reward {amount} credits to {user}'s reply. Continue?"
+      },
+      "status": {
+        "rewarded": "Rewarded {amount} credits",
+        "settled": "Bounty Settled"
+      },
+      "info": {
+        "title": "Bounty Info",
+        "totalAmount": "Total Amount",
+        "bountyType": "Bounty Type",
+        "remainingSlots": "Remaining Slots",
+        "singleAmount": "Single Amount",
+        "rewardedList": "Rewarded List",
+        "noRewardsYet": "No rewards yet, be the first to answer!"
+      },
+      "error": {
+        "insufficientCredits": "Insufficient credits to create bounty",
+        "alreadySettled": "Bounty already settled",
+        "cannotRewardSelf": "Cannot reward yourself",
+        "alreadyRewarded": "User already rewarded",
+        "noRemainingSlots": "No remaining slots",
+        "onlyOwnerCanReward": "Only topic owner can reward"
+      },
+      "success": {
+        "created": "Bounty topic published successfully, {amount} credits deducted",
+        "rewarded": "Reward successful, {remaining} slots remaining"
+      },
+      "validation": {
+        "totalRequired": "Please enter total bounty",
+        "totalPositive": "Bounty amount must be greater than 0",
+        "slotsRequired": "Please enter bounty slots",
+        "slotsSingle": "Bounty slots must be 1 for single mode",
+        "slotsMultiple": "Bounty slots must be greater than 1 for multiple mode",
+        "singleAmountRequired": "Single amount is required for multiple mode",
+        "totalMismatch": "Bounty total must equal single amount × slots"
+      }
+    },
+    "Question": {
+      "acceptance": {
+        "title": "Best Answer",
+        "status": {
+          "settled": "Accepted",
+          "noAnswer": "No best answer yet",
+          "bestAnswer": "Best Answer"
+        },
+        "info": {
+          "acceptedBy": "Accepted by",
+          "acceptedAt": "Accepted at",
+          "acceptedPost": "Best answer floor",
+          "answeredBy": "Answered by"
+        }
+      },
+      "actions": {
+        "accept": "Accept",
+        "cancelAccept": "Cancel",
+        "accepting": "Accepting",
+        "canceling": "Canceling"
+      },
+      "messages": {
+        "acceptSuccess": "Answer accepted successfully",
+        "cancelSuccess": "Acceptance canceled successfully",
+        "acceptError": "Failed to accept answer",
+        "cancelError": "Failed to cancel acceptance"
+      }
+    },
+    "Form": {
+      "rewardPoints": {
+        "label": "Reward Points",
+        "placeholder": "Enter reward points",
+        "info": "Available credits: {credits}"
+      },
+      "pollOptions": {
+        "label": "Poll Options",
+        "placeholder": "Enter option {index}",
+        "addOption": "Add Option",
+        "removeOption": "Remove Option"
+      },
+      "endTime": {
+        "label": "Poll End Time",
+        "placeholder": "Select poll end time"
+      },
+      "pollConfig": {
+        "label": "Poll Configuration",
+        "allowMultiple": "Allow Multiple Choices",
+        "maxChoices": "Max Choices",
+        "maxChoicesPlaceholder": "Enter max choices (required for multiple choice)",
+        "showResultsBeforeVote": "Show Results Before Voting",
+        "showVoterList": "Show Voter List"
+      },
+      "lotteryEndTime": {
+        "label": "Draw Time",
+        "placeholder": "Select draw time"
+      },
+      "lotteryRules": {
+        "label": "Participation Rules",
+        "placeholder": "Describe participation conditions and lottery rules"
+      },
+      "winnerCount": {
+        "label": "Winner Count",
+        "placeholder": "Enter winner count"
+      },
+      "minCredits": {
+        "label": "Minimum Credits",
+        "placeholder": "Enter minimum credits required (optional)",
+        "info": "0 or empty means no restriction"
+      }
+    },
+    "Lottery": {
+      "info": {
+        "title": "Lottery Info"
+      },
+      "drawType": {
+        "label": "Draw Type",
+        "scheduled": "Scheduled Draw",
+        "threshold": "Threshold Draw",
+        "instant": "Instant Win"
+      },
+      "algorithmType": {
+        "label": "Lottery Algorithm",
+        "interval": "Interval Floors",
+        "random": "Random Floors",
+        "fixed": "Fixed Floors"
+      },
+      "endTime": {
+        "label": "Draw Time",
+        "info": "Please select a future time"
+      },
+      "participantThreshold": {
+        "label": "Participant Threshold",
+        "placeholder": "e.g., 100",
+        "info": "Auto-draw when reply count reaches this number"
+      },
+      "floorInterval": {
+        "label": "Floor Interval",
+        "placeholder": "e.g., 10 (win every 10 floors)",
+        "info": "Win every N floors"
+      },
+      "winnerCount": {
+        "label": "Winner Count",
+        "placeholder": "e.g., 5",
+        "info": "Number of winners to randomly select (1-100)"
+      },
+      "fixedFloors": {
+        "label": "Fixed Winner Floors",
+        "placeholder": "e.g., 8, 88, 188 (comma-separated)",
+        "info": "Specify which floors win"
+      },
+      "entryCost": {
+        "label": "Entry Cost (Credits)",
+        "placeholder": "0 means free entry",
+        "info": "Credits deducted when users participate"
+      },
+      "participation": {
+        "method": "How to Participate",
+        "replyToJoin": "Reply to this topic to participate",
+        "replyAndCost": "Reply and pay {cost} credits to participate"
+      },
+      "status": {
+        "pending": "Pending Draw",
+        "drawn": "Drawn",
+        "progress": "{current} / {threshold} replies"
+      },
+      "error": {
+        "alreadyWon": "You have already won, cannot win again",
+        "insufficientCredits": "Insufficient credits, need {required} credits",
+        "lotteryEnded": "Lottery has ended"
+      },
+      "success": {
+        "won": "Congratulations! You won!",
+        "participated": "Participated successfully, waiting for draw"
+      }
+    },
+    "Status": {
+      "active": "Active",
+      "closed": "Closed",
+      "draft": "Draft",
+      "ending": "Ending Soon",
+      "answered": "Answered",
+      "waiting": "Waiting",
+      "drawn": "Drawn",
+      "pin": "Pinned",
+      "community": "Community"
+    },
+    "Poll": {
+      "title": "Poll",
+      "options": "Options",
+      "votes": "votes",
+      "totalVotes": "{count} people voted",
+      "myChoice": "My Choice",
+      "timeRemaining": "Time remaining:",
+      "voteClosed": "Poll Closed",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds",
+      "vote": "Vote",
+      "cancelVote": "Cancel Vote",
+      "viewDetails": "View Details",
+      "singleChoice": "Single Choice",
+      "multipleChoice": "Multiple Choice (up to {max})",
+      "selectOption": "Please select an option",
+      "voteSuccess": "Voted successfully",
+      "voteCanceled": "Vote canceled",
+      "alreadyVoted": "You have already voted",
+      "cannotVote": "Poll is closed",
+      "invalidOptions": "Invalid options",
+      "rank": "#{rank}",
+      "changeVote": "Change Vote"
+    },
+    "Action": {
+      "vote": "Vote",
+      "participate": "Participate",
+      "acceptAnswer": "Accept as Best Answer"
+    }
+  },
+  "Auth": {
+    "Login": {
+      "title": "Sign In",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "signInWith": "Sign in with {provider}",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "or": "Or",
+      "questionNoAccount": "Don't have an account?",
+      "toRegister": "Go to Sign Up",
+      "welcomeBack": "Welcome back. Sign in to continue your journey.",
+      "Branding": {
+        "titlePart1": "Next bulletin board, ",
+        "titlePart2": "reimagined",
+        "description": "A next-generation community platform built with cutting-edge technology for meaningful conversations.",
+        "fastTitle": "Fast",
+        "fastDesc": "Built on Next.js 16",
+        "secureTitle": "Secure",
+        "secureDesc": "Enterprise-grade auth",
+        "modernTitle": "Modern",
+        "modernDesc": "Beautiful interface"
+      },
+      "error": {
+        "failed": "Sign in failed",
+        "emailInvalid": "Invalid email address",
+        "passwordMin": "Password must be at least 6 characters"
+      }
+    },
+    "Register": {
+      "title": "Create Account",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "emailCode": "Email Code",
+      "emailCodePlaceholder": "Enter 6-digit code",
+      "password": "Password",
+      "passwordPlaceholder": "Set a password (min. 8 characters)",
+      "username": "Username",
+      "usernamePlaceholder": "Choose a username",
+      "sendCode": "Send Code",
+      "resendCode": "Resend",
+      "sendingCode": "Sending...",
+      "codeCooldown": "Resend in {seconds}s",
+      "codeHint": "Code expires in 10 minutes. Check inbox or spam folder",
+      "submit": "Sign Up",
+      "inviteCode": "Invite Code",
+      "inviteCodePlaceholder": "Enter 32-character invite code",
+      "applicationReason": "Application Reason",
+      "applicationReasonPlaceholder": "Briefly describe your purpose, background, or interests",
+      "applicationReasonHint": "Please provide your application reason. Results will be sent by email",
+      "pendingTitle": "Application Submitted",
+      "pendingDescription": "We'll notify you by email once the review is complete. Please check your inbox",
+      "hintTitle": "Create an account to join the community",
+      "questionHaveAccount": "Already have an account?",
+      "toLogin": "Go to Sign In",
+      "verification": {
+        "subject": "Registration Verification Code",
+        "textBody": "Your registration verification code is: {code}, valid for {minutes} minutes.",
+        "htmlLine1": "Your registration verification code is:",
+        "htmlLine2": "Valid for {minutes} minutes."
+      },
+      "review": {
+        "approved": {
+          "subject": "Registration Approved",
+          "textBody": "Your registration application has been approved. You can now sign in. Note: {reason}",
+          "htmlLine1": "Your registration application has been approved. You can now sign in.",
+          "htmlLine2": "Note: {reason}"
+        },
+        "rejected": {
+          "subject": "Registration Rejected",
+          "textBody": "Sorry, your registration application was not approved. Reason: {reason}",
+          "htmlLine1": "Sorry, your registration application was not approved.",
+          "htmlLine2": "Reason: {reason}"
+        }
+      },
+      "error": {
+        "failed": "Sign up failed, please try again",
+        "emailInvalid": "Please enter a valid email address",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMax": "Password cannot exceed 72 characters",
+        "usernameMin": "Username must be at least {min} characters",
+        "usernameMax": "Username cannot exceed {max} characters",
+        "usernameFormat": "Username can only contain letters, numbers, underscores, Chinese characters, and hyphens",
+        "usernameInvalid": "Invalid username format. Please avoid special characters",
+        "codeRequired": "Please enter the email verification code",
+        "codeInvalid": "Please enter a 6-digit verification code",
+        "sendCodeFailed": "Failed to send code, please try again",
+        "emailExists": "This email is already registered. Please sign in or use a different email",
+        "usernameExists": "This username is taken. Please try another one",
+        "invalidParams": "Invalid input, please check and try again",
+        "codeVerificationFailed": "Code verification failed, please check and re-enter",
+        "codeInvalidOrExpired": "Code is invalid or expired. Please request a new one",
+        "registrationFailed": "Registration failed, please try again later",
+        "registrationNotEnabled": "Registration is currently closed. Please contact the administrator for help",
+        "emailVerificationNotEnabled": "Email verification is not enabled",
+        "sendTooFrequent": "Sending too frequently, please try again later",
+        "codeExpired": "Failed to send code, please try again later",
+        "inviteCodeRequired": "Please enter an invite code",
+        "inviteCodeInvalid": "Invalid invite code, please check and re-enter",
+        "inviteCodeInactive": "This invite code has been deactivated",
+        "inviteCodeExpired": "This invite code has expired",
+        "inviteCodeMaxUsed": "This invite code has reached its maximum uses",
+        "applicationReasonRequired": "Please provide an application reason",
+        "applicationReasonMin": "Application reason must be at least {min} characters",
+        "applicationReasonMax": "Application reason cannot exceed {max} characters",
+        "applicationPending": "An application with this email or username is already pending review"
+      }
+    },
+    "PasswordReset": {
+      "title": "Reset Password",
+      "description": "Enter your new password to complete the reset.",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter new password",
+      "submit": "Reset Password",
+      "success": "Password reset successful. Please sign in with your new password.",
+      "backToLogin": "Back to Sign In",
+      "invalidToken": "Reset link is invalid or expired. Please request a new password reset.",
+      "noToken": "Missing reset token, redirecting to sign in...",
+      "email": {
+        "subject": "Password Reset",
+        "textBody": "You are resetting your password. Please click the link below to proceed: {link}\n\nThis link expires in {minutes} minutes. If you didn't request this, please ignore this email.",
+        "htmlLine1": "You are resetting your password. Please click the link below to proceed:",
+        "htmlLine2": "This link expires in {minutes} minutes. If you didn't request this, please ignore this email."
+      },
+      "error": {
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMax": "Password must be at most 72 characters",
+        "passwordMismatch": "Passwords do not match",
+        "tokenRequired": "Missing reset token",
+        "tokenInvalid": "Reset link is invalid or expired",
+        "resetFailed": "Password reset failed, please try again",
+        "sendFailed": "Failed to send reset email, please try again",
+        "sendTooFrequent": "Sending too frequently, please try again later",
+        "noEmail": "Your account has no email address, cannot send reset email",
+        "passwordWeak": "Password is too weak. Please choose a stronger password (avoid common passwords, sequential numbers or letters)"
+      }
+    }
+  },
+  "Nav": {
+    "main": {
+      "menu": "Menu",
+      "topics": "Topics",
+      "myPosts": "Posts",
+      "notifications": "Notifications",
+      "conversations": "Conversations",
+      "checkin": "Check-in",
+      "donation": "Donation",
+      "leaderboard": "Leaderboard",
+      "sharedResources": "Shared Resources",
+      "more": "More"
+    },
+    "user": {
+      "notLoggedIn": "Not Logged In",
+      "profile": "My Profile",
+      "activity": "My Activity",
+      "notifications": "My Notifications",
+      "invitations": "Invitations",
+      "settings": "Settings",
+      "logout": "Log out"
+    }
+  },
+  "Conversations": {
+    "title": "Conversations",
+    "tabs": {
+      "mine": "My Conversations",
+      "discover": "Discover Groups"
+    },
+    "actions": {
+      "back": "Back",
+      "join": "Join",
+      "joining": "Joining",
+      "loadMore": "Load more",
+      "createGroup": "Create Group"
+    },
+    "meta": {
+      "members": "{count} members",
+      "you": "You",
+      "privateChat": "Private chat",
+      "unknownUser": "Unknown user",
+      "deletedUser": "Deleted user",
+      "untitledGroup": "Untitled group"
+    },
+    "empty": {
+      "mine": "No conversations yet",
+      "discover": "No groups to join",
+      "noMessages": "No messages yet",
+      "messages": "No messages yet. Start the first one.",
+      "select": "Select a conversation",
+      "selectDescription": "Choose a conversation from the left to start chatting.",
+      "joinTitle": "Join to view messages",
+      "joinDescription": "Join this group to view and participate in the chat."
+    },
+    "error": {
+      "notFound": "Conversation not found",
+      "notFoundDescription": "This conversation may have been removed or you don't have access."
+    },
+    "editor": {
+      "placeholder": "Type a message...",
+      "slashPlaceholder": "Type / to see commands",
+      "send": "Send",
+      "sending": "Sending...",
+      "cancel": "Cancel",
+      "writeMessage": "Write message",
+      "title": "Send Message",
+      "emptyError": "Message cannot be empty",
+      "tooLongError": "Message too long (max 10000 chars)",
+      "sendSuccess": "Message sent",
+      "sendError": "Failed to send message",
+      "networkError": "Network connection failed",
+      "syncingHint": "Syncing..."
+    },
+    "message": {
+      "languageSelection": "Select language",
+      "originallyWrittenIn": "Originally written in: {locale}",
+      "source": "Source",
+      "translationError": "Failed to load translation"
+    },
+    "createGroup": {
+      "title": "Create Group",
+      "description": "Create a new group chat and invite friends to join",
+      "avatarLabel": "Group Avatar",
+      "avatarHint": "Upload an image as the group avatar",
+      "uploadAvatar": "Upload Avatar",
+      "nameLabel": "Group Name",
+      "namePlaceholder": "Enter group name",
+      "cancel": "Cancel",
+      "create": "Create",
+      "creating": "Creating..."
+    },
+    "editGroup": {
+      "title": "Edit Group",
+      "description": "Modify group name and avatar",
+      "avatarLabel": "Group Avatar",
+      "avatarHint": "Upload an image as the group avatar",
+      "uploadAvatar": "Upload Avatar",
+      "nameLabel": "Group Name",
+      "namePlaceholder": "Enter group name",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving...",
+      "saveSuccess": "Saved successfully",
+      "saveError": "Failed to save"
+    }
+  },
+  "AdminOverview": {
+    "title": "Admin Overview",
+    "description": "Real-time data and community trend monitoring",
+    "map": {
+      "title": "Global Activity",
+      "description": "Visualizing global user presence and interaction hotspots.\nThis real-time map tracks member activity across continents, providing immediate insights into community growth and geographic engagement trends."
+    },
+    "header": {
+      "status": "Live Dashboard",
+      "title": "Operation Insights",
+      "description": "Monitor core community metrics, user activity, and system health with real-time data and historical trends for deeper community insights.",
+      "actions": {
+        "download": "Download Report",
+        "settings": "Dashboard Settings"
+      }
+    },
+    "stats": {
+      "users": "Total Users",
+      "topics": "Total Topics",
+      "posts": "Total Replies",
+      "interactions": "Total Interactions",
+      "activeUsers7d": "Active Users (7d)",
+      "checkins7d": "Total Check-ins (7d)",
+      "categories": "Total Categories",
+      "tags": "Total Tags",
+      "badges": "Total Badges"
+    },
+    "charts": {
+      "userGrowth": {
+        "title": "User Growth Trend (30d)",
+        "description": "Daily new registered users",
+        "label": "New Users"
+      },
+      "contentActivity": {
+        "title": "Content Activity Trend (30d)",
+        "description": "Daily topics and replies volume",
+        "total": "Total Activity",
+        "topics": "Topics",
+        "posts": "Replies"
+      },
+      "categoryTrends": {
+        "title": "Category Topic Distribution (30d)",
+        "description": "Daily new topics in popular categories"
+      },
+      "tagTrends": {
+        "title": "Tag Usage Trend (30d)",
+        "description": "Daily new topics with popular tags"
+      },
+      "topN": {
+        "label": "Show Top",
+        "all": "All"
+      }
+    },
+    "logs": {
+      "badges": {
+        "title": "Badge Award Records",
+        "description": "Community achievement and honor distribution activity",
+        "awardedTo": "awarded to",
+        "system": "System Auto"
+      },
+      "registrations": {
+        "title": "Recent Registrations",
+        "description": "New members recently joined the community"
+      },
+      "logins": {
+        "title": "Recent Logins",
+        "description": "Monitor user login activities in real-time",
+        "success": "Success",
+        "failed": "Failed",
+        "table": {
+          "user": "User",
+          "status": "Status",
+          "method": "Method",
+          "ip": "IP Address",
+          "userAgent": "User Agent",
+          "location": "Location",
+          "time": "Login Time"
+        },
+        "pagination": {
+          "total": "Total {count} records",
+          "page": "Page {page}",
+          "prev": "Prev",
+          "next": "Next"
+        },
+        "empty": "No login records"
+      },
+      "loading": "Loading...",
+      "noMore": "All records shown",
+      "empty": "No records found"
+    }
+  },
+  "Admin": {
+    "entry": "Admin Panel",
+    "title": "NextBB Admin",
+    "description": "NextBB Admin Page.",
+    "nav": {
+      "overview": "Overview",
+      "topics": "Topics",
+      "userManagement": "User Management",
+      "users": "Users",
+      "registrationApplications": "Registration Review",
+      "categories": "Categories",
+      "tags": "Tags",
+      "badges": "Badges",
+      "socialProviders": "Social Login",
+      "storageProviders": "Object Storage",
+      "translationTasks": "Translation Tasks",
+      "automationRules": "Automation Rules",
+      "llmConfigs": "LLM Configs",
+      "contentStructure": "Content Structure",
+      "intelligence": "Intelligence Services",
+      "extensions": "Extensions",
+      "expressions": "Expressions",
+      "donations": "Donations",
+      "settings": "Settings"
+    },
+    "translationDialog": {
+      "title": "Manage Translations",
+      "sourceLanguage": "Source Language",
+      "translated": "Translated",
+      "missing": "Missing",
+      "noName": "No Name",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "name": "Name",
+      "description": "Description"
+    },
+    "settings": {
+      "title": "System Settings",
+      "description": "Manage system configuration items",
+      "save": "Save Settings",
+      "reset": "Reset",
+      "resetAll": "Reset All",
+      "saving": "Saving...",
+      "upload": "Upload",
+      "uploading": "Uploading...",
+      "basic": "Basic Info",
+      "registration": "Registration",
+      "content": "Content",
+      "system": "System",
+      "smtp": "SMTP",
+      "message": {
+        "saveSuccess": "Settings saved successfully",
+        "saveError": "Failed to save settings",
+        "resetSuccess": "Settings reset successfully",
+        "resetError": "Failed to reset settings",
+        "uploadSuccess": "Upload successful",
+        "uploadError": "Upload failed"
+      }
+    }
+  },
+  "AdminUsers": {
+    "title": "User Management",
+    "description": "Manage all users in the system, including role assignment and status management",
+    "searchPlaceholder": "Search email or username",
+    "stats": {
+      "total": "Total Users",
+      "active": "Active Users",
+      "admin": "Administrators",
+      "deleted": "Deleted"
+    },
+    "card": {
+      "admin": "Admin",
+      "deleted": "Deleted",
+      "joined": "Joined",
+      "role": "Role",
+      "active": "Active",
+      "deletedStatus": "Deleted"
+    },
+    "filter": {
+      "title": "Filters",
+      "status": {
+        "all": "All statuses",
+        "active": "Active",
+        "disabled": "Disabled"
+      },
+      "deleted": {
+        "all": "All delete states",
+        "normal": "Normal",
+        "deleted": "Deleted"
+      },
+      "apply": "Apply filters"
+    },
+    "table": {
+      "user": "User",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "deleted": "Deleted",
+      "createdAt": "Created At"
+    },
+    "role": {
+      "admin": "Admin",
+      "user": "User"
+    },
+    "status": {
+      "active": "Active",
+      "disabled": "Disabled"
+    },
+    "deleted": {
+      "deleted": "Deleted",
+      "normal": "Normal"
+    },
+    "loading": "Loading...",
+    "empty": "No data",
+    "pagination": {
+      "total": "Total {count}",
+      "page": "Page {page}",
+      "prev": "Prev",
+      "next": "Next"
+    },
+    "badges": {
+      "title": "User Badges",
+      "manage": "Manage Badges",
+      "assigned": "Assigned",
+      "empty": "No badges"
+    },
+    "badgeDialog": {
+      "title": "Manage User Badges",
+      "assignTitle": "Assign badges to {name}",
+      "currentBadges": "Current Badges",
+      "availableBadges": "Available Badges",
+      "search": "Search badges",
+      "filterByType": "Filter by type",
+      "assign": "Assign Selected",
+      "remove": "Remove Selected",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "success": "Operation successful",
+      "error": "Operation failed",
+      "alreadyOwned": "Already owned",
+      "selectAtLeastOne": "Please select at least one badge",
+      "empty": "No badges"
+    }
+  },
+  "AdminRegistrationApplications": {
+    "title": "Registration Review",
+    "description": "Review and manage new user registration applications",
+    "filter": {
+      "title": "Filters",
+      "status": "Status",
+      "statusAll": "All statuses",
+      "searchPlaceholder": "Search email or username",
+      "apply": "Apply filters"
+    },
+    "table": {
+      "applicant": "Applicant",
+      "reason": "Application Reason",
+      "status": "Status",
+      "reviewer": "Reviewer",
+      "reviewReason": "Review Reason",
+      "createdAt": "Submitted At",
+      "reviewedAt": "Reviewed At",
+      "actions": "Actions"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "dialog": {
+      "titleApprove": "Approve Application",
+      "titleReject": "Reject Application",
+      "reasonLabel": "Review Reason",
+      "reasonPlaceholder": "Provide a clear reason for your decision",
+      "submitApprove": "Approve and Notify",
+      "submitReject": "Reject and Notify",
+      "cancel": "Cancel"
+    },
+    "message": {
+      "approveSuccess": "Application approved",
+      "rejectSuccess": "Application rejected",
+      "updateFailed": "Failed to update application",
+      "emailFailed": "Application updated, but notification email failed"
+    },
+    "empty": "No applications",
+    "loading": "Loading...",
+    "pagination": {
+      "total": "Total {count}",
+      "page": "Page {page}",
+      "prev": "Prev",
+      "next": "Next"
+    }
+  },
+  "AdminDonations": {
+    "title": "Donation Management",
+    "description": "Manage and view all donation records, track donation statistics",
+    "searchPlaceholder": "Search donor name or email",
+    "createButton": "Add Donation",
+    "stats": {
+      "total": "Total Donations",
+      "totalAmount": "Total Amount",
+      "confirmed": "Confirmed",
+      "pending": "Pending"
+    },
+    "filter": {
+      "title": "Filter",
+      "donorType": {
+        "all": "All Donors",
+        "guest": "Guest",
+        "registered": "Registered User"
+      },
+      "donorNamePlaceholder": "Search donor name",
+      "userSearchPlaceholder": "Search by name or email",
+      "noUserFound": "No user found",
+      "status": {
+        "all": "All Status",
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "failed": "Failed",
+        "refunded": "Refunded",
+        "cancelled": "Cancelled"
+      },
+      "source": {
+        "all": "All Sources",
+        "KOFI": "Ko-fi",
+        "PATREON": "Patreon",
+        "PAYPAL": "PayPal",
+        "ALIPAY": "Alipay",
+        "WECHAT_PAY": "WeChat Pay",
+        "BANK_TRANSFER": "Bank Transfer",
+        "CRYPTO": "Cryptocurrency",
+        "OTHER": "Other"
+      },
+      "apply": "Apply Filter"
+    },
+    "table": {
+      "donor": "Donor",
+      "amount": "Amount",
+      "source": "Source",
+      "status": "Status",
+      "message": "Message",
+      "createdAt": "Date",
+      "actions": "Actions"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "FAILED": "Failed",
+      "REFUNDED": "Refunded",
+      "CANCELLED": "Cancelled"
+    },
+    "source": {
+      "KOFI": "Ko-fi",
+      "PATREON": "Patreon",
+      "PAYPAL": "PayPal",
+      "ALIPAY": "Alipay",
+      "WECHAT_PAY": "WeChat Pay",
+      "BANK_TRANSFER": "Bank Transfer",
+      "CRYPTO": "Cryptocurrency",
+      "OTHER": "Other"
+    },
+    "loading": "Loading...",
+    "empty": "No donations yet",
+    "pagination": {
+      "total": "{count} records",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "dialog": {
+      "createTitle": "Add Donation",
+      "editTitle": "Edit Donation",
+      "form": {
+        "donorType": "Donor Type",
+        "guestDonor": "Guest",
+        "registeredDonor": "Registered User",
+        "selectUser": "Select User",
+        "searchUserPlaceholder": "Search by name or email",
+        "noUserFound": "No user found",
+        "donorName": "Donor Name",
+        "donorNamePlaceholder": "Enter donor name",
+        "donorEmail": "Donor Email",
+        "donorEmailPlaceholder": "Enter donor email",
+        "amount": "Amount",
+        "amountPlaceholder": "Enter donation amount",
+        "currency": "Currency",
+        "source": "Source",
+        "status": "Status",
+        "externalId": "External ID",
+        "externalIdPlaceholder": "Third-party transaction ID (optional)",
+        "isAnonymous": "Anonymous Donation",
+        "message": "Message",
+        "messagePlaceholder": "Donor message (optional)",
+        "adminNote": "Admin Note",
+        "adminNotePlaceholder": "Admin note (only visible to admins)"
+      },
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving...",
+      "success": "Saved successfully",
+      "error": "Failed to save"
+    },
+    "actions": {
+      "edit": "Edit",
+      "confirm": "Confirm",
+      "delete": "Delete",
+      "confirmTitle": "Confirm Donation",
+      "confirmMessage": "Confirm this donation has been received?",
+      "deleteTitle": "Delete Donation",
+      "deleteMessage": "Are you sure you want to delete this donation record? This action cannot be undone.",
+      "confirmSuccess": "Confirmed successfully",
+      "deleteSuccess": "Deleted successfully",
+      "error": "Operation failed"
+    },
+    "anonymous": "Anonymous",
+    "error": {
+      "unauthorized": "Unauthorized",
+      "invalidQuery": "Invalid query parameters",
+      "invalidJson": "Invalid JSON",
+      "invalidBody": "Invalid request body",
+      "invalidId": "Invalid ID",
+      "notFound": "Donation not found"
+    },
+    "message": {
+      "createSuccess": "Donation created successfully",
+      "updateSuccess": "Donation updated successfully",
+      "deleteSuccess": "Donation deleted successfully"
+    }
+  },
+  "AdminCategories": {
+    "title": "Category Management",
+    "description": "Manage forum categories including create, edit, sort, etc.",
+    "createButton": "Create Category",
+    "searchPlaceholder": "Search category name",
+    "stats": {
+      "total": "Total Categories",
+      "active": "Active Categories",
+      "deleted": "Deleted",
+      "hottest": "Hottest"
+    },
+    "filter": {
+      "title": "Filter",
+      "deleted": {
+        "all": "All Deletion Status",
+        "normal": "Normal",
+        "deleted": "Deleted"
+      },
+      "sortBy": "Sort By",
+      "sortByOptions": {
+        "updatedAt": "Updated Time",
+        "sort": "Sort Value",
+        "topicCount": "Topic Count"
+      },
+      "apply": "Apply Filter"
+    },
+    "list": {
+      "dragHint": "Drag to reorder",
+      "reordering": "Updating order..."
+    },
+    "card": {
+      "topics": "Topics",
+      "updatedAt": "Updated",
+      "deleted": "Deleted",
+      "edit": "Edit",
+      "delete": "Delete",
+      "sourceLocale": "Category Source Language"
+    },
+    "dialog": {
+      "createTitle": "Create Category",
+      "editTitle": "Edit Category",
+      "name": "Name",
+      "namePlaceholder": "Enter category name",
+      "icon": "Icon",
+      "iconPlaceholder": "Click to select emoji",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter category description",
+      "sortValue": "Sort Value",
+      "lightModeColors": "Light Mode",
+      "bgColor": "Background Color",
+      "bgColorPlaceholder": "Click to select color",
+      "textColor": "Text Color",
+      "textColorPlaceholder": "Click to select color",
+      "darkModeColors": "Dark Mode",
+      "darkBgColor": "Dark Mode Background",
+      "darkBgColorPlaceholder": "Select dark mode color",
+      "darkTextColor": "Dark Mode Text Color",
+      "darkTextColorPlaceholder": "Select dark mode color",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "colorPreview": "Color Preview",
+      "lightPreview": "Light Preview",
+      "darkPreview": "Dark Preview",
+      "clearColor": "Clear Color"
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete Category",
+      "description": "This will soft delete the category. Related topics will not be affected. You can view and restore it through filters.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "message": {
+      "createSuccess": "Category created successfully",
+      "updateSuccess": "Category updated successfully",
+      "deleteSuccess": "Category deleted successfully",
+      "reorderSuccess": "Reorder successful",
+      "createError": "Failed to create category",
+      "updateError": "Failed to update category",
+      "deleteError": "Failed to delete category",
+      "reorderError": "Failed to reorder"
+    },
+    "loading": "Loading...",
+    "empty": "No data",
+    "pagination": {
+      "total": "Total {count} items",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "translationDialog": {
+      "title": "Manage Multi-language Translations",
+      "sourceLanguage": "Source Language",
+      "translated": "Translated",
+      "missing": "Not Translated",
+      "noName": "Name not filled",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "name": "Name",
+      "description": "Description"
+    }
+  },
+  "AdminTags": {
+    "title": "Tag Management",
+    "description": "Manage forum tags including create, edit, sort, etc.",
+    "createButton": "Create Tag",
+    "searchPlaceholder": "Search tag name",
+    "stats": {
+      "total": "Total Tags",
+      "active": "Active Tags",
+      "deleted": "Deleted",
+      "hottest": "Hottest"
+    },
+    "filter": {
+      "title": "Filter",
+      "deleted": {
+        "all": "All Deletion Status",
+        "normal": "Normal",
+        "deleted": "Deleted"
+      },
+      "sortBy": "Sort By",
+      "sortByOptions": {
+        "updatedAt": "Updated Time",
+        "sort": "Sort Value",
+        "usageCount": "Usage Count"
+      },
+      "apply": "Apply Filter"
+    },
+    "card": {
+      "sort": "Sort",
+      "usages": "Usages",
+      "times": "times",
+      "updatedAt": "Updated",
+      "deleted": "Deleted",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "dialog": {
+      "createTitle": "Create Tag",
+      "editTitle": "Edit Tag",
+      "name": "Name",
+      "namePlaceholder": "Enter tag name",
+      "icon": "Icon",
+      "iconPlaceholder": "Click to select emoji",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter tag description",
+      "sortValue": "Sort Value",
+      "lightModeColors": "Light Mode",
+      "bgColor": "Background Color",
+      "bgColorPlaceholder": "Click to select color",
+      "textColor": "Text Color",
+      "textColorPlaceholder": "Click to select color",
+      "darkModeColors": "Dark Mode",
+      "darkBgColor": "Dark Mode Background",
+      "darkBgColorPlaceholder": "Select dark mode color",
+      "darkTextColor": "Dark Mode Text Color",
+      "darkTextColorPlaceholder": "Select dark mode color",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "colorPreview": "Color Preview",
+      "lightPreview": "Light Preview",
+      "darkPreview": "Dark Preview",
+      "clearColor": "Clear Color"
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete Tag",
+      "description": "This will soft delete the tag. Related topics will not be affected. You can view and restore it through filters.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "message": {
+      "createSuccess": "Tag created successfully",
+      "updateSuccess": "Tag updated successfully",
+      "deleteSuccess": "Tag deleted successfully",
+      "createError": "Failed to create tag",
+      "updateError": "Failed to update tag",
+      "deleteError": "Failed to delete tag"
+    },
+    "loading": "Loading...",
+    "empty": "No data",
+    "pagination": {
+      "total": "Total {count} items",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "translationDialog": {
+      "title": "Manage Translations",
+      "sourceLanguage": "Source Language",
+      "translated": "Translated",
+      "missing": "Missing",
+      "noName": "No Name",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "name": "Name",
+      "description": "Description"
+    }
+  },
+  "AdminTopics": {
+    "title": "Topic Management",
+    "description": "Manage all forum topics including edit, pin, delete, etc.",
+    "createButton": "Create Topic",
+    "searchPlaceholder": "Search topic title",
+    "selected": "{count} selected",
+    "batchPin": "Batch Pin",
+    "batchDelete": "Batch Delete",
+    "columns": "Columns",
+    "columnsConfig": "Configure Columns",
+    "stats": {
+      "total": "Total Topics",
+      "pinned": "Pinned Topics",
+      "community": "Recommended Topics",
+      "deleted": "Deleted"
+    },
+    "filter": {
+      "title": "Filter",
+      "category": {
+        "all": "All Categories"
+      },
+      "tag": {
+        "all": "All Tags"
+      },
+      "status": {
+        "all": "All Status",
+        "pinned": "Pinned",
+        "community": "Recommended",
+        "deleted": "Deleted",
+        "normal": "Normal"
+      },
+      "sortBy": "Sort By",
+      "sortByOptions": {
+        "createdAt": "Created Time",
+        "updatedAt": "Updated Time",
+        "views": "Views",
+        "replies": "Replies"
+      },
+      "order": "Order",
+      "orderOptions": {
+        "desc": "Descending",
+        "asc": "Ascending"
+      },
+      "apply": "Apply Filter"
+    },
+    "table": {
+      "selectAll": "Select All",
+      "selectRow": "Select Row",
+      "selectColumn": "Select Column",
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "authorCategory": "Author/Category",
+      "tags": "Tags",
+      "replies": "Replies",
+      "views": "Views",
+      "stats": "Stats",
+      "status": "Status",
+      "createdAt": "Created",
+      "activity": "Last Activity",
+      "time": "Time",
+      "created": "Created",
+      "active": "Active",
+      "actions": "Actions",
+      "more": "More",
+      "empty": "No data",
+      "pinned": "Pinned",
+      "community": "Recommended",
+      "deleted": "Deleted",
+      "normal": "Normal",
+      "edit": "Edit",
+      "delete": "Delete",
+      "restore": "Restore",
+      "pin": "Pin",
+      "unpin": "Unpin",
+      "recommend": "Recommend",
+      "unrecommend": "Unrecommend"
+    },
+    "card": {
+      "author": "Author",
+      "category": "Category",
+      "replies": "Replies",
+      "views": "Views",
+      "created": "Created",
+      "lastActivity": "Last Activity",
+      "pinned": "Pinned",
+      "community": "Recommended",
+      "deleted": "Deleted",
+      "edit": "Edit",
+      "delete": "Delete",
+      "restore": "Restore",
+      "pin": "Pin",
+      "unpin": "Unpin",
+      "recommend": "Recommend",
+      "unrecommend": "Unrecommend"
+    },
+    "dialog": {
+      "createTitle": "Create New Topic",
+      "editTitle": "Edit Topic",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Enter topic title",
+      "categoryLabel": "Category",
+      "categoryPlaceholder": "Select category",
+      "tagsLabel": "Tags",
+      "tagsPlaceholder": "Select tags",
+      "pinnedLabel": "Pinned",
+      "communityLabel": "Recommended",
+      "cancel": "Cancel",
+      "submit": "Submit"
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete",
+      "description": "This will soft delete the topic. The topic will not be displayed on the front page, but can be restored. Are you sure to continue?",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "restoreConfirm": {
+      "title": "Confirm Restore",
+      "description": "This will restore the deleted topic. The topic will be displayed on the front page again. Are you sure to continue?",
+      "cancel": "Cancel",
+      "confirm": "Confirm Restore"
+    },
+    "message": {
+      "updateSuccess": "Topic updated successfully",
+      "updateError": "Failed to update topic",
+      "deleteSuccess": "Topic deleted successfully",
+      "deleteError": "Failed to delete topic",
+      "restoreSuccess": "Topic restored successfully",
+      "restoreError": "Failed to restore topic",
+      "pinSuccess": "Topic pinned successfully",
+      "pinError": "Failed to pin topic",
+      "unpinSuccess": "Topic unpinned successfully",
+      "unpinError": "Failed to unpin topic",
+      "recommendSuccess": "Topic recommended successfully",
+      "recommendError": "Failed to recommend topic",
+      "unrecommendSuccess": "Topic unrecommended successfully",
+      "unrecommendError": "Failed to unrecommend topic",
+      "batchDeleteSuccess": "Batch delete successful",
+      "batchDeleteError": "Batch delete failed",
+      "batchPinSuccess": "Batch pin successful",
+      "batchPinError": "Batch pin failed"
+    },
+    "loading": "Loading...",
+    "empty": "No data",
+    "pagination": {
+      "total": "{count} topics in total",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "AdminBadges": {
+    "title": "Badge Management",
+    "description": "Manage forum badge system, create and configure achievement badges",
+    "createButton": "Create Badge",
+    "loading": "Loading...",
+    "empty": "No badge data",
+    "stats": {
+      "total": "Total Badges",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "deleted": "Deleted",
+      "byType": "By Type"
+    },
+    "filter": {
+      "title": "Filters",
+      "badgeType": "Badge Type",
+      "level": "Badge Level",
+      "status": "Status",
+      "sortBy": "Sort By",
+      "apply": "Apply Filters",
+      "badgeTypeOptions": {
+        "all": "All Types",
+        "achievement": "Achievement",
+        "honor": "Honor",
+        "role": "Role",
+        "event": "Event",
+        "special": "Special"
+      },
+      "levelOptions": {
+        "all": "All Levels",
+        "1": "Common",
+        "2": "Excellent",
+        "3": "Rare",
+        "4": "Epic",
+        "5": "Legendary"
+      },
+      "statusOptions": {
+        "all": "All Status",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "deleted": "Deleted"
+      },
+      "sortByOptions": {
+        "updatedAt": "Updated Time",
+        "sort": "Sort Value",
+        "level": "Level"
+      }
+    },
+    "searchPlaceholder": "Search badge name or description",
+    "badgeType": {
+      "achievement": "Achievement",
+      "honor": "Honor",
+      "role": "Role",
+      "event": "Event",
+      "special": "Special"
+    },
+    "level": {
+      "common": "Common",
+      "excellent": "Excellent",
+      "rare": "Rare",
+      "epic": "Epic",
+      "legendary": "Legendary"
+    },
+    "card": {
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "deleted": "Deleted",
+      "visible": "Visible",
+      "hidden": "Hidden",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "dialog": {
+      "createTitle": "Create Badge",
+      "editTitle": "Edit Badge",
+      "name": "Badge Name",
+      "namePlaceholder": "Enter badge name",
+      "icon": "Badge Icon",
+      "iconPlaceholder": "Choose an emoji",
+      "description": "Badge Description",
+      "descriptionPlaceholder": "Enter badge description",
+      "badgeType": "Badge Type",
+      "badgeTypePlaceholder": "Select badge type",
+      "level": "Badge Level",
+      "levelPlaceholder": "Select badge level",
+      "sortValue": "Sort Value",
+      "lightModeColors": "Light Mode",
+      "bgColor": "Background Color",
+      "bgColorPlaceholder": "Select background color",
+      "textColor": "Text Color",
+      "textColorPlaceholder": "Select text color",
+      "darkModeColors": "Dark Mode",
+      "darkBgColor": "Dark Mode Background",
+      "darkBgColorPlaceholder": "Select dark mode color",
+      "darkTextColor": "Dark Mode Text Color",
+      "darkTextColorPlaceholder": "Select dark mode color",
+      "isEnabled": "Enable Badge",
+      "isVisible": "Visible on Frontend",
+      "colorPreview": "Color Preview",
+      "lightPreview": "Light Preview",
+      "darkPreview": "Dark Preview",
+      "cancel": "Cancel",
+      "submit": "Save"
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete Badge",
+      "description": "This operation will soft delete the badge, data will still be retained. Continue?",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "message": {
+      "createSuccess": "Badge created successfully",
+      "createError": "Failed to create badge",
+      "updateSuccess": "Badge updated successfully",
+      "updateError": "Failed to update badge",
+      "deleteSuccess": "Badge deleted successfully",
+      "deleteError": "Failed to delete badge"
+    },
+    "pagination": {
+      "total": "{count} badges in total",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "Config": {
+    "basic": {
+      "name": {
+        "label": "Forum Name",
+        "description": "Displayed in website title, header, etc."
+      },
+      "description": {
+        "label": "Forum Description",
+        "description": "SEO metadata description"
+      },
+      "logo": {
+        "label": "Forum Logo",
+        "description": "Image URL for website branding"
+      },
+      "contact_email": {
+        "label": "Contact Email",
+        "description": "Administrator contact email"
+      },
+      "icp": {
+        "label": "Website Registration Info",
+        "description": "ICP registration number, etc."
+      },
+      "welcome_message": {
+        "label": "Homepage Welcome Message",
+        "description": "Custom homepage title, leave empty to use default multilingual title"
+      }
+    },
+    "registration": {
+      "enabled": {
+        "label": "Allow Registration",
+        "description": "Global switch to control whether new user registration is allowed"
+      },
+      "email_verify": {
+        "label": "Email Verification",
+        "description": "Whether email verification is required after registration"
+      },
+      "username_min_length": {
+        "label": "Minimum Username Length",
+        "description": "Minimum allowed username characters"
+      },
+      "username_max_length": {
+        "label": "Maximum Username Length",
+        "description": "Maximum allowed username characters"
+      },
+      "require_invite_code": {
+        "label": "Invite Code Registration",
+        "description": "When enabled, new users must provide a valid invite code to register"
+      },
+      "review_enabled": {
+        "label": "Registration Review",
+        "description": "New users must submit an application for approval"
+      }
+    },
+    "content": {
+      "topic": {
+        "publish_permission": {
+          "label": "Topic Publish Permission",
+          "description": "Control which users can publish topics (all/verified/admin)"
+        }
+      },
+      "post": {
+        "reply_permission": {
+          "label": "Reply Permission",
+          "description": "Control which users can reply to posts (all/verified/admin)"
+        }
+      },
+      "moderation": {
+        "enabled": {
+          "label": "Content Moderation",
+          "description": "Whether to enable content moderation"
+        }
+      },
+      "filter": {
+        "enabled": {
+          "label": "Sensitive Word Filter",
+          "description": "Whether to enable sensitive word filtering"
+        }
+      },
+      "upload": {
+        "max_size": {
+          "label": "Upload File Size Limit",
+          "description": "Maximum file size for uploads (MB)"
+        }
+      }
+    },
+    "system": {
+      "pagination": {
+        "page_size": {
+          "label": "Page Size",
+          "description": "Number of items per page in lists"
+        }
+      },
+      "cache": {
+        "ttl": {
+          "label": "Cache Expiration Time",
+          "description": "Cache data expiration time (seconds)"
+        }
+      },
+      "maintenance": {
+        "enabled": {
+          "label": "Maintenance Mode",
+          "description": "Whether to enable website maintenance mode"
+        },
+        "message": {
+          "label": "Maintenance Message",
+          "description": "Message displayed during maintenance mode"
+        }
+      },
+      "translation": {
+        "enabled_locales": {
+          "label": "Enabled Translation Languages",
+          "description": "Select target languages for automatic translation tasks, multiple selection supported"
+        }
+      }
+    },
+    "smtp": {
+      "host": {
+        "label": "SMTP Host",
+        "description": "SMTP server hostname or IP address"
+      },
+      "port": {
+        "label": "SMTP Port",
+        "description": "SMTP server port"
+      },
+      "secure": {
+        "label": "Use TLS/SSL",
+        "description": "Whether to enable TLS/SSL encrypted connection"
+      },
+      "auth_user": {
+        "label": "SMTP Username",
+        "description": "SMTP login username"
+      },
+      "auth_pass": {
+        "label": "SMTP Password",
+        "description": "SMTP login password"
+      },
+      "from_name": {
+        "label": "From Name",
+        "description": "Sender name shown in emails"
+      },
+      "from_email": {
+        "label": "From Email",
+        "description": "Sender email address shown in emails"
+      }
+    }
+  },
+  "User": {
+    "profile": {
+      "title": "User Profile",
+      "badges": "Badges",
+      "preferences": "Settings",
+      "joinedAt": "Joined",
+      "statistics": {
+        "topics": "Topics",
+        "posts": "Posts",
+        "likes": "Likes",
+        "bookmarks": "Bookmarks",
+        "badges": "Badges",
+        "credits": "Credits"
+      },
+      "overview": {
+        "title": "Overview",
+        "statistics": {
+          "title": "Statistics"
+        },
+        "activeStats": {
+          "title": "Active Stats",
+          "joinDays": "Days Joined",
+          "topicsCreated": "Topics Created",
+          "repliesCount": "Total Replies",
+          "unit": {
+            "day": "days",
+            "topic": "topics",
+            "reply": "replies",
+            "joinedToday": "Joined today"
+          }
+        },
+        "interactionStats": {
+          "title": "Interaction Stats",
+          "likesGiven": "Likes Given",
+          "likesReceived": "Likes Received",
+          "bookmarksCount": "Bookmarks",
+          "bookmarkedCount": "Bookmarked"
+        },
+        "honorStats": {
+          "title": "Honor Stats",
+          "badgesCount": "Badges Earned",
+          "checkinCount": "Total Check-ins",
+          "unit": {
+            "badge": "badges",
+            "checkin": "times"
+          }
+        },
+        "topContent": {
+          "title": "Top Content",
+          "topTopics": "Top Topics",
+          "topReplies": "Top Replies",
+          "views": "Views",
+          "likes": "Likes",
+          "emptyTopics": "No topics yet. Share your ideas!",
+          "emptyReplies": "No replies yet. Join the discussion!",
+          "inTopic": "In topic"
+        },
+        "socialInteraction": {
+          "title": "Social Interaction",
+          "topLikers": "Top Likers",
+          "topLiked": "Most Liked By Me",
+          "likesCount": "{count} likes",
+          "emptyLikers": "No likes received yet. Keep going!",
+          "emptyLiked": "No likes given yet. Support great content!"
+        }
+      },
+      "actions": {
+        "edit": "Edit Profile",
+        "manage": "Manage User",
+        "message": "Send Message",
+        "follow": "Follow",
+        "unfollow": "Unfollow"
+      },
+      "notFound": "User Not Found or Disabled",
+      "notFoundDescription": "This user may have been deleted, disabled, or never existed.",
+      "backToHome": "Back to Home",
+      "unauthorized": "You do not have permission to access this page",
+      "empty": {
+        "activity": "No activity yet",
+        "topics": "No topics yet",
+        "posts": "No posts yet",
+        "likes": "No liked posts yet",
+        "bookmarks": "No bookmarks yet",
+        "badges": "No badges yet",
+        "followers": "No followers yet",
+        "following": "Not following anyone yet"
+      },
+      "follows": {
+        "title": "Follows",
+        "followers": "Followers",
+        "following": "Following",
+        "followersCount": "Followers",
+        "followingCount": "Following",
+        "followedAt": "Followed at"
+      },
+      "badgeList": {
+        "title": "Badge List",
+        "description": "All badges earned by the user and their timeline",
+        "journey": "Badge Journey",
+        "awardedAt": "Awarded at",
+        "awardedBy": "Awarded by",
+        "system": "System",
+        "empty": "No badges earned yet",
+        "emptyDescription": "Participate in community activities to earn badges!",
+        "totalBadges": "Total {count} badges earned"
+      },
+      "activity": {
+        "title": "Activity",
+        "timelineTitle": "Activity Timeline",
+        "timelineDescription": "Recording every interaction and contribution",
+        "scrollLoadMore": "Scroll down to load more...",
+        "allLoaded": "All activities loaded",
+        "filter": {
+          "all": "All",
+          "topics": "Topics",
+          "posts": "Replies",
+          "likes": "Likes",
+          "bookmarks": "Bookmarks"
+        },
+        "empty": {
+          "all": "No activity records yet",
+          "topics": "No topics published yet",
+          "posts": "No replies posted yet",
+          "likes": "No content liked yet",
+          "bookmarks": "No content bookmarked yet"
+        },
+        "item": {
+          "topic": "Published topic",
+          "post": "Replied to",
+          "like": "Liked",
+          "bookmark": "Bookmarked",
+          "views": "views",
+          "replies": "replies",
+          "floor": "#"
+        },
+        "permission": {
+          "denied": "Only the owner or administrators can view this content"
+        }
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "nav": {
+        "all": "All",
+        "mentions": "Mentions",
+        "replies": "Replies",
+        "likes": "Likes",
+        "awards": "Awards",
+        "system": "System",
+        "prevPage": "Previous",
+        "nextPage": "Next",
+        "pageCounter": "Page {page}"
+      },
+      "empty": {
+        "all": "No notifications",
+        "mentions": "No mentions yet",
+        "replies": "No reply notifications",
+        "likes": "No like notifications",
+        "awards": "No award notifications",
+        "system": "No system notifications"
+      },
+      "item": {
+        "TOPIC_REPLY": "replied to you in {topic}",
+        "POST_REPLY": "replied to your post in {topic}",
+        "MENTION": "mentioned you in {topic}",
+        "LIKE": "liked your post in {topic}",
+        "BADGE_AWARD": "Congratulations! You earned the {badge} badge",
+        "BOUNTY_REWARD": "Your answer in {topic} received a bounty reward",
+        "LOTTERY_WIN": "Congratulations! You won the lottery in {topic}",
+        "SYSTEM": "System notification: {message}"
+      }
+    },
+    "activity": {
+      "all": "All Activity",
+      "topics": "Topics",
+      "posts": "Posts",
+      "likes": "Liked",
+      "bookmarks": "Bookmarks"
+    },
+    "preferences": {
+      "title": "Settings",
+      "account": {
+        "title": "Account",
+        "description": "Manage your account information and connected Accounts",
+        "basicInfo": "Basic Information",
+        "username": "Username",
+        "email": "Email",
+        "avatar": "Avatar",
+        "uploadAvatar": "Upload Avatar",
+        "uploading": "Uploading...",
+        "uploadSuccess": "Avatar uploaded successfully",
+        "uploadError": "Failed to upload avatar, please try again",
+        "fileTooLarge": "File size cannot exceed 5MB",
+        "invalidFileType": "Only JPG, PNG, WEBP and GIF formats are supported",
+        "titleBadge": "Title",
+        "titleBadgePlaceholder": "Select a badge as title",
+        "noTitleBadge": "Use default title",
+        "save": "Save Changes",
+        "saving": "Saving...",
+        "saveSuccess": "Saved successfully",
+        "saveError": "Save failed, please try again",
+        "usernameHelper": "Username can be changed, but must be unique",
+        "emailHelper": "Email is used for login and notifications",
+        "usernameInvalid": "Username format is invalid",
+        "usernameTaken": "This username is already taken",
+        "usernameCheckError": "Failed to check username, please try again",
+        "usernameChecking": "Checking username availability...",
+        "customStatus": "Custom Status",
+        "customStatusHelper": "Set a personalized status to let others know what you're up to",
+        "customStatusPlaceholder": "What's happening...",
+        "statusExpiry": "Status Expiry",
+        "statusExpiryPlaceholder": "Select expiry time",
+        "statusExpiryNever": "Never",
+        "statusExpiry1Hour": "1 hour",
+        "statusExpiry4Hours": "4 hours",
+        "statusExpiryToday": "End of today",
+        "statusExpiry1Week": "1 week",
+        "statusExpiry1Month": "1 month",
+        "notSet": "Not set",
+        "expiresAt": "Expires at",
+        "emoji": "Emoji",
+        "statusText": "Status Text",
+        "clearStatus": "Clear Status",
+        "saveStatus": "Save",
+        "cancel": "Cancel",
+        "statusExpiryCustom": "Quick Set",
+        "statusExpiryCustomPlaceholder": "Select expiry time",
+        "selectedExpiry": "Selected expiry",
+        "apply": "Apply"
+      },
+      "profile": {
+        "title": "Profile",
+        "description": "Manage your profile information",
+        "bio": "Bio",
+        "bioPlaceholder": "Tell us about yourself...",
+        "bioHelper": "Introduce yourself",
+        "website": "Website",
+        "websitePlaceholder": "https://example.com",
+        "location": "Location",
+        "locationPlaceholder": "Your city or country",
+        "birthday": "Birthday",
+        "birthdayPlaceholder": "Select date",
+        "save": "Save Changes",
+        "saving": "Saving...",
+        "saveSuccess": "Saved successfully",
+        "saveError": "Failed to save, please try again"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Manage passwords and third-party account linking",
+        "passwordManagement": {
+          "title": "Password Management",
+          "descriptionHasPassword": "You can change your current password by requesting a password reset email.",
+          "descriptionNoPassword": "Your account doesn't have a password yet. You can set one via email.",
+          "sendResetEmail": "Send Password Reset Email",
+          "sending": "Sending...",
+          "cooldown": "Resend in {seconds}s",
+          "emailSent": "Reset email sent. Please check your inbox and click the link to reset your password.",
+          "sendError": "Failed to send, please try again",
+          "sendTooFrequent": "Sending too frequently, please try again later"
+        },
+        "socialAccounts": {
+          "title": "Connected Accounts",
+          "description": "Manage your connected third-party accounts for easier login",
+          "linked": "Connected",
+          "notLinked": "Not connected",
+          "link": "Connect",
+          "unlink": "Disconnect",
+          "lastUsed": "Last used",
+          "linkSuccess": "Account connected successfully",
+          "linkError": "Failed to connect account, please try again",
+          "unlinkSuccess": "Account disconnected",
+          "unlinkError": "Failed to disconnect account, please try again",
+          "alreadyLinked": "This account is already connected to your profile",
+          "linkedToOther": "This social account is connected to another user",
+          "cannotUnlinkLast": "Cannot disconnect the only linked account (no password set)",
+          "unlinkConfirmTitle": "Confirm Disconnect",
+          "unlinkConfirmDescription": "Are you sure you want to disconnect from {provider}? You will no longer be able to sign in with this platform.",
+          "cancel": "Cancel",
+          "confirmUnlink": "Disconnect"
+        }
+      },
+      "interface": {
+        "title": "Interface"
+      },
+      "notifications": {
+        "title": "Notification"
+      },
+      "privacy": {
+        "title": "Privacy"
+      }
+    },
+    "invitations": {
+      "title": "Invitations",
+      "description": "Create and manage invite codes to invite new users to the community",
+      "createCode": "Create Invite Code",
+      "creating": "Creating...",
+      "note": "Note",
+      "notePlaceholder": "Optional note for this invite code",
+      "maxUses": "Max Uses",
+      "maxUsesPlaceholder": "Leave empty for unlimited",
+      "expiresAt": "Expires At",
+      "expiresAtPlaceholder": "Leave empty for no expiry",
+      "code": "Invite Code",
+      "copyCode": "Copy Invite Code",
+      "codeCopied": "Invite code copied to clipboard",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "statusExpired": "Expired",
+      "statusMaxUsed": "Used Up",
+      "usedCount": "Used {used} times",
+      "usedCountWithMax": "Used {used}/{max} times",
+      "noExpiry": "No expiry",
+      "expiresAtLabel": "Expires on {date}",
+      "enable": "Enable",
+      "disable": "Disable",
+      "delete": "Delete",
+      "deleteConfirmTitle": "Delete Invite Code",
+      "deleteConfirmDescription": "Are you sure you want to delete this invite code? This action cannot be undone.",
+      "deleteHasInvitations": "This invite code has invitation records and cannot be deleted",
+      "deleteSuccess": "Invite code deleted",
+      "deleteError": "Failed to delete, please try again",
+      "updateSuccess": "Invite code updated",
+      "updateError": "Failed to update, please try again",
+      "createSuccess": "Invite code created successfully",
+      "createError": "Failed to create, please try again",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "invitedUsers": "Invited Users",
+      "noInvitedUsers": "No invitation records yet",
+      "emptyState": "You haven't created any invite codes yet",
+      "emptyStateHint": "Create an invite code to invite new users to the community"
+    }
+  },
+  "UserCard": {
+    "viewProfile": "View Profile",
+    "follow": "Follow",
+    "following": "Following",
+    "message": "Message",
+    "admin": "Admin",
+    "badges": "Badges",
+    "allBadges": "All Badges",
+    "joinedAt": "Joined",
+    "statistics": {
+      "topics": "Topics",
+      "posts": "Posts",
+      "likes": "Likes",
+      "followers": "Followers",
+      "credits": "Credits"
+    },
+    "loading": "Loading...",
+    "loadingStats": "Loading statistics...",
+    "followSuccess": "Followed successfully",
+    "unfollowSuccess": "Unfollowed successfully",
+    "followError": "Operation failed, please try again later",
+    "messageLoginRequired": "Please sign in to send a message",
+    "messageError": "Failed to create conversation, please try again later",
+    "website": "Website",
+    "location": "Location",
+    "birthday": "Birthday"
+  },
+  "Leaderboard": {
+    "title": "Community Leaderboard",
+    "subtitle": "Showcasing outstanding members across different dimensions",
+    "wealth": "Wealth Rank",
+    "wealthDesc": "Wealth Accumulation - Based on user's current credit balance",
+    "pioneer": "Pioneer Rank",
+    "pioneerDesc": "Activity Level - Based on topics and posts in the last 7 days",
+    "expert": "Expert Rank",
+    "expertDesc": "Professional Contribution - Based on accepted answers count",
+    "reputation": "Reputation Rank",
+    "reputationDesc": "Community Recognition - Based on total likes and bookmarks received",
+    "credits": "Credits",
+    "activities": "Activities",
+    "acceptances": "Accepted Answers",
+    "likesAndBookmarks": "Reputation Score",
+    "rank": "Rank",
+    "user": "User",
+    "value": "Value",
+    "noData": "No ranking data yet",
+    "loadError": "Failed to load, please try again later",
+    "lastUpdated": "Last Updated",
+    "loading": "Loading...",
+    "loadingData": "Fetching leaderboard data",
+    "loadFailed": "Failed to load",
+    "retryLater": "Please retry later or refresh the page",
+    "noRankingData": "No ranking data available",
+    "joinCommunity": "Join community activities and climb the leaderboard!",
+    "yourRanking": "Your Ranking",
+    "fullLeaderboard": "Full Leaderboard",
+    "wealthShort": "Wealth",
+    "pioneerShort": "Pioneer",
+    "expertShort": "Expert",
+    "reputationShort": "Reputation",
+    "noMoreData": "No more data"
+  },
+  "Donation": {
+    "pageTitle": "Donation Honor Roll",
+    "title": "Donation Honor Roll",
+    "subtitle": "Thank you to every supporter for their generous donations",
+    "monthTab": "This Month",
+    "yearTab": "This Year",
+    "allTab": "All Time",
+    "monthDesc": "Show donation records for this month",
+    "yearDesc": "Show donation records for this year",
+    "allDesc": "Show all historical donation records",
+    "totalAmount": "Total Donations",
+    "totalCount": "Donation Count",
+    "amount": "Amount",
+    "message": "Message",
+    "anonymous": "Anonymous Benefactor",
+    "noData": "No donation records yet",
+    "noDataDesc": "Be the first donor!",
+    "loading": "Loading",
+    "loadingData": "Fetching donation data...",
+    "loadFailed": "Failed to load",
+    "retryLater": "Please try again later",
+    "lastUpdated": "Last Updated",
+    "people": "donations",
+    "donatedAt": "Donated at",
+    "fullLeaderboard": "Full Leaderboard",
+    "noMoreData": "No more data"
+  },
+  "AdminTranslationTasks": {
+    "title": "Translation Tasks Management",
+    "description": "Manage all translation tasks, monitor status and handle exceptions",
+    "refresh": "Refresh",
+    "loading": "Loading...",
+    "empty": "No translation tasks",
+    "locales": {
+      "en": "English",
+      "zh": "Chinese"
+    },
+    "status": {
+      "all": "All Status",
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    },
+    "priority": {
+      "all": "All Priorities",
+      "urgent": "Urgent",
+      "high": "High",
+      "normal": "Normal",
+      "low": "Low",
+      "lowest": "Lowest"
+    },
+    "entityType": {
+      "category": "Category",
+      "tag": "Tag",
+      "badge": "Badge",
+      "topic": "Topic",
+      "post": "Post",
+      "message": "Message",
+      "expression_group": "Expression Group",
+      "expression": "Expression"
+    },
+    "filter": {
+      "title": "Filter",
+      "entityType": {
+        "all": "All Types"
+      },
+      "sourceLocale": {
+        "all": "All Source Locales"
+      },
+      "targetLocale": {
+        "all": "All Target Locales"
+      }
+    },
+    "table": {
+      "entity": "Entity",
+      "language": "Language",
+      "statusLabel": "Status",
+      "priorityLabel": "Priority",
+      "retry": "Retry",
+      "time": "Time",
+      "actions": "Actions",
+      "empty": "No data",
+      "created": "Created At",
+      "updated": "Updated At",
+      "action": {
+        "retry": "Retry",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "execute": "Execute"
+      }
+    },
+    "selectedCount": "{count} selected",
+    "clearSelection": "Clear selection",
+    "batch": {
+      "retry": "Batch Retry",
+      "cancel": "Batch Cancel",
+      "delete": "Batch Delete"
+    },
+    "batchDeleteConfirm": "Are you sure you want to delete selected tasks?",
+    "message": {
+      "retrySuccess": "Task reset successfully, waiting for processing",
+      "retryError": "Failed to retry task",
+      "executeSuccess": "Task execution triggered successfully",
+      "executeError": "Failed to trigger task execution",
+      "deleteSuccess": "Task deleted successfully",
+      "deleteError": "Failed to delete task",
+      "cancelSuccess": "Task cancelled successfully",
+      "cancelError": "Failed to cancel task",
+      "batchSuccess": "Batch operation successful",
+      "batchError": "Batch operation failed"
+    },
+    "deleteConfirm": {
+      "description": "Are you sure you want to delete this translation task? This action cannot be undone."
+    },
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "error": {
+      "unauthorized": "Unauthorized",
+      "invalidId": "Invalid ID",
+      "taskNotFound": "Task not found",
+      "internalServerError": "Internal server error",
+      "invalidJson": "Invalid JSON",
+      "invalidAction": "Invalid action",
+      "taskPendingOrProcessing": "Task is pending or processing",
+      "taskNotPending": "Task is not pending",
+      "invalidIds": "Invalid IDs"
+    }
+  },
+  "AdminLLMConfigs": {
+    "title": "LLM Configurations",
+    "description": "Manage Large Language Model configurations",
+    "createButton": "Create Config",
+    "searchPlaceholder": "Search config name",
+    "table": {
+      "name": "Name",
+      "interfaceMode": "Interface Mode",
+      "baseUrl": "Base URL",
+      "apiKey": "API Key",
+      "usage": "Usage",
+      "status": "Status",
+      "actions": "Actions",
+      "edit": "Edit",
+      "delete": "Delete",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "notConfigured": "Not Configured",
+      "noConfig": "No configuration set",
+      "configure": "Configure"
+    },
+    "usages": {
+      "TRANSLATION": "Translation",
+      "CHAT": "Chat",
+      "SUMMARIZATION": "Summarization"
+    },
+    "dialog": {
+      "title": "LLM Configuration",
+      "createTitle": "Create LLM Config",
+      "editTitle": "Edit LLM Config",
+      "interfaceMode": "Interface Mode",
+      "name": "Name",
+      "baseUrl": "Base URL",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Leave empty to keep existing key",
+      "usage": "Usage",
+      "isEnabled": "Enabled",
+      "cancel": "Cancel",
+      "submit": "Submit"
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete",
+      "description": "Are you sure you want to delete this configuration? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "message": {
+      "createSuccess": "Config created successfully",
+      "updateSuccess": "Config updated successfully",
+      "deleteSuccess": "Config deleted successfully",
+      "createError": "Failed to create config",
+      "updateError": "Failed to update config",
+      "deleteError": "Failed to delete config"
+    }
+  },
+  "AdminAutomationRules": {
+    "title": "Automation Rules",
+    "description": "Manage system automation rules configuration",
+    "createButton": "Create Rule",
+    "actionTypes": {
+      "CREDIT_CHANGE": "Credit Change",
+      "BADGE_GRANT": "Grant Badge",
+      "BADGE_REVOKE": "Revoke Badge",
+      "USER_GROUP_CHANGE": "User Group Change"
+    },
+    "stats": {
+      "total": "Total Rules",
+      "enabled": "Enabled Rules",
+      "disabled": "Disabled Rules",
+      "deleted": "Deleted Rules",
+      "triggerDistribution": "Trigger Distribution",
+      "actionDistribution": "Action Distribution"
+    },
+    "filter": {
+      "title": "Filters",
+      "searchPlaceholder": "Search rule name or description",
+      "triggerType": "Trigger Type",
+      "actionType": "Action Type",
+      "status": "Status",
+      "sortBy": "Sort By",
+      "triggerTypeOptions": {
+        "all": "All Triggers",
+        "CRON": "Scheduled Task",
+        "POST_CREATE": "Post Create",
+        "POST_REPLY": "Post Reply",
+        "CHECKIN": "Check-in",
+        "DONATION": "Donation",
+        "POST_LIKE_GIVEN": "Likes Given",
+        "POST_LIKE_RECEIVED": "Likes Received",
+        "USER_REGISTER": "User Register",
+        "USER_LOGIN": "User Login"
+      },
+      "actionTypeOptions": {
+        "all": "All Actions",
+        "CREDIT_CHANGE": "Credit Change",
+        "BADGE_GRANT": "Grant Badge",
+        "BADGE_REVOKE": "Revoke Badge",
+        "USER_GROUP_CHANGE": "User Group Change"
+      },
+      "statusOptions": {
+        "all": "All Status",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "deleted": "Deleted"
+      },
+      "sortByOptions": {
+        "updatedAt": "Updated Time",
+        "createdAt": "Created Time",
+        "priority": "Priority"
+      }
+    },
+    "card": {
+      "priority": "Priority",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "deleted": "Deleted",
+      "repeatable": "Repeatable",
+      "nonRepeatable": "Non-Repeatable",
+      "maxExecutions": "Max Executions",
+      "cooldown": "Cooldown",
+      "noLimit": "No Limit",
+      "timeRange": "Time Range",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "actions": {
+        "viewLogs": "View Logs",
+        "edit": "Edit",
+        "enable": "Enable",
+        "disable": "Disable",
+        "delete": "Delete"
+      }
+    },
+    "dialog": {
+      "createTitle": "Create Rule",
+      "editTitle": "Edit Rule",
+      "name": "Rule Name",
+      "namePlaceholder": "Enter rule name",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter rule description",
+      "triggerType": "Trigger Type",
+      "actionType": "Action Type",
+      "addAction": "Add Action",
+      "actionIndex": "Action {index}",
+      "priority": "Priority",
+      "isEnabled": "Enable Rule",
+      "isRepeatable": "Repeatable Trigger",
+      "maxExecutions": "Max Executions",
+      "maxExecutionsPlaceholder": "Leave empty for unlimited",
+      "cooldownSeconds": "Cooldown (Seconds)",
+      "cooldownSecondsPlaceholder": "Leave empty for no cooldown",
+      "timeRangeTitle": "Effective Time Range",
+      "timeRangeHint": "If not selected, the rule will be effective at all times",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "triggerConditions": "Trigger Conditions",
+      "actionParams": "Action Parameters",
+      "noTriggerConfig": "This trigger type requires no additional configuration",
+      "featureNotImplemented": "This feature is not yet implemented",
+      "basicInfo": {
+        "title": "Basic Information",
+        "name": "Rule Name",
+        "namePlaceholder": "Enter rule name",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter rule description",
+        "priority": "Priority",
+        "priorityHelp": "Higher number means higher priority"
+      },
+      "trigger": {
+        "title": "Trigger Configuration",
+        "type": "Trigger Type",
+        "conditions": "Trigger Conditions"
+      },
+      "action": {
+        "title": "Action Configuration",
+        "type": "Action Type",
+        "params": "Action Parameters"
+      },
+      "control": {
+        "title": "Execution Control",
+        "isEnabled": "Enable Rule",
+        "isRepeatable": "Repeatable Trigger",
+        "maxExecutions": "Max Executions",
+        "maxExecutionsPlaceholder": "Leave empty for unlimited",
+        "cooldownSeconds": "Cooldown (Seconds)",
+        "cooldownPlaceholder": "Leave empty for no cooldown"
+      },
+      "timeRange": {
+        "title": "Effective Time Range",
+        "startTime": "Start Time",
+        "endTime": "End Time"
+      },
+      "actions": {
+        "title": "Action List",
+        "cancel": "Cancel",
+        "submit": "Submit"
+      }
+    },
+    "logsDialog": {
+      "title": "Rule Execution Logs",
+      "filter": {
+        "status": "Execution Status",
+        "timeRange": "Time Range",
+        "statusOptions": {
+          "all": "All Status",
+          "SUCCESS": "Success",
+          "FAILED": "Failed",
+          "SKIPPED": "Skipped"
+        },
+        "timeRangeOptions": {
+          "last7days": "Last 7 Days",
+          "last30days": "Last 30 Days",
+          "custom": "Custom"
+        }
+      },
+      "log": {
+        "executedAt": "Executed At",
+        "triggeredBy": "Triggered By",
+        "status": "Status",
+        "context": "Trigger Context",
+        "result": "Execution Result",
+        "error": "Error Message"
+      }
+    },
+    "deleteConfirm": {
+      "title": "Confirm Delete",
+      "description": "Are you sure you want to delete this rule? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "message": {
+      "createSuccess": "Created successfully",
+      "createError": "Failed to create",
+      "updateSuccess": "Updated successfully",
+      "updateError": "Failed to update",
+      "deleteSuccess": "Deleted successfully",
+      "deleteError": "Failed to delete",
+      "enableSuccess": "Enabled successfully",
+      "enableError": "Failed to enable",
+      "disableSuccess": "Disabled successfully",
+      "disableError": "Failed to disable"
+    },
+    "pagination": {
+      "total": "{count} records in total",
+      "page": "Page {page}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "error": {
+      "unauthorized": "Unauthorized",
+      "ruleNotFound": "Rule not found",
+      "nameLengthInvalid": "Name must be between 1-128 characters",
+      "descriptionLengthInvalid": "Description must not exceed 512 characters",
+      "invalidTriggerType": "Invalid trigger type",
+      "invalidActions": "Invalid actions: must be a non-empty array with valid action objects",
+      "priorityMustBeInteger": "Priority must be an integer",
+      "invalidDateFormat": "Invalid date format for start_time or end_time",
+      "endTimeMustBeAfterStartTime": "End time must be after start time",
+      "internalServerError": "Internal server error"
+    },
+    "loading": "Loading...",
+    "empty": "No data",
+    "triggerConfig": {
+      "cron": {
+        "cronExpression": "Cron Expression",
+        "cronExpressionHint": "Format: second minute hour day month week, e.g., 0 0 * * * means every day at midnight",
+        "timezone": "Timezone"
+      },
+      "postCreate": {
+        "categories": "Specify Categories",
+        "categoriesHint": "If not selected, applies to all categories",
+        "minContentLength": "Min Content Length",
+        "minContentLengthHint": "Content character count must reach this value to trigger"
+      },
+      "checkin": {
+        "consecutiveDays": "Consecutive Check-in Days",
+        "consecutiveDaysHint": "If not filled, triggers on every check-in"
+      },
+      "donation": {
+        "minAmount": "Min Donation Amount",
+        "minAmountHint": "Donation amount must reach this value to trigger",
+        "currency": "Currency",
+        "sources": "Donation Sources",
+        "sourcesHint": "If not selected, applies to all sources",
+        "sourceOptions": {
+          "KOFI": "Ko-fi",
+          "PATREON": "Patreon",
+          "PAYPAL": "PayPal",
+          "ALIPAY": "Alipay",
+          "WECHAT_PAY": "WeChat Pay",
+          "BANK_TRANSFER": "Bank Transfer",
+          "CRYPTO": "Cryptocurrency",
+          "OTHER": "Other"
+        }
+      },
+      "postLike": {
+        "minCount": "Min Count",
+        "minCountHint": "User's like count must reach this value to trigger"
+      }
+    },
+    "actionConfig": {
+      "creditChange": {
+        "amount": "Credit Amount",
+        "amountHint": "Positive number to add, negative to deduct",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter credit change description"
+      },
+      "badgeGrant": {
+        "badge": "Select Badge",
+        "badgePlaceholder": "Please select a badge to grant",
+        "autoGrant": "Auto Grant (Skip Review)"
+      },
+      "badgeRevoke": {
+        "badge": "Select Badge",
+        "badgePlaceholder": "Please select a badge to revoke",
+        "reason": "Revoke Reason",
+        "reasonPlaceholder": "Enter revoke reason (optional)"
+      }
+    }
+  },
+  "Automation": {
+    "skipReason": {
+      "badgeAlreadyOwned": "User already owns badge: {badgeName}",
+      "badgeNotOwned": "User does not own badge: {badgeName}",
+      "insufficientCredits": "Insufficient credits, current: {currentCredits}, required change: {amount}"
+    },
+    "error": {
+      "userNotFound": "User not found: {userId}",
+      "badgeNotFound": "Badge not found: {badgeId}",
+      "databaseError": "Database error: {message}",
+      "invalidParams": "Invalid parameters: {message}",
+      "creditChangeFailed": "Credit change failed: {error}",
+      "unexpectedError": "Unexpected error: {error}",
+      "unknownError": "Unknown error: {message}"
+    }
+  },
+  "Editor": {
+    "SlashCommand": {
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "bulletList": "Bullet List",
+      "orderedList": "Ordered List",
+      "codeBlock": "Code Block",
+      "quote": "Quote",
+      "image": "Image",
+      "divider": "Divider",
+      "noCommands": "No commands found",
+      "slashPlaceholder": "Type '/' for commands"
+    },
+    "ImageBlock": {
+      "title": "Add Image",
+      "upload": "Upload",
+      "link": "Embed Link",
+      "uploadInstruction": "Upload an image from your device",
+      "chooseFile": "Choose File",
+      "placeholder": "Paste image link...",
+      "embed": "Embed Image"
+    },
+    "Upload": {
+      "uploading": "Uploading {name}...",
+      "success": "Uploaded {name}",
+      "error": "Upload failed: {name}",
+      "genericError": "Upload failed",
+      "widgetText": "Uploading image..."
+    },
+    "Toolbar": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "strikethrough": "Strikethrough",
+      "code": "Code",
+      "paragraph": "Paragraph",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "bulletList": "Bullet List",
+      "orderedList": "Ordered List",
+      "blockquote": "Blockquote",
+      "codeBlock": "Code Block",
+      "link": "Link",
+      "image": "Image",
+      "hr": "Horizontal Rule",
+      "insertLink": "Insert Link",
+      "editLink": "Edit Link",
+      "linkUrl": "URL",
+      "linkText": "Link Text",
+      "linkTextPlaceholder": "Display text for the link (defaults to URL)",
+      "cancel": "Cancel",
+      "insert": "Insert",
+      "update": "Update",
+      "more": "More",
+      "ExpressionPicker": {
+        "title": "Select Expression",
+        "searchPlaceholder": "Search expressions...",
+        "noResults": "No expressions found",
+        "error": "Failed to load expressions",
+        "loading": "Loading..."
+      }
+    }
+  },
+  "EmojiPicker": {
+    "placeholder": "Pick an emoji",
+    "clear": "Clear"
+  },
+  "EmojiMart": {
+    "search": "Search",
+    "search_no_results_1": "Oh no!",
+    "search_no_results_2": "That emoji couldn't be found",
+    "pick": "Pick an emoji...",
+    "add_custom": "Add custom emoji",
+    "categories": {
+      "activity": "Activity",
+      "custom": "Custom",
+      "flags": "Flags",
+      "foods": "Food & Drink",
+      "frequency": "Frequently Used",
+      "nature": "Animals & Nature",
+      "objects": "Objects",
+      "people": "Smileys & People",
+      "places": "Travel & Places",
+      "search": "Search Results",
+      "symbols": "Symbols"
+    },
+    "skins": {
+      "choose": "Choose default skin tone",
+      "1": "Default",
+      "2": "Light",
+      "3": "Medium-Light",
+      "4": "Medium",
+      "5": "Medium-Dark",
+      "6": "Dark"
+    }
+  },
+  "AdminSocialProviders": {
+    "title": "Social Login Providers",
+    "description": "Configure OAuth social login providers.",
+    "createButton": "Add Provider",
+    "loading": "Loading...",
+    "empty": "No social login providers configured. Click the button above to add one.",
+    "list": {
+      "dragHint": "Drag to reorder"
+    },
+    "card": {
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "clientId": "Client ID",
+      "scope": "Scope",
+      "endpoints": "Endpoints",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "dialog": {
+      "createTitle": "Add Social Login Provider",
+      "editTitle": "Edit Social Login Provider",
+      "template": "Select Template",
+      "templatePlaceholder": "Choose a preset template",
+      "custom": "Custom",
+      "providerKey": "Provider Key",
+      "name": "Display Name",
+      "icon": "Icon",
+      "uploadIcon": "Upload Icon",
+      "uploading": "Uploading...",
+      "uploadSuccess": "Upload successful",
+      "uploadError": "Upload failed",
+      "clientId": "Client ID",
+      "clientSecret": "Client Secret",
+      "secretPlaceholder": "Leave empty to keep unchanged",
+      "wellKnownUrl": "Well-Known URL",
+      "wellKnownHint": "If provided, authorization endpoints will be auto-discovered. Works with standard OIDC providers.",
+      "authorizeUrl": "Authorization URL",
+      "tokenUrl": "Token URL",
+      "userinfoUrl": "User Info URL",
+      "scope": "Scope",
+      "cancel": "Cancel",
+      "submit": "Save",
+      "submitting": "Saving..."
+    },
+    "deleteDialog": {
+      "title": "Confirm Delete",
+      "description": "Are you sure you want to delete this social login provider? Users will no longer be able to login using this provider.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "message": {
+      "createSuccess": "Provider created successfully",
+      "createError": "Failed to create provider",
+      "updateSuccess": "Provider updated successfully",
+      "updateError": "Failed to update provider",
+      "deleteSuccess": "Provider deleted successfully",
+      "deleteError": "Failed to delete provider",
+      "reorderSuccess": "Order updated successfully",
+      "reorderError": "Failed to update order"
+    }
+  },
+  "AdminStorageProviders": {
+    "title": "Storage Provider Management",
+    "description": "Manage file storage provider configurations",
+    "createButton": "Add Provider",
+    "loading": "Loading...",
+    "empty": "No storage providers configured",
+    "list": {
+      "default": "Default",
+      "setDefault": "Set as Default",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "dragHint": "Drag to reorder"
+    },
+    "providerTypes": {
+      "LOCAL": "Local Storage",
+      "VERCEL_BLOB": "Vercel Blob",
+      "ALIYUN_OSS": "Aliyun OSS",
+      "AWS_S3": "AWS S3",
+      "TENCENT_COS": "Tencent COS",
+      "QINIU": "Qiniu",
+      "UPYUN": "Upyun",
+      "MINIO": "MinIO"
+    },
+    "dialog": {
+      "createTitle": "Add Storage Provider",
+      "editTitle": "Edit Storage Provider",
+      "name": "Provider Name",
+      "providerType": "Provider Type",
+      "providerTypePlaceholder": "Select provider type",
+      "baseUrl": "Base URL",
+      "isActive": "Enable this provider",
+      "maxFileSize": "Max File Size (MB)",
+      "allowedTypes": "Allowed File Types",
+      "allowedTypesPlaceholder": "e.g.: image/*,application/pdf",
+      "configSection": "Provider Configuration",
+      "cancel": "Cancel",
+      "submit": "Save",
+      "submitting": "Saving...",
+      "secretPlaceholder": "Leave empty to keep unchanged",
+      "config": {
+        "basePath": "Base Path",
+        "token": "Access Token",
+        "accessKeyId": "Access Key ID",
+        "accessKeySecret": "Access Key Secret",
+        "secretAccessKey": "Secret Access Key",
+        "secretId": "Secret ID",
+        "secretKey": "Secret Key",
+        "region": "Region",
+        "bucket": "Bucket",
+        "endpoint": "Endpoint",
+        "accessKey": "Access Key",
+        "operator": "Operator",
+        "password": "Password",
+        "port": "Port",
+        "useSsl": "Use SSL"
+      }
+    },
+    "deleteDialog": {
+      "title": "Confirm Delete",
+      "description": "Are you sure you want to delete this storage provider? Files using this provider may become inaccessible.",
+      "cannotDeleteDefault": "Cannot delete the default provider. Please set another provider as default first.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "message": {
+      "createSuccess": "Provider created successfully",
+      "createError": "Failed to create provider",
+      "updateSuccess": "Provider updated successfully",
+      "updateError": "Failed to update provider",
+      "deleteSuccess": "Provider deleted successfully",
+      "deleteError": "Failed to delete provider",
+      "setDefaultSuccess": "Default provider set successfully",
+      "setDefaultError": "Failed to set default provider",
+      "reorderSuccess": "Order updated successfully",
+      "reorderError": "Failed to update order",
+      "cannotDisableDefault": "Cannot disable the default provider"
+    }
+  },
+  "AdminExpressions": {
+    "title": "Expression Management",
+    "description": "Manage forum expressions, including groups, image expressions and text expressions",
+    "createGroupButton": "Create Group",
+    "createExpressionButton": "Add Expression",
+    "searchPlaceholder": "Search groups or expressions",
+    "stats": {
+      "totalGroups": "Total Groups",
+      "totalExpressions": "Total Expressions",
+      "imageExpressions": "Image Expressions",
+      "textExpressions": "Text Expressions"
+    },
+    "filter": {
+      "title": "Filter",
+      "type": {
+        "all": "All Types",
+        "image": "Image",
+        "text": "Text"
+      },
+      "enabled": {
+        "all": "All Status",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "deleted": {
+        "all": "All",
+        "normal": "Normal",
+        "deleted": "Deleted"
+      },
+      "sortBy": "Sort By",
+      "sortByOptions": {
+        "sort": "Custom Sort",
+        "updatedAt": "Updated Time"
+      }
+    },
+    "group": {
+      "code": "Group Code",
+      "icon": "Group Icon",
+      "expressionCount": "Expression Count",
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "enable": "Enable",
+      "disable": "Disable"
+    },
+    "expression": {
+      "code": "Expression Code",
+      "type": "Type",
+      "image": "Image",
+      "text": "Text",
+      "dimensions": "Dimensions",
+      "preview": "Preview"
+    },
+    "groupDialog": {
+      "createTitle": "Create Expression Group",
+      "editTitle": "Edit Expression Group",
+      "code": "Group Code",
+      "codePlaceholder": "e.g: default, onion (letters, numbers, underscore only)",
+      "codeHint": "Cannot be changed after creation",
+      "name": "Group Name",
+      "namePlaceholder": "e.g: Default, Onion",
+      "expressionSize": "Expression Size",
+      "expressionSizePlaceholder": "Select size",
+      "expressionSizeHint": "Display size only: Small 32px / Medium 64px / Large 96px",
+      "expressionSizePreview": "Preview size: {size}px",
+      "sizeOptions": {
+        "large": "Large",
+        "medium": "Medium",
+        "small": "Small"
+      },
+      "icon": "Group Icon",
+      "iconPlaceholder": "Click to select emoji",
+      "selectIconPlaceholder": "Select icon from expressions",
+      "noIcon": "No icon",
+      "iconHint": "Select an expression from this group as the group icon",
+      "sortValue": "Sort Value",
+      "cancel": "Cancel",
+      "submit": "Save"
+    },
+    "expressionDialog": {
+      "createTitle": "Add Expression",
+      "editTitle": "Edit Expression",
+      "selectGroup": "Select Group",
+      "selectGroupPlaceholder": "Please select a group",
+      "code": "Expression Code",
+      "codePlaceholder": "e.g: smile, 001",
+      "codeHint": "Unique within the group",
+      "codeFormatHint": "⚠️ Only letters, numbers, underscores and hyphens allowed, used for image path",
+      "codeWarning": "💡 Cannot be modified after saving, please fill carefully",
+      "codeLockedAfterUpload": "ℹ️ Image uploaded, code is locked and cannot be modified",
+      "codeRequiredForUpload": "⚠️ Please fill in the expression code first before uploading image",
+      "codeFormatInvalid": "❌ Invalid expression code format, only letters, numbers, underscores and hyphens allowed",
+      "codeDuplicateError": "This code already exists in the current group, please use another code",
+      "name": "Expression Name",
+      "namePlaceholder": "e.g: Smile, Happy",
+      "type": "Expression Type",
+      "imageTab": "Image",
+      "textTab": "Text",
+      "uploadImage": "Upload Image",
+      "uploadHint": "Supports PNG/GIF/JPG/WEBP, max 2MB",
+      "dragHint": "Click or drag file here",
+      "textContent": "Text Content",
+      "textPlaceholder": "Enter emoji or text symbol",
+      "dimensions": "Dimensions",
+      "width": "Width",
+      "height": "Height",
+      "autoDetect": "Auto Detect",
+      "sortValue": "Sort Value",
+      "cancel": "Cancel",
+      "submit": "Save",
+      "animatedBadge": "Animated",
+      "storagePathLabel": "📁 Storage Path:",
+      "formatConversionHint": "💡 Static images (PNG/JPG) will be automatically converted to WebP format; animated GIFs retain original format"
+    },
+    "message": {
+      "createGroupSuccess": "Group created successfully",
+      "createGroupError": "Failed to create group",
+      "updateGroupSuccess": "Group updated successfully",
+      "updateGroupError": "Failed to update group",
+      "deleteGroupSuccess": "Group deleted successfully",
+      "deleteGroupError": "Failed to delete group",
+      "reorderGroupSuccess": "Group order updated successfully",
+      "reorderGroupError": "Failed to update group order",
+      "createExpressionSuccess": "Expression created successfully",
+      "createExpressionError": "Failed to create expression",
+      "updateExpressionSuccess": "Expression updated successfully",
+      "updateExpressionError": "Failed to update expression",
+      "deleteExpressionSuccess": "Expression deleted successfully",
+      "deleteExpressionError": "Failed to delete expression",
+      "reorderExpressionSuccess": "Expression order updated successfully",
+      "reorderExpressionError": "Failed to update expression order",
+      "uploadImageSuccess": "Image uploaded successfully",
+      "uploadImageError": "Failed to upload image",
+      "invalidImageType": "Invalid image type",
+      "imageTooLarge": "Image size exceeds limit",
+      "translationUpdateSuccess": "Translation updated successfully",
+      "translationUpdateError": "Failed to update translation",
+      "codeFormatError": "Invalid expression code format, only letters, numbers, underscores and hyphens allowed",
+      "codeDuplicate": "This code already exists in the current group, please use another code",
+      "imageRequired": "Please upload expression image",
+      "textContentRequired": "Please fill in text content"
+    },
+    "deleteConfirm": {
+      "groupTitle": "Confirm Delete Group",
+      "groupDescription": "This group has {count} expressions. The group will be marked as deleted but expressions will be retained.",
+      "expressionTitle": "Confirm Delete Expression",
+      "expressionDescription": "This will soft delete the expression. Continue?",
+      "cancel": "Cancel",
+      "confirm": "Confirm Delete"
+    },
+    "translationDialog": {
+      "groupTitle": "Manage Group Translations",
+      "expressionTitle": "Manage Expression Translations",
+      "sourceLanguage": "Source Language",
+      "translated": "Translated",
+      "missing": "Not Translated",
+      "noName": "No name provided",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "name": "Name"
+    },
+    "loading": "Loading...",
+    "empty": "No data"
+  }
+}
